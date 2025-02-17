@@ -31,15 +31,31 @@ connection.onInitialize((params: InitializeParams) => {
   return result;
 });
 
-connection.onCompletion((params: CompletionParams): CompletionList => {
-  return completion(params);
+connection.onCompletion((params: CompletionParams): CompletionList | null => {
+  const doc = documents.get(params.textDocument.uri);
+  if (!doc)
+  {
+    return null;
+  }
+
+  const content = doc.getText();
+
+  const currentLine = content.split("\n")[params.position.line];
+
+  const lineUntilCursor = currentLine.slice(0, params.position.character);
+
+  const currentWord = lineUntilCursor.replace(/.*\W(.*)/, "$1");
+  connection.window.showInformationMessage(currentWord);
+
+  return completion(currentWord, params);
 });
 
-// documents.onDidChangeContent((change) => {
-//   // connection.window.showInformationMessage(
-//   //   "onDidChangeContent: " + change.document.uri
-//   // );
-// });
+documents.onDidChangeContent((change) => {
+
+  // connection.window.showInformationMessage(
+  //   "onDidChangeContent: " + change.document.uri
+  // );
+});
 
 
 // Make the text document manager listen on the connection
