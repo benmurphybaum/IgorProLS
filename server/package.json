@@ -1,15 +1,15 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
+  "name": "IgorProLS Server",
+  "description": "Language server for Igor Pro",
   "version": "1.0.0",
-  "author": "REPLACE_ME",
+  "author": "Ben Murphy-Baum",
   "license": "MIT",
   "engines": {
     "node": "*"
   },
   "repository": {
     "type": "git",
-    "url": "REPLACE_ME"
+    "url": "https://github.com/benmurphybaum/IgorProLS"
   },
   "dependencies": {
     "vscode-languageserver": "^8.1.0",
