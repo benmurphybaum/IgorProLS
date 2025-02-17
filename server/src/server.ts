@@ -35,11 +35,11 @@ connection.onCompletion((params: CompletionParams): CompletionList => {
   return completion(params);
 });
 
-documents.onDidChangeContent((change) => {
-  connection.window.showInformationMessage(
-    "onDidChangeContent: " + change.document.uri
-  );
-});
+// documents.onDidChangeContent((change) => {
+//   // connection.window.showInformationMessage(
+//   //   "onDidChangeContent: " + change.document.uri
+//   // );
+// });
 
 
 // Make the text document manager listen on the connection
