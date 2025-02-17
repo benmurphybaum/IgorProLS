@@ -3,8 +3,9 @@ import { CompletionItem } from "vscode-languageserver";
 import { CompletionParams } from "vscode-languageserver";
 import { operationList } from "../completionSources/Operations";
 import { numericFunctionsList } from "../completionSources/Functions";
+import { stringFunctionList } from "../completionSources/Functions";
 
-const completionList: CompletionItem[] = operationList.concat(numericFunctionsList);
+const completionList: CompletionItem[] = operationList.concat(numericFunctionsList).concat(stringFunctionList);
 
 export const completion = (prefix: string, params: CompletionParams): CompletionList => {
     return {

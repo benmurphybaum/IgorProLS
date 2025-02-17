@@ -38,6 +38,7 @@ connection.onCompletion((params: CompletionParams): CompletionList | null => {
     return null;
   }
 
+  // Extract the current word in the document
   const content = doc.getText();
 
   const currentLine = content.split("\n")[params.position.line];
@@ -45,7 +46,8 @@ connection.onCompletion((params: CompletionParams): CompletionList | null => {
   const lineUntilCursor = currentLine.slice(0, params.position.character);
 
   const currentWord = lineUntilCursor.replace(/.*\W(.*)/, "$1");
-  connection.window.showInformationMessage(currentWord);
+
+  
 
   return completion(currentWord, params);
 });
