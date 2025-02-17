@@ -1,13 +1,13 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
-  "author": "REPLACE_ME",
+  "name": "IgorProLS Client",
+  "description": "Language server client for Igor Pro 10",
+  "author": "Ben Murphy-Baum",
   "license": "MIT",
   "version": "0.0.1",
-  "publisher": "REPLACE_ME",
+  "publisher": "Ben Murphy-Baum",
   "repository": {
     "type": "git",
-    "url": "REPLACE_ME"
+    "url": "https://github.com/benmurphybaum/IgorProLS"
   },
   "engines": {
     "vscode": "^1.75.0"

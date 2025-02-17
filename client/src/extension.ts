@@ -38,8 +38,8 @@ export function activate(context: ExtensionContext) {
 
   // Create the language client and start the client.
   client = new LanguageClient(
-    "REPLACE_ME language-server-id",
-    "REPLACE_ME language server name",
+    "igorprols language-server-id",
+    "IgorProLS language server name",
     serverOptions,
     clientOptions
   );
