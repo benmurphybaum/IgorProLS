@@ -5,7 +5,6 @@ import {
   InitializeParams,
   TextDocumentSyncKind,
   InitializeResult,
-  CompletionOptions,
   CompletionParams,
   CompletionList,
 } from "vscode-languageserver/node";
