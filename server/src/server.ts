@@ -37,18 +37,13 @@ connection.onCompletion((params: CompletionParams): CompletionList | null => {
     return null;
   }
 
-  // Extract the current word in the document
+  // Getting the current line and word of the document lets us provide completion context
   const content = doc.getText();
-
   const currentLine = content.split("\n")[params.position.line];
-
-  const lineUntilCursor = currentLine.slice(0, params.position.character);
-
+  const lineUntilCursor = currentLine.slice(0, params.position.character).trimStart();
   const currentWord = lineUntilCursor.replace(/.*\W(.*)/, "$1");
 
-  
-
-  return completion(currentWord, params);
+  return completion(lineUntilCursor, currentWord, params);
 });
 
 documents.onDidChangeContent((change) => {

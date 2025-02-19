@@ -11,6 +11,7 @@ export const keywordList: CompletionItem[] = [
     {label: "while", kind: 14},
     {label: "switch", kind: 14},
     {label: "strswitch", kind: 14},
+    {label: "endswitch", kind: 14},
     {label: "case", kind: 14},
     {label: "default", kind: 14},
     {label: "break", kind: 14},
