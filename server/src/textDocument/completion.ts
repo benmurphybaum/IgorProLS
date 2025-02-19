@@ -5,6 +5,7 @@ import { operationList } from "../completionSources/Operations";
 import { numericFunctionsList } from "../completionSources/Functions";
 import { stringFunctionList } from "../completionSources/Functions";
 import { keywordList } from "../completionSources/Keywords";
+import { operationKeywordMap } from "../completionSources/OperationKeywords";
 
 const completionList: CompletionItem[] = operationList.concat(numericFunctionsList).concat(stringFunctionList).concat(keywordList);
 const noOperationList: CompletionItem[] = numericFunctionsList.concat(stringFunctionList).concat(keywordList)
@@ -35,9 +36,10 @@ export const completion = (lineToCursor: string, prefix: string, params: Complet
     {
         options = noOperationList.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
 
-        if (theOperation.label === "Python")
+        const result = operationKeywordMap.get(theOperation.label.toLowerCase())
+        if (result)
         {
-            options.push( {label: "execute", kind: 5}, {label: "var", kind: 5}, {label: "array", kind: 5}) // add the operation keywords
+            options = options.concat(result)
         }
     }
     else if (lineToCursor === prefix)
