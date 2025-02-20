@@ -16,7 +16,7 @@ function getFirstWord(str: string): string | null {
   }
 
 function whichOperation(possibleOperation: string): CompletionItem | undefined {
-    return operationList.find(item => item.label === possibleOperation);
+    return operationList.find(item => item.label.toLowerCase() === possibleOperation.toLowerCase());
 }
 
 export const completion = (lineToCursor: string, prefix: string, params: CompletionParams): CompletionList => {
