@@ -7,8 +7,8 @@ import { stringFunctionList } from "../completionSources/Functions";
 import { keywordList } from "../completionSources/Keywords";
 import { operationKeywordMap } from "../completionSources/OperationKeywords";
 
-const completionList: CompletionItem[] = operationList.concat(numericFunctionsList).concat(stringFunctionList).concat(keywordList);
-const noOperationList: CompletionItem[] = numericFunctionsList.concat(stringFunctionList).concat(keywordList)
+const completionList: CompletionItem[] = operationList.concat(keywordList);
+const noOperationList: CompletionItem[] = keywordList;
 
 function getFirstWord(str: string): string | null {
     const match = str.match(/^\S+/);
