@@ -1,14 +1,14 @@
 import { CompletionList } from "vscode-languageserver";
 import { CompletionItem } from "vscode-languageserver";
 import { CompletionParams } from "vscode-languageserver";
+
 import { operationList } from "../completionSources/Operations";
-import { numericFunctionsList } from "../completionSources/Functions";
-import { stringFunctionList } from "../completionSources/Functions";
+import { functionList } from "../completionSources/Functions";
 import { keywordList } from "../completionSources/Keywords";
 import { operationKeywordMap } from "../completionSources/OperationKeywords";
 
-const completionList: CompletionItem[] = operationList.concat(keywordList);
-const noOperationList: CompletionItem[] = keywordList;
+const completionList: CompletionItem[] = operationList.concat(functionList, keywordList);
+const noOperationList: CompletionItem[] = keywordList.concat(functionList);
 
 function getFirstWord(str: string): string | null {
     const match = str.match(/^\S+/);

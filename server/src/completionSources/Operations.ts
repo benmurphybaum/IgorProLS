@@ -1,38 +1,9 @@
 import { CompletionItem } from "vscode-languageserver";
-import * as fs from "fs";
-import * as path from "path";
-
-export const operationList: CompletionItem[] = []
-
-function loadCommandHelp()
-{
-  const projectRoot = path.resolve(__dirname, "../..");
-  const commandHelpPath = path.join(projectRoot, "src/completionSources/CommandHelp.txt");
-  
-  const text = fs.readFileSync(commandHelpPath, "utf-8");
-  const lines: string[] = text.split("\n");
-
-  lines.forEach((line, index) => {
-    const tokens = line.split("::");
-
-    if (tokens.length == 2)
-    {
-      const operation: string = tokens[0];
-      const tooltip: string = tokens[1];
-      
-      if (tooltip.trim().length == 0)
-      {
-         operationList.push({label: operation, kind: 3});
-      }
-      else{
-         operationList.push({label: operation, kind: 3, detail: tooltip});
-      }
-    }
-  });
-
-}
+import { loadCommandHelp } from "./LoadCompletionSources";
+export let operationList: CompletionItem[] = []
 
 loadCommandHelp();
+
 
 //    {label: "Abort", kind: 3},							
 //    {label: "AddFIFOData", kind: 3},						
