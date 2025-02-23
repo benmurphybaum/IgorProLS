@@ -135,6 +135,7 @@ class CompletionSources
             {label: "#include", kind: 14},
             {label: "function", kind: 14},
             {label: "picture", kind: 14},
+            {label: "panel", kind: 14},  
             {label: "macro", kind: 14},
             {label: "structure", kind: 14},
             {label: "end", kind: 14},
@@ -144,8 +145,15 @@ class CompletionSources
             {label: "endproc", kind: 14},
             {label: "constant", kind: 14},
             {label: "strconstant", kind: 14},
+            {label: "return", kind: 14},
+            {label: "multithread", kind: 14},
+            {label: "threadsafe", kind: 14},
+            {label: "static", kind: 14},
+            {label: "wave", kind: 14},
+            {label: "dfref", kind: 14},
+            {label: "funcref", kind: 14},  
+            {label: "override", kind: 14},  
         ];
-        
     }
 }
   

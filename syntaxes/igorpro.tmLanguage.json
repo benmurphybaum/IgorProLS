@@ -51,7 +51,7 @@
 			"patterns": [
 			  {
 				"name": "keyword.control.igorpro",
-				"match": "(?i)\\b(if|else|elseif|endif|do|while|for|endfor|switch|strswitch|case|endswitch|default|break|return|function|macro|structure|picture|end|endmacro|endstructure|threadsafe|static|multithread)\\b"
+				"match": "(?i)\\b(if|else|elseif|endif|do|while|for|endfor|switch|strswitch|case|endswitch|default|break|return|function|macro|structure|picture|end|endmacro|endstructure|threadsafe|static|multithread|override)\\b"
 			  }
 			]
 		},
