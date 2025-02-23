@@ -42,7 +42,7 @@ connection.onCompletion((params: CompletionParams): CompletionList | null => {
   const currentLine = content.split("\n")[params.position.line];
   const lineUntilCursor = currentLine.slice(0, params.position.character).trimStart();
   const currentWord = lineUntilCursor.replace(/.*\W(.*)/, "$1");
-
+  
   return completion(lineUntilCursor, currentWord, params);
 });
 

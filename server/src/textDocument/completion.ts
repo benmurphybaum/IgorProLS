@@ -2,21 +2,17 @@ import { CompletionList } from "vscode-languageserver";
 import { CompletionItem } from "vscode-languageserver";
 import { CompletionParams } from "vscode-languageserver";
 
-import { operationList } from "../completionSources/Operations";
-import { functionList } from "../completionSources/Functions";
-import { keywordList } from "../completionSources/Keywords";
-import { operationKeywordMap } from "../completionSources/OperationKeywords";
+import CompletionSources from "../completionSources/CompletionSources";
 
-const completionList: CompletionItem[] = operationList.concat(functionList, keywordList);
-const noOperationList: CompletionItem[] = keywordList.concat(functionList);
+export const sources: CompletionSources = new CompletionSources();
 
 function getFirstWord(str: string): string | null {
     const match = str.match(/^\S+/);
     return match ? match[0] : null;
-  }
+}
 
 function whichOperation(possibleOperation: string): CompletionItem | undefined {
-    return operationList.find(item => item.label.toLowerCase() === possibleOperation.toLowerCase());
+    return sources.operations.find(item => item.label.toLowerCase() === possibleOperation.toLowerCase());
 }
 
 export const completion = (lineToCursor: string, prefix: string, params: CompletionParams): CompletionList => {
@@ -27,16 +23,16 @@ export const completion = (lineToCursor: string, prefix: string, params: Complet
     {
         return {
             isIncomplete: false,
-            items: completionList.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
+            items: sources.all.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
         }
     }
 
     const theOperation = whichOperation(firstWord)
     if (theOperation !== undefined)
     {
-        options = noOperationList.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
+        options = sources.noOperations.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
 
-        const result = operationKeywordMap.get(theOperation.label.toLowerCase())
+        const result = sources.operationKeywords.get(theOperation.label.toLowerCase())
         if (result)
         {
             options = options.concat(result)
@@ -45,17 +41,16 @@ export const completion = (lineToCursor: string, prefix: string, params: Complet
     else if (lineToCursor === prefix)
     {
         // This is the first word, so all options possible
-        options = completionList.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
+        options = sources.all.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
     }
     else
     {
         // Not the first word, so no operations are valid
-        options = noOperationList.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
+        options = sources.noOperations.filter(item => item.label.toLowerCase().includes(prefix.toLowerCase()))
     }
 
-   
     return {
-        isIncomplete: false,
+        isIncomplete: true,
         items: options,
     }
 }
