@@ -1,0 +1,106 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Igor Pro",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+
+		{
+			"include": "#strings"
+		},
+
+		{
+			"include": "#keywords"
+		},
+
+		{
+			"include": "#types"
+		}
+		,
+		{
+			"include": "#operations"
+		},
+
+		{
+			"include": "#userfunctions"
+		},
+		
+		{
+			"include": "#preprocessors"
+		},
+
+		{
+			"include": "#pragmas"
+		}
+	],
+	"repository": {
+
+		"comments": {
+			"name": "comment.line.double-slash.igorpro",
+			"match": "//.*"
+		},
+
+		"strings": {
+			"name": "string.quoted.double.igorpro",
+			"begin": "\"",
+			"end": "\""
+		},
+
+		"keywords": {
+			"patterns": [
+			  {
+				"name": "keyword.control.igorpro",
+				"match": "(?i)\\b(if|else|elseif|endif|do|while|for|endfor|switch|strswitch|case|endswitch|default|break|return|function|macro|structure|picture|end|endmacro|endstructure|threadsafe|static|multithread)\\b"
+			  }
+			]
+		},
+
+		"types": {
+			"patterns": [
+			  {
+				"name": "entity.name.class",
+				"match": "(?i)\\b(svar|nvar|wave|variable|struct|string|dfref|constant|strconstant)\\b"
+			  }
+			]
+		},
+
+		"operations": {
+			"patterns": [
+			  {
+				"name": "entity.name.function.igorpro",
+				"match": "(?i)^\\s*(Abort|AddFIFOData|AddFIFOVectData|AddMovieAudio|AddMovieFrame|AddWavesToBoxPlot|AddWavesToViolinPlot|AdoptFiles|APMath|Append|AppendBoxPlot|AppendImage|AppendLayoutObject|AppendMatrixContour|AppendText|AppendToGizmo|AppendToGraph|AppendToLayout|AppendToTable|AppendViolinPlot|AppendXYZContour|AutoPositionWindow|BackgroundInfo|Beep|BezierToPolygon|BombOut|BoundingBall|BoxSmooth|BrowseURL|BuildMenu|Button|cd|Chart|CheckBox|CheckDisplayed|ChooseColor|Close|CloseHelp|CloseMovie|CloseProc|ColorScale|ColorTab2Wave|Concatenate|ControlBar|ControlInfo|ControlUpdate|ConvertGlobalStringTextEncoding|ConvexHull|Convolve|CopyDimLabels|CopyFile|CopyFolder|CopyScales|Correlate|CreateAliasShortcut|CreateBrowser|Cross|CtrlBackground|CtrlFIFO|CtrlNamedBackground|Cursor|CurveFit|CustomControl|CWT|debug|Debugger|DebuggerOptions|DefaultFont|DefaultGuiControls|DefaultGuiFont|DefaultTextEncoding|DefineGuide|DelayUpdate|DeleteAnnotations|DeleteFile|DeleteFolder|DeletePoints|Differentiate|dir|Display|DisplayHelpTopic|DisplayProcedure|DoAlert|DoIgorMenu|DoUpdate|DoWindow|DoXOPIdle|DPSS|DrawAction|DrawArc|DrawBezier|DrawLine|DrawOval|DrawPICT|DrawPoly|DrawRect|DrawRRect|DrawText|DrawUserShape|DSPDetrend|DSPPeriodogram|Duplicate|DuplicateDataFolder|DWT|EdgeStats|Edit|EncryptProcedureFiles|ErrorBars|EstimatePeakSizes|Execute|ExecuteScriptText|ExperimentInfo|ExperimentModified|ExportGizmo|Extract|FastGaussTransform|FastOp|FBinRead|FBinWrite|FFT|FGetPos|FIFO2Wave|FIFOStatus|FilterFIR|FilterIIR|FindAPeak|FindContour|FindDuplicates|FindLevel|FindLevels|FindPeak|FindPointsInPoly|FindRoots|FindSequence|FindValue|FMaxFlat|FPClustering|fprintf|FPU|FReadLine|FSetPos|FStatus|FTPCreateDirectory|FTPDelete|FTPDownload|FTPUpload|FuncFit|FuncFitMD|GBLoadWave|GetAxis|GetCamera|GetFileFolderInfo|GetGizmo|GetLastUserMenuInfo|GetMarquee|GetMouse|GetSelection|GetWindow|GraphNormal|GraphWaveDraw|GraphWaveEdit|Grep|GroupBox|Hanning|HCluster|HDF5CloseFile|HDF5CloseGroup|HDF5Control|HDF5ConvertColors|HDF5CreateFile|HDF5CreateGroup|HDF5CreateLink|HDF5DimensionScale|HDF5Dump|HDF5DumpErrors|HDF5DumpState|HDF5FlushFile|HDF5ListAttributes|HDF5ListGroup|HDF5LoadData|HDF5LoadGroup|HDF5LoadImage|HDF5OpenFile|HDF5OpenGroup|HDF5SaveData|HDF5SaveGroup|HDF5SaveImage|HDF5UnlinkObject|HideIgorMenus|HideInfo|HideProcedures|HideTools|HilbertTransform|Histogram|ICA|IFFT|ImageAnalyzeParticles|ImageBlend|ImageBoundaryToMask|ImageComposite|ImageEdgeDetection|ImageFileInfo|ImageFilter|ImageFocus|ImageFromXYZ|ImageGenerateROIMask|ImageGLCM|ImageHistModification|ImageHistogram|ImageInterpolate|ImageLineProfile|ImageLoad|ImageMorphology|ImageRegistration|ImageRemoveBackground|ImageRestore|ImageRotate|ImageSave|ImageSeedFill|ImageSkeleton3d|ImageSnake|ImageStats|ImageThreshold|ImageTransform|ImageUnwrapPhase|ImageWindow|IndexSort|InsertPoints|InstantFrequency|Integrate|Integrate2D|IntegrateODE|Interp3DPath|Interp4DPath|Interpolate2|Interpolate3D|JCAMPLoadWave|JointHistogram|JSONSimple|KillBackground|KillControl|KillDataFolder|KillFIFO|KillFreeAxis|KillPath|KillPICTs|KillStrings|KillVariables|KillWaves|KillWindow|KillXOP|KMeans|Label|Layout|LayoutPageAction|LayoutSlideShow|Legend|LHNullOperation|LinearFeedbackShiftRegister|ListBox|ListPICTs|ListPRecs|LoadData|LoadExps|LoadPackagePreferences|LoadPICT|LoadWave|LoadXOP|Loess|LombPeriodogram|Make|MakeIndex|MarkPerfTestTime|MatrixBalance|MatrixConvolve|MatrixCorr|MatrixEigenV|MatrixFactor|MatrixFilter|MatrixGaussJ|MatrixGLM|MatrixInverse|MatrixLinearSolve|MatrixLinearSolveTD|MatrixLLS|MatrixLUBkSub|MatrixLUD|MatrixLUDTD|MatrixMultiply|MatrixMultiplyAdd|MatrixOP|MatrixReverseBalance|MatrixSchur|MatrixSolve|MatrixSparse|MatrixSVBkSub|MatrixSVD|MatrixTranspose|MeasureStyledText|MLLoadWave|Modify|ModifyBoxPlot|ModifyBrowser|ModifyCamera|ModifyContour|ModifyControl|ModifyControlList|ModifyFreeAxis|ModifyGizmo|ModifyGraph|ModifyImage|ModifyLayout|ModifyPanel|ModifyProcedure|ModifyTable|ModifyViolinPlot|ModifyWaterfall|MoveDataFolder|MoveFile|MoveFolder|MoveString|MoveSubwindow|MoveVariable|MoveWave|MoveWindow|MultiTaperPSD|MultiThreadingControl|NeuralNetworkRun|NeuralNetworkTrain|NewCamera|NewDataFolder|NewFIFO|NewFIFOChan|NewFreeAxis|NewGizmo|NewImage|NewLayout|NewMovie|NewNotebook|NewPanel|NewPath|NewWaterfall|Note|Notebook|NotebookAction|Open|OpenHelp|OpenNotebook|OpenProc|Optimize|ParseOperationTemplate|PathInfo|PauseForUser|PauseUpdate|PCA|PlayMovie|PlayMovieAction|PlaySound|PolygonOp|PopupContextualMenu|PopupMenu|Preferences|PrimeFactors|Print|printf|PrintGraphs|PrintLayout|PrintNotebook|PrintSettings|PrintTable|Project|PulseStats|PutScrapText|pwd|Python|PythonFile|Quit|RatioFromNumber|ReadVariables|Redimension|Remez|Remove|RemoveContour|RemoveFromGizmo|RemoveFromGraph|RemoveFromLayout|RemoveFromTable|RemoveImage|RemoveLayoutObjects|RemovePath|Rename|RenameDataFolder|RenamePath|RenamePICT|RenameWindow|ReorderImages|ReorderTraces|ReplaceText|ReplaceWave|Resample|ResumeUpdate|Reverse|Rotate|Save|SaveData|SaveExperiment|SaveGizmoCopy|SaveGraphCopy|SaveNotebook|SavePackagePreferences|SavePICT|SaveTableCopy|SetActiveSubwindow|SetAxis|SetBackground|SetDashPattern|SetDataFolder|SetDimLabel|SetDrawEnv|SetDrawLayer|SetFileFolderInfo|SetFormula|SetIdlePeriod|SetIgorHook|SetIgorMenuMode|SetIgorOption|SetIgorProcess|SetMarquee|SetProcessSleep|SetRandomSeed|SetScale|SetVariable|SetWaveLock|SetWaveTextEncoding|SetWindow|ShowDependency|ShowIgorMenus|ShowInfo|ShowTools|Silent|Sleep|Slider|Slow|Smooth|SmoothCustom|Sort|SortColumns|SoundInRecord|SoundInSet|SoundInStartChart|SoundInStatus|SoundInStopChart|SoundLoadWave|SoundSaveWave|SphericalInterpolate|SphericalTriangulate|SplitString|SplitWave|sprintf|sscanf|Stack|StackWindows|StatsAngularDistanceTest|StatsANOVA1Test|StatsANOVA2NRTest|StatsANOVA2RMTest|StatsANOVA2Test|StatsChiTest|StatsCircularCorrelationTest|StatsCircularMeans|StatsCircularMoments|StatsCircularTwoSampleTest|StatsCochranTest|StatsContingencyTable|StatsDIPTest|StatsDunnettTest|StatsFriedmanTest|StatsFTest|StatsHodgesAjneTest|StatsJBTest|StatsKDE|StatsKendallTauTest|StatsKSTest|StatsKWTest|StatsLinearCorrelationTest|StatsLinearRegression|StatsMultiCorrelationTest|StatsNPMCTest|StatsNPNominalSRTest|StatsQuantiles|StatsRankCorrelationTest|StatsResample|StatsSample|StatsScheffeTest|StatsShapiroWilkTest|StatsSignTest|StatsSRTest|StatsTTest|StatsTukeyTest|StatsVariancesTest|StatsWatsonUSquaredTest|StatsWatsonWilliamsTest|StatsWheelerWatsonTest|StatsWilcoxonRankTest|StatsWRCorrelationTest|STFT|StructFill|StructGet|StructPut|SumDimension|SumSeries|TabControl|Tag|TestOperation|Text2Bezier|TextBox|TextHistogram|ThreadGroupPutDF|ThreadStart|TickWavesFromAxis|Tile|TileWindows|timetest|TitleBox|ToCommandLine|ToolsGrid|Triangulate3d|Unwrap|UnzipFile|URLRequest|ValDisplay|WaveMeanStdv|WaveMeanStdv|WaveStats|WaveTracking|WaveTransform|wfprintf|WignerTransform|WindowFunction|XLLoadWave)\\b"
+			  }
+			]
+		},
+
+		"userfunctions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.igorpro",
+					"match": "(?i)\\b(\\w+)\\("
+				}
+			]
+		},
+
+		"preprocessors": {
+			"name": "meta.preprocessor.igorpro",
+			"match": "(?i)^\\s*(#ifdef|#ifndef|#if|#include|#endif)"
+		},
+
+		"pragmas": {
+			"patterns": [
+				{
+					"name": "meta.preprocessor.igorpro",
+					"match": "(?i)^\\s*(#pragma)\\s+(\\w+)\\b",
+					"captures":{
+						"1": {"name": "meta.preprocessor.igorpro" },
+						"2": {"name": "keyword.control.igorpro" }
+					}
+				}
+			]
+		}
+
+
+	},
+	"scopeName": "source.igorpro"}
