@@ -5,6 +5,10 @@
   "license": "MIT",
   "version": "1.0.0",
   "publisher": "Ben Murphy-Baum",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benmurphybaum/IgorProLS"
+  },
   "categories": [
     "Programming Languages"
   ],
