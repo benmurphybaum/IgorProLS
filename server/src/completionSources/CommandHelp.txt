@@ -1,1242 +1,1201 @@
--::-
---::--
-!::!
-!=::!=
-#define::#define
-#if-#elif-#endif::#if-#elif-#endif
-#if-#endif::#if-#endif
-#ifdef-#endif::#ifdef-#endif
-#ifndef-#endif::#ifndef-#endif
-#include::#include
-#pragma::#pragma
-#undef::#undef
-$::$
-%^::%^
-&::&
-&&::&&
-*::*
-/::/
-//:://
-? :::? :
-^::^
-|::|
-||::||
-~::~
-+::+
-++::++
-<::<
-<<::<<
-<=::<=
-==::==
->::>
->=::>=
->>::>>
-Abort::Abort [errorMessageStr ]
-AbortOnRTE::AbortOnRTE
-AbortOnValue::AbortOnValue abortCondition, abortCode
-abs::abs(num )
-acos::acos(num )
-acosh::acosh(num )
-AddFIFOData::AddFIFOData FIFOName, FIFO_channelExpr [, FIFO_channelExpr ]...
-AddFIFOVectData::AddFIFOVectData FIFOName, FIFO_channelKeyExpr [, FIFO_channelKeyExpr ]...
-AddListItem::AddListItem(itemStr, listStr  [, listSepStr  [, itemNum ]])
-AddMovieAudio::AddMovieAudio soundWave
-AddMovieFrame::AddMovieFrame [/PICT=pictName ]
-AddWavesToBoxPlot::AddWavesToBoxPlot [/W=winName /T=traceName /INST=traceInstance] wave [, wave ] ...
-AddWavesToViolinPlot::AddWavesToViolinPlot [/W=winName /T=traceName /INST=traceInstance] wave [, wave ] ...
-AdoptFiles::AdoptFiles [ flags ]
-AfterCompiledHook::AfterCompiledHook( )
-AfterFileOpenHook::AfterFileOpenHook(refNum, fileNameStr, pathNameStr, fileTypeStr, fileCreatorStr, fileKind )
-AfterMDIFrameSizedHook::AfterMDIFrameSizedHook(param )
-AfterWindowCreatedHook::AfterWindowCreatedHook(windowNameStr, winType )
-AiryA::airyA(x [, accuracy ])
-AiryAD::airyAD(x [, accuracy ])
-AiryB::airyB(x [, accuracy ])
-AiryBD::airyBD(x [, accuracy ])
-alog::alog(num )
-AnnotationInfo::AnnotationInfo(winNameStr, annotationNameStr  [, options  ] )
-AnnotationList::AnnotationList(winNameStr )
-APMath::APMath [/EX=exDigits /N=numDigits /V/Z] destStr = Expression
-Append::Append
-AppendBoxPlot::AppendBoxPlot [axis flags ][/W=winName /TN=traceName /VERT[=doVert] /CATL[=doCatLabels]] wave[, wave, ...] [vs xWave]
-AppendImage::AppendImage [/G=g /W=winName ][axisFlags ] matrix   [vs {xWaveName, yWaveName }]
-AppendLayoutObject::AppendLayoutObject [flags] objectType  objectName
-AppendMatrixContour::AppendMatrixContour [axisFlags ][/W=winName /F=formatStr ] zWave [vs {xWave, yWave }]
-AppendText::AppendText [/W=winName /N=name /NOCR[=n ]] textStr
-AppendToGizmo::AppendToGizmo [flags] keyword [=value ]
-AppendToGraph::AppendToGraph [/W=winName /B[=axisName ] /C=(r,g,b[,a]) /L[=axisName ] /NCAT/Q/R [=axisName ] /T[=axisName ]/VERT] waveName  [, waveName ] ... [vs xwaveName ]
-AppendToLayout::AppendToLayout [/G=g /I/M/R/T/S] objectSpec  [, objectSpec ]...
-AppendToTable::AppendToTable  [/W=winName ] columnSpec [, columnSpec ]...
-AppendViolinPlot::AppendViolinPlot [axis flags ][/W=winName /TN=traceName /VERT[=doVert] /CATL[=doCatLabels]] wave[, wave, ...] [vs xWave]
-AppendXYZContour::AppendXYZContour [axisFlags ][/W=winName /F=formatStr ] zWave [vs {xWave, yWave }]
-area::area(waveName  [, x1, x2  ] )
-areaXY::areaXY(XWaveName, YWaveName  [, x1, x2  ] )
-asin::asin(num )
-asinh::asinh(num )
-atan::atan(num )
-atan2::atan2(y1, x1 )
-atanh::atanh(num )
-AutoPositionWindow::AutoPositionWindow[/E][/M=m ][/R=relWindow ] [windowName ]
-AxisInfo::AxisInfo(graphNameStr, axisNameStr )
-AxisLabel::AxisLabel(graphNameStr, axisNameStr [, escapeBackslashes])
-AxisList::AxisList(graphNameStr )
-AxisValFromPixel::AxisValFromPixel(graphNameStr, axNameStr, pixel )
-BackgroundInfo::BackgroundInfo
-Base64Decode::Base64Decode(inputStr)
-Base64Encode::Base64Encode(inputStr)
-Beep::Beep
-BeforeDebuggerOpensHook::BeforeDebuggerOpensHook(errorInRoutineStr, stoppedByBreakpoint )
-BeforeExperimentSaveHook::BeforeExperimentSaveHook(refNum, fileNameStr, pathNameStr, fileTypeStr, fileCreatorStr, fileKind )
-BeforeFileOpenHook::BeforeFileOpenHook(refNum, fileNameStr, pathNameStr, fileTypeStr, fileCreatorStr, fileKind )
-BeforeUncompiledHook::BeforeUncompiledHook(changeCode, procedureWindowTitleStr, textChangeStr )
-Besseli::Besseli(n, z )
-Besselj::Besselj(n, z )
-Besselk::Besselk(n, z )
-Bessely::Bessely(n, z )
-bessi::bessI(n,x [, algorithm  [, accuracy  ]])
-bessj::bessJ(n,x [, algorithm  [, accuracy ]])
-bessk::bessK(n,x [, algorithm  [, accuracy ]])
-bessy::bessY(n,x [, algorithm  [, accuracy ]])
-beta::beta(a, b )
-betai::betai(a, b, x [, accuracy ])
-BezierToPolygon::BezierToPolygon [ /DSTX=destXWave /DSTY=dstYWave /FREE /NSEG=nseg ] bezXWave, bezYWave
-BinarySearch::BinarySearch(waveName, val )
-BinarySearchInterp::BinarySearchInterp(waveName, val )
-binomial::binomial(n, k )
-binomialln::binomialln(a, b )
-binomialNoise::binomialNoise(n, p )
-BombOut::
-BoundingBall::BoundingBall [/F/Z] scatterWave
-BoxSmooth::BoxSmooth box, srcWave, smoothedWave
-break::break
-BrowseURL::BrowseURL [/Z ] urlStr
-BuildMenu::BuildMenu menuNameStr
-Button::Button [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-ButtonControl::ButtonControl
-cabs::cabs(z )
-CameraWindow::CameraWindow
-CaptureHistory::CaptureHistory(refnum, stopCapturing )
-CaptureHistoryStart::CaptureHistoryStart()
-catch::The catch flow control keyword marks the beginning of code in a try-catch-endtry flow control construct for handling any abort conditions.See AlsoThe try-catch-endtry flow control statement for details.
-cd::cd dataFolderSpec
-CDFFunc::CDFFunc
-ceil::ceil(num )
-centerOfMass::centerOfMass(srcWave [, x1, x2] )
-centerOfMassXY::centerOfMassXY(waveX, waveY)
-cequal::cequal(z1, z2 )
-char2num::char2num(str )
-Chart::Chart ctrlName [ keyword = value  [, keyword = value ...] ]
-chebyshev::chebyshev(n, x )
-chebyshevU::chebyshevU(n, x )
-CheckBox::CheckBox [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-CheckboxControl::CheckboxControl
-CheckDisplayed::CheckDisplayed [/A/W=winName ] waveName [, waveName ]...
-CheckName::CheckName(nameStr, objectType   [, windowNameStr ])
-ChildWindowList::ChildWindowList(hostNameStr )
-ChooseColor::ChooseColor [/A[=a]/C=(r,g,b[,a] )]
-CleanupName::CleanupName(nameStr, beLiberal  [, maxBytes ])
-Close::Close [/A] [fileRefNum ]
-CloseHelp::CloseHelp [ /ALL /FILE=fileNameStr  /NAME=helpNameStr  /P=pathName ]
-CloseMovie::CloseMovie
-CloseProc::CloseProc  /NAME=procNameStr  [/P=PathName ] [/COMP=[compile ] [/D=[delete ]] [/SAVE[=savePathStr ]]
-cmplx::cmplx(realPart, imagPart )
-cmpnum::
-cmpstr::CmpStr(str1, str2  [, flags ])
-ColorScale::ColorScale [flags] [, keyword = value, ...] [axisLabelStr ]
-ColorTab2Wave::ColorTab2Wave colorTableName
-complex::complex
-Concatenate::Concatenate [ /DL /FREE /KILL /NP[=dim ] /O] [typeFlags ]  waveListStr, destWave
-conj::conj(z )
-Constant::Constant
-continue::continue
-ContourInfo::ContourInfo(graphNameStr, contourWaveNameStr, instanceNumber )
-ContourNameList::ContourNameList(graphNameStr, separatorStr )
-ContourNameToWaveRef::ContourNameToWaveRef(graphNameStr, contourNameStr )
-ContourZ::ContourZ(graphNameStr, contourNameStr, instance, x, y [,pointFindingTolerance] )
-ControlBar::ControlBar [ /EXP=e /L/R/B/T/W=graphName ]barHeight
-ControlInfo::ControlInfo [/W=winName ] controlName
-ControlNameList::ControlNameList(winNameStr  [, listSepStr  [, matchStr ] ])
-ControlUpdate::ControlUpdate [/A /W=winName ] [controlName ]
-ConvertGlobalStringTextEncoding::ConvertGlobalStringTextEncoding [flags ] originalTextEncoding, newTextEncoding , [string , string, ...]
-ConvertTextEncoding::ConvertTextEncoding(sourceTextStr , sourceTextEncoding , destTextEncoding , mapErrorMode, options )
-ConvexHull::ConvexHull [/C/E/I/S/T=tolerance /V/Z] xwave, ywave
-Convolve::Convolve [/A/C] srcWaveName, destWaveName [, destWaveName ]...
-CopyDimLabels::CopyDimLabels [flags] srcWave, destWave [, destWave]...
-CopyFile::CopyFile [/D /I[=i ]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFileStr ]  [ as destFileOrFolderStr ]
-CopyFolder::CopyFolder [/D/I[=i]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFolderStr ]  [ as destFolderStr ]
-CopyScales::CopyScales [/I/P] srcWaveName, waveName [, waveName ]...
-Correlate::Correlate [/AUTO/C/NODC] srcWaveName, destWaveName [, destWaveName ]...
-cos::cos(angle )
-cosh::cosh(num )
-cosIntegral::CosIntegral(z )
-cot::cot(angle )
-coth::coth(num )
-CountObjects::CountObjects(sourceFolderStr, objectType )
-CountObjectsDFR::CountObjectsDFR(dfr, objectType )
-cpowi::cpowi(num, ipow )
-CreateAliasShortcut::CreateAliasShortcut [/D/I[=i ]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [targetFileDirStr ]  [ as aliasFileStr ]
-CreateBrowser::CreateBrowser [/M] [ keyword = value  [, keyword = value ...] ]
-CreateDataObjectName::CreateDataObjectName(dfr, nameInStr, objectType, suffixNum, options)
-CreationDate::CreationDate(waveName )
-Cross::Cross [ /DEST=destWave  /FREE /T /Z] vectorA, vectorB  [, vectorC ]
-csc::csc(angle )
-csch::csch(x)
-CsrInfo::CsrInfo(cursorName  [, graphNameStr ])
-CsrWave::CsrWave(cursorName  [, graphNameStr  [, wantTraceName ]])
-CsrWaveRef::CsrWaveRef(cursorName  [, graphNameStr ])
-CsrXWave::CsrXWave(cursorName  [, graphNameStr ])
-CsrXWaveRef::CsrXWaveRef(cursorName  [, graphNameStr ])
-CTabList::CTabList()
-CtrlBackground::CtrlBackground [start[=startTicks ], period=deltaTicks, dialogsOK=d, noBurst=n, stop]
-CtrlFIFO::CtrlFIFO FIFOName, [deltaT=dt, note=noteStr, file=oRefNum, rfile=rRefNum, rdfile=rRefNum, doffset=dataOffset, dsize=dataSize, swap, size=s, start, stop, close, flush]
-CtrlNamedBackground::CtrlNamedBackground taskName , keyword  = value  [, keyword  = value ...]
-Cursor::Cursor [flags] cursorName  traceName  x_value
-CursorStyle::CursorStyle
-CurveFit::CurveFit [ flags ] fitType, [kwCWave=coefWaveName ,] waveName  [ flag parameters ]
-CustomControl::CustomControl [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-CWT::CWT [ flags ] srcWave
-DataFolderDir::DataFolderDir(mode [, dfr ] )
-DataFolderExists::DataFolderExists(dataFolderNameStr )
-DataFolderList::DataFolderList(matchStr, separatorStr [, dfr ] )
-DataFolderRefChanges::DataFolderRefChanges(dfr, changeType)
-DataFolderRefsEqual::DataFolderRefsEqual(dfr1 , dfr2 )
-DataFolderRefStatus::DataFolderRefStatus(dfr )
-date::date()
-date2secs::date2secs(year, month, day )
-datetime::DateTime
-DateToJulian::dateToJulian(year, month, day )
-Dawson::dawson(x )
-debug::
-Debugger::Debugger
-DebuggerOptions::DebuggerOptions [enable=en, debugOnAbort=doa, debugOnError=doe, NVAR_SVAR_WAVE_Checking=nvwc]
-default::default
-DefaultFont::DefaultFont [/U] "fontName "
-DefaultGuiControls::DefaultGUIControls [/W=winName /Mac/Win] [ appearance ]
-DefaultGuiFont::DefaultGUIFont [/W=winName /Mac/Win] group= {fNameStr, fSize, fStyle } [, ...]
-DefaultTab::DefaultTab
-DefaultTextEncoding::DefaultTextEncoding [encoding=textEncoding , overrideDefault=override ]
-defined::defined(symbol)
-DefineGuide::DefineGuide [/W=winName ] newGuideName = {[guideName1, val  [, guideName2 ]]} [, ...]
-DelayUpdate::DelayUpdate
-DeleteAnnotations::DeleteAnnotations [flags] [tagOffscreen, tagTraceHidden, invisible, offsetOffscreen, tooSmall[=size ]]
-DeleteFile::DeleteFile [/I/M=messageStr /P=pathName  /Z ]  [fileNameStr  ]
-DeleteFolder::DeleteFolder [/I/M=messageStr /P=pathName /Z ]  [folderNameStr  ]
-DeletePoints::DeletePoints [/M=dim ] startElement, numElements, waveName [, waveName ]...
-deltax::deltax(waveName )
-DFREF::DFREF
-Differentiate::Differentiate [/DIM = d  /EP=e  /METH=m  /P ][typeFlags ] yWaveA  [/X=xWaveA ] [/D=destWaveA ][, yWaveB  [/X=xWaveB ][/D=destWaveB ][, ...]]
-digamma::digamma(x )
-dilogarithm::Dilogarithm(z)
-DimDelta::DimDelta(waveName, dimNumber )
-DimOffset::DimOffset(waveName, dimNumber )
-DimSize::DimSize(waveName, dimNumber )
-dir::Dir [dataFolderSpec ]
-Display::Display [/B[=axisName /HIDE=h /FG=(gLeft, gTop, gRight, gBottom ) /HOST=hcSpec /I/K=k /L[=axisName]/M /N=name /PG=(gLeft, gTop, gRight, gBottom )/R[=axisName ] /T[=axisName ] /VERT/W=(left, top, right, bottom )] [waveName [,waveName ] ... [vs xwaveName ]] [as titleStr ]
-DisplayHelpTopic::DisplayHelpTopic [/K=k  /Z] TopicString
-DisplayProcedure::DisplayProcedure [/B=winTitleOrName  /L=lineNum  /W=procWinTitle ] [functionOrMacroNameStr ]
-DoAlert::DoAlert [/T=titleStr] alertType, promptStr
-DoIgorMenu::DoIgorMenu [/C /OVRD] MenuNameStr, MenuItemStr
-DoPrompt::DoPrompt [/HELP=helpStr ] dialogTitleStr, variable  [, variable ]...
-double::double
-DoUpdate::DoUpdate [ /E=e  /W=targWin  /SPIN=ticks ]
-do-while::do		<code>	while (<expression>)
-DoWindow::DoWindow [/B[=bname ]/C/D/F/H/HIDE=h /K/N/R/W=targWin ] [windowName ]
-DoXOPIdle::DoXOPIdle
-DPSS::DPSS [flags] numPoints, numWindows
-DrawAction::DrawAction [/L=layerName /W=winName  ] keyword = value [, keyword = value ...]
-DrawArc::DrawArc [/W=winName /X/Y] xOrg, yOrg, arcRadius, startAngle, stopAngle
-DrawBezier::DrawBezier [/W=winName /ABS] xOrg, yOrg, hScaling, vScaling, xWaveName, yWaveName
-DrawLine::DrawLine [/W=winName ] x0, y0, x1, y1
-DrawOval::DrawOval [/W=winName ] left, top, right, bottom
-DrawPICT::DrawPICT [/W=winName ][/RABS ] left, top, hScaling, vScaling, pictName
-DrawPoly::DrawPoly [/W=winName /ABS] xorg, yorg, hScaling, vScaling, xWaveName, yWaveName
-DrawRect::DrawRect [/W=winName ] left, top, right, bottom
-DrawRRect::DrawRRect [/W=winName ] left, top, right, bottom
-DrawText::DrawText [/W=winName ] x0, y0, textStr
-DrawUserShape::DrawUserShape [/W=winName /MO=options] x0, y0, x1, y1, userFuncName, textString, privateString
-DrawUserShape::DrawUserShape
-DSPDetrend::DSPDetrend [/F=function /M=maskWave /P=polyOrder /Q]  srcWave
-DSPPeriodogram::DSPPeriodogram [/DB /DBR=ref  /COHR /DLSG /NODC=val  /NOR=value  /Q /SEGN={ptsPerSegment , overlapPts } /R=[start, end ] /R=(startX, endX) /WIN=windowKind  /Z ] srcWave [, srcWave2 ]
-Duplicate::Duplicate [/O/R=(startX,endX )[(startY, endY )...]] [typeFlags ]  srcWaveName, destWaveName [, destWaveName ]...
-DuplicateDataFolder::DuplicateDataFolder [ /O=options /Z ] sourceDataFolderSpec, destDataFolderSpec
-DWT::DWT [/I/S/D/P=num/T=type /N=num /V=value] srcWaveName, destWaveName
-e::e
-EdgeStats::EdgeStats [/A=avgPts /B=box /F=frac /L=(startLevel, endLevel ) /P /Q /R=(startX, endX ) /T=dx ] waveName
-Edit::Edit [ /FG=(gLeft, gTop, gRight, gBottom) /HIDE=h /HOST=hcSpec /I/K=k /M/N=name/W=(left, top, right, bottom)] [columnSpec [,columnSpec]...] [as titleStr]
-ei::ei(x )
-ellipticE::EllipticE(x)
-ellipticK::EllipticK(x)
-EncryptProcedureFiles::
-End::End
-EndMacro::EndMacro
-EndStructure::EndStructure
-endtry::The endtry flow control keyword marks the end of a try-catch-endtry flow control construct.See AlsoThe try-catch-endtry flow control statement for details.
-enoise::enoise(num  [, RNG ])
-equalWaves::EqualWaves(waveA, waveB , selector  [, tolerance ])
-erf::erf(num  [, accuracy ])
-erfc::erfc(num  [, accuracy ])
-erfcw::erfcw(z )
-erfcx::erfcx(num )
-ErrorBars::ErrorBars [/W=winName /CLIP=clip /L=lineThick /T=thick /X=xWidth /Y=yWidth /RGB=strokeColor ] traceName, mode [errorSpecification ]
-EstimatePeakSizes::EstimatePeakSizes [/B=baseWave ] [/X=xWave ] [/E=bothEdgesWave ] edgePct, maxWidth, box, npks, peakCentersWave, peakWave, peakAmplitudesWave, peakWidthsWave
-Execute::Execute [/Z] cmdStr
-ExecuteScriptText::ExecuteScriptText [/B /W=waitTime /UNQ /Z] textStr
-exists::exists(objNameStr )
-exp::exp(num )
-ExperimentInfo::ExperimentInfo [ /Q[=quiet ] ] [ keyword=value [, keyword=value ...] ]
-ExperimentModified::ExperimentModified  [newModifiedState ]
-expInt::expInt(n, x )
-expIntegralE1::ExpIntegralE1(z )
-expNoise::expNoise(b )
-ExportGizmo::ExportGizmo [flags] keyword [=value]
-Extract::Extract [ /FREE /INDX /O ][ typeFlags ] srcWave, destWave, LogicalExpression
-factorial::factorial(n )
-Faddeeva::Faddeeva(z)
-fakedata::FakeData(waveName )
-FastGaussTransform::FastGaussTransform [/AERR=aprxErr, /WDTH=h, /OUTW=locWave, /OUT1={x1,nx,x2 },  /OUT2={x1,nx,x2,y1,ny,y2 }, /OUT3={x1,nx,x2,y1,ny,y2,z1,nz,z2 }, /Q, /RX=rx, /RY=ry, /TET=nTerms, /Z] srcLocationsWave, srcWeightsWave
-FastOp::FastOp destWave = prod1 [± prod2  [± prod3 ]]
-faverage::faverage(waveName  [, x1, x2  ] )
-faverageXY::faverageXY(XWaveName, YWaveName  [, x1, x2  ] )
-FBinRead::FBinRead [/B[=b ]/F=f ] refNum, objectName
-FBinWrite::FBinWrite [/B[=b ]/F=f ] refNum, objectName
-FetchURL::FetchURL(urlStr )
-FFT::FFT [flags]  srcWave
-FGetPos::FGetPos refNum
-FIFO2Wave::FIFO2Wave [/R=[startPoint,endPoint ]/S=s ] FIFOName, channelName, waveName
-FIFOStatus::FIFOStatus [/Q] FIFOName
-FilterFIR::FilterFIR [/COEF[=coefsWaveName ] /DIM= d /E=endEffect  /ENDV={sv[,ev]} /HI={f1, f2, n } /LO={f1, f2, n } /NMF={fc, fw [, eps, nMult ]} /WINF=windowKindName] waveName [, waveName ]...
-FilterIIR::FilterIIR [/CASC /COEF[=coefsWaveName] /DIM=d /ENDV=ev /HI=fHigh  /LO=fLow /N={fNotch, notchQ } /ORD=order /Z=z /ZP] [waveName , ... ]
-FindAPeak::FindAPeak [/B=baseWaveName ] minamp, pol, box, peakWave [ (startX,endX ) ]
-FindContour::FindContour [/DSTX=destXWave /DSTY=dstYWave ] matrixWave, level
-FindDimLabel::FindDimLabel(waveName, dimNumber, labelString )
-FindDuplicates::FindDuplicates [flags ] srcWave
-FindLevel::FindLevel [/B=box /EDGE=e /P/Q/R=(startX,endX )/T=dx ] waveName, level
-FindLevels::FindLevels [/B=box /D=destWaveName /DEST=destWaveName /EDGE=e /M=minWidthX /N=maxLevels /P/Q  /R=(startX,endX)/T=dx]waveName, level
-FindListItem::FindListItem(itemStr, listStr  [, listSepStr  [, start  [, matchCase ]]])
-FindPeak::FindPeak [/B=box /I/M=minAmp /N/P/Q/R=(startX,endX )] waveName
-FindPointsInPoly::FindPointsInPoly xWaveName, yWaveName, xPolyWaveName, yPolyWaveName
-FindRoots::FindRoots [/B=[doBracket ]][/F=trustRegion ] [/H=highBracket  /L=lowBracket ] [/I=maxIters ] [/Q] [/T=tol ] [/X=startXSpec ] funcspec, pWave  [, funcspec, pwave  [, ...]]
-FindSequence::FindSequence [/I=iValueWave /M=match  /R=reverse  /S=start /T=tolerance /U=uValueWave /V=rValueWave /Z] srcWave
-FindValue::FindValue [/I=iValue /S=start /T=tolerance /U=uValue /V=rValue /Z] srcWave
-FitFunc::FitFunc
-FlateDecode::
-FlateEncode::
-floor::floor(num )
-FMaxFlat::FMaxFlat [/SYM[=sym] /Z[=z] ] beta, gamma, coefsWave
-FontList::FontList(separatorStr  [, options ])
-FontSizeHeight::FontSizeHeight(fontNameStr, fontSize, fontstyle  [,appearanceStr ] )
-FontSizeStringWidth::FontSizeStringWidth(fontNameStr, fontSize, fontstyle, theStr [,appearanceStr] )
-for-endfor::for(<initialization>; <continuation test>; <update>)		<code>	endfor
-for-var-in-wave::for(<type> varName : <wave>)		<code>	endfor
-FPClustering::FPClustering [/NOR][/SHUB=startHub][/MAXR=maxRad] [/Q/Z] srcWave
-fprintf::fprintf refNum,formatStr  [, parameter]...
-FPU::
-FReadLine::FReadLine [/N=n /ENCG=textEncoding /T=termcharStr ] refNum, stringVarName
-FresnelCos::fresnelCos(x )
-FresnelSin::fresnelSin(x )
-FSetPos::FSetPos refNum, filePos
-FStatus::FStatus refNum
-FTPCreateDirectory::FTPCreateDirectory [ /N=portNumber /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr
-FTPDelete::FTPDelete [ /D /N=portNumber /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr
-FTPDownload::FTPDownload [ /D /I/M=messageStr /N=portNumber /O[=mode]/P=pathName /S=showProgress /T=transferType /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr, localPathStr
-FTPUpload::FTPUpload [ /D /I/M=messageStr /N=portNumber /O[=mode]/P=pathName /S=showProgress /T=transferType /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr, localPathStr
-FuncFit::FuncFit [ flags ] fitFuncName, cwaveName, waveName  [ flag parameters ]
-FuncFitMD::FuncFitMD [ flags ] fitFuncName, cwaveName, waveName  [ flag parameters ]
-FUNCREF::FUNCREF
-FuncRefInfo::FuncRefInfo(funcRef )
-Function::Function [ /C /D /S /DF /WAVE ]
-FunctionInfo::FunctionInfo(functionNameStr [, procedureWinTitleStr ])
-FunctionList::FunctionList(matchStr, separatorStr, optionsStr )
-FunctionPath::FunctionPath(functionNameStr)
-GalleryGlobal::GalleryGlobal
-gamma::gamma(num )
-gammaEuler::gammaEuler
-gammaInc::gammaInc(a, x  [, upperTail ])
-gammaNoise::gammaNoise(a [,b ])
-gammln::gammln(num  [, accuracy ])
-gammp::gammp(a, x  [, accuracy ])
-gammq::gammq(a, x  [, accuracy ])
-Gauss::Gauss(x,xc,wx[,y,yc,wy [,z,zc,wz [,t,tc,wt ]]])
-Gauss1D::Gauss1D(w, x )
-Gauss2D::Gauss2D(w, x, y )
-GBLoadWave::GBLoadWave [flags] fileNameStr
-gcd::gcd(A, B )
-GeometricMean::GeometricMean(a, b)
-GetAxis::GetAxis [/W=winName /Q] axisName
-GetBrowserLine::GetBrowserLine (fullPathStr [, mode])
-GetBrowserSelection::GetBrowserSelection (index [, mode ])
-GetCamera::GetCamera [/DEF/Q /W=winName /Z ]  keyword=value
-GetDataFolder::GetDataFolder(mode [, dfr ] )
-GetDataFolderDFR::GetDataFolderDFR( )
-GetDefaultFont::GetDefaultFont(winName )
-GetDefaultFontSize::GetDefaultFontSize(graphNameStr, axisNameStr )
-GetDefaultFontStyle::GetDefaultFontStyle(graphNameStr, axisNameStr )
-GetDimLabel::GetDimLabel(waveName, dimNumber, dimIndex )
-GetEnvironmentVariable::GetEnvironmentVariable(varName)
-GetErrMessage::GetErrMessage(errorCode [, substitutionOption ])
-GetFileFolderInfo::GetFileFolderInfo [/D /P=pathName /Q /UTC[=u] /Z[=z]] [fileOrFolderNameStr]
-GetFormula::GetFormula(objName )
-GetGizmo::GetGizmo [/N/Z] keyword  [=value ]
-GetIndependentModuleName::GetIndependentModuleName()
-GetIndexedObjName::GetIndexedObjName(sourceFolderStr, objectType, index )
-GetIndexedObjNameDFR::GetIndexedObjNameDFR(dfr, objectType, index )
-GetKeyState::GetKeyState(flags)
-GetLastUserMenuInfo::GetLastUserMenuInfo
-GetMarquee::GetMarquee [/K/W=winName  /Z] [axisName [, axisName ]]
-GetMouse::GetMouse [ /W=winName ]
-GetRTErrMessage::GetRTErrMessage()
-GetRTError::GetRTError(flag )
-GetRTLocation::GetRTLocation(sleepMS )
-GetRTLocInfo::GetRTLocInfo(code )
-GetRTStackInfo::GetRTStackInfo(selector )
-GetScrapText::GetScrapText()
-GetSelection::GetSelection winType, winName, bitflags
-GetUserData::GetUserData(winName, objID, userdataName )
-GetWavesDataFolder::GetWavesDataFolder(waveName, kind )
-GetWavesDataFolderDFR::GetWavesDataFolderDFR(waveName )
-GetWindow::GetWindow [/Z] winName  keyword
-GetWindowBrowserSelection::
-GizmoInfo::GizmoInfo(nameStr, key )
-GizmoPlot::GizmoPlot
-GizmoScale::GizmoScale(dataValue, dimNumber [, gizmoNameStr ] )
-gnoise::gnoise(num [, RNG ])
-Graph::Graph
-GraphMarquee::GraphMarquee
-GraphNormal::GraphNormal [/W=winName ]
-GraphStyle::GraphStyle
-GraphWaveDraw::GraphWaveDraw [/W=winName /B/F[=f ]/L/M/O/R/T] [yWave, xWave]
-GraphWaveEdit::GraphWaveEdit [/M /NI /ND /T=t  /W=winName ] traceName
-Grep::Grep [ flags ] [srcFileStr ] [srcTextWaveName] [ as [destFileOrFolderStr ]										[, destTextWaveName] ]
-GrepList::GrepList(listStr, regExprStr [,reverse  [, listSepStr ]] )
-GrepString::GrepString(string, regExprStr )
-GridStyle::GridStyle
-GroupBox::GroupBox [/Z] ctrlname  [ keyword = value  [, keyword = value ...] ]
-GuideInfo::GuideInfo(winNameStr, guideNameStr )
-GuideNameList::GuideNameList(winNameStr, optionsStr )
-Hanning::Hanning waveName [, waveName ]...
-Hash::Hash(inputStr, method )
-HCluster::HCluster [ /ITYP=it /OTYP=ot /LINK=nm /DISS=dm /P=pow /VARW=varWave /DEST={dMatrixName, dendrodrogramName} /O ] sourceWave
-hcsr::hcsr(cursorName  [, graphNameStr ])
-HDF5AttributeInfo::HDF5AttributeInfo(locationID, objectNameStr, objectType, attributeNameStr, options, di )
-HDF5CloseFile::HDF5CloseFile [ /A /Z ] fileID
-HDF5CloseGroup::HDF5CloseGroup [ /Z ] groupID
-HDF5Control::HDF5Control [ keyword = value  [, keyword = value ...] ]
-HDF5ConvertColors::
-HDF5CreateFile::HDF5CreateFile [ /I /O /P=pathName /Z ] fileID as fileNameStr
-HDF5CreateGroup::HDF5CreateGroup [ /Z ] locationID, nameStr, groupID
-HDF5CreateLink::HDF5CreateLink [ /EXT={pathName, filePath} /HARD=makeHardLink /Q /Z ] targetLocationID, targetName, linkLocationID, linkName
-HDF5DataInfo::HDF5DataInfo
-HDF5DatasetInfo::HDF5DatasetInfo(locationID, datasetNameStr, options, di )
-HDF5DatatypeInfo::HDF5DatatypeInfo
-HDF5DimensionScale::HDF5DimensionScale [ /Z ] [ keyword = value  [, keyword = value ...] ]
-HDF5Dump::HDF5Dump [ [ /A[=attributeNameStr ] /ATTR=dumpAttributes /D=datasetNameStr /G=groupNameStr /H=dumpHeaderOnly /I=dumpObjectIDs /L=linkNameStr /Q /P=pathName /PROP=dumpProperties /R=dumpAsASCII /T=datatypeNameStr /TIME=timeInSeconds /W=widthInColumns /Z ] fileNameStr
-HDF5DumpErrors::HDF5DumpErrors [ /CLR=clear /Q ]
-HDF5DumpState::
-HDF5FlushFile::HDF5FlushFile [/A /Z ] fileID
-HDF5LibraryInfo::HDF5LibraryInfo(options)
-HDF5LinkInfo::HDF5LinkInfo(locationID, pathStr, options, li)
-HDF5LinkInfoStruct::HDF5LinkInfoStruct
-HDF5ListAttributes::HDF5ListAttributes [ /SEP=separatorStr /TYPE=type /Z ] locationID, nameStr
-HDF5ListGroup::HDF5ListGroup [ /CONT=continue /ERR=errorFlags /F /R[=mode ] /ORDR=order /SEP=separatorStr /TYPE=typeMask /Z ] locationID, nameStr
-HDF5LoadData::HDF5LoadData [ /A=attributeNameStr /COMP={mode, memberName} /ENUM=enumMode /GRPH=showInGraph /IGOR=attributesMask /N=name /O /OPTS=options /Q /SLAB=slabWave /T=showInTable /TRAN=transpose /TYPE=objectType /VAR=varMode /Z ] locationID, nameStr
-HDF5LoadGroup::HDF5LoadGroup [ /CONT=continue /ENUM=enumMode /IGOR=attributesMask /IMAG=lookForFormalImages /L=loadFlags /N=name /O /ORDR=order /OPTS=options /R[=mode ] /T[=topLevelName ] /TRAN=transpose /VAR=varMode /Z ] dataFolderSpec, locationID, nameStr
-HDF5LoadImage::HDF5LoadImage [ /CMDL=colorModelStr /GRPH=showInGraph /N=name /O /PAL=paletteNumber /PALN=palNameStr /SCLI={offset, multiplier, min, max, round} /SCLP={offset, multiplier, min, max, round} /Q /Z ] locationID, nameStr
-HDF5OpenFile::HDF5OpenFile [ /I /P=pathName /R /Z ] fileID [as fileNameStr ]
-HDF5OpenGroup::HDF5OpenGroup [ /Z ] locationID, nameStr, groupID
-HDF5SaveData::HDF5SaveData [ /A={attributeNameStr [, options ]} /APND=append /ENUM={enumList [, keyValSepStr, keyValTermStr ]} /IGOR=attributesMask /GZIP={compressionLevel, shuffle} /LAYO={layout [, chunkSizeList ]} /MAXD={maxDimSizeList} /O /OPTS=options /REF=refMode /SLAB=slabWave /STRF={fixedLength,paddingMode,charset} /TRAN=transpose /WRIT=write /Z ] wave, locationID [, nameStr ]
-HDF5SaveDataHook::HDF5SaveDataHook(s)
-HDF5SaveDataHookStruct::HDF5SaveDataHookStruct
-HDF5SaveGroup::HDF5SaveGroup [ flags ] dataFolderSpec, locationID, nameStr
-HDF5SaveImage::HDF5SaveImage [ /COMP=compatibility /CTAB={colorTable, zMin, zMax, reverse} /DIR /GRAY /O /PALD=palDatasetStr /PALN=palNameStr /PALW=paletteWave /Z ] wave, locationID [, nameStr ]
-HDF5TypeInfo::HDF5TypeInfo(locationID, datasetOrGroupNameStr, attributeNameStr, memberName, options, dti)
-HDF5UnlinkObject::HDF5UnlinkObject [ /Z ] locationID, nameStr
-hermite::hermite(n, x )
-hermiteGauss::hermiteGauss(n, x )
-HideIgorMenus::HideIgorMenus  [MenuNameStr  [,MenuNameStr ] ...
-HideInfo::HideInfo [/W=winName ]
-HideProcedures::HideProcedures
-HideTools::HideTools  [/W=winName /A]
-HilbertTransform::HilbertTransform [flags] srcWave
-Histogram::Histogram [ flags ] srcWaveName, destWaveName
-HyperG0F1::hyperG0F1(b, z)
-HyperG1F1::hyperG1F1(a, b, z)
-HyperG2F1::hyperG2F1(a, b, c, z)
-HyperGNoise::hyperGNoise(m, n, k )
-HyperGPFQ::hyperGPFQ(waveA, waveB, z)
-i::i
-ICA::ICA [flags] srcWave
-if-else-endif::if (<expression>)		<code>	else		<code>	endif
-if-elseif-endif::if (<expression>)		<code>	elseif (<expression>)		<code>	else		<code>	endif
-if-endif::if (<expression>)		<code>	endif
-IFFT::IFFT [flags] srcWave
-IgorBeforeNewHook::IgorBeforeNewHook(igorApplicationNameStr )
-IgorBeforeQuitHook::IgorBeforeQuitHook(unsavedExp, unsavedNotebooks, unsavedProcedures )
-IgorInfo::IgorInfo(selector )
-IgorMenuHook::IgorMenuHook(isSelection, menuStr, itemStr, itemNo, activeWindowStr, wType )
-IgorQuitHook::IgorQuitHook(igorApplicationNameStr )
-IgorStartOrNewHook::IgorStartOrNewHook(igorApplicationNameStr )
-IgorVersion::IgorVersion()
-IgorVersion::IgorVersion
-ilim::ilim
-imag::imag(z )
-ImageAnalyzeParticles::ImageAnalyzeParticles  [ flags ] keyword  imageMatrix
-ImageBlend::ImageBlend [/A=alpha /W=alphaWave ] srcWaveA, srcWaveB  [, destWave ]
-ImageBoundaryToMask::ImageBoundaryToMask width=w, height=h, xwave=xwavename, ywave=ywavename  [, scalingWave=scalingWaveName,  [seedX=xVal, seedY=yVal ]]
-ImageComposite::ImageComposite [/Z /FREE /DEST=destWave] srcImageA, srcImageB
-ImageEdgeDetection::ImageEdgeDetection [flags] Method  ImageMatrix
-ImageFileInfo::ImageFileInfo [/P=pathName ] fileNameStr
-ImageFilter::ImageFilter [/N=n /O/P=p /b=b /R=roiWave ] Method  dataMatrix
-ImageFocus::ImageFocus [/ED=edepth /METH=method /Q/Z] stackWave
-ImageFromXYZ::ImageFromXYZ [/AS] xyzWave , dataMatrix , countMatrix
-ImageGenerateROIMask::ImageGenerateROIMask [/E=e /I=i /W=winName ] imageInstance
-ImageGLCM::ImageGLCM [/Z /FREE /D=distance /E=structure /P=plane /HTFP /DEST=destGLCM /DETP=destParamWave] srcWave
-ImageHistModification::ImageHistModification [/A [/B=bins ][/C=cFactor ]] [/H=hRegions ] [/O/I] [/R=roiSpec ][/V=vRegions ][/W=waveName ] ImageMatrix
-ImageHistogram::ImageHistogram [/I/P=plane /R=roiWave /S] imageMatrix
-ImageInfo::ImageInfo(graphNameStr, imageWaveNameStr, instanceNumber )
-ImageInterpolate::ImageInterpolate [ flags ] Method  srcWave
-ImageLineProfile::ImageLineProfile  [/P=plane /S/SC/V] xWave=xwave, yWave=ywave, srcwave=srcwave [, width=value, widthWave=wWave ]
-ImageLoad::ImageLoad  [ flags ] [fileNameStr ]
-ImageMorphology::ImageMorphology [/E=SE#  /I=iterations /L/N/O/R=roiSpec  /S= StructureElement  /W=whiteValue  /X=xOrigin  /Y=yOrigin /Z=zOrigin ] Method  ImageMatrix
-ImageNameList::ImageNameList(graphNameStr, separatorStr )
-ImageNameToWaveRef::ImageNameToWaveRef(graphNameStr, imageNameStr )
-ImageRegistration::ImageRegistration [flags] [testMask=testMaskWave ] [refMask=refMaskWave ] testWave=imageWave1, refWave=imageWave2
-ImageRemoveBackground::ImageRemoveBackground /R=roiWave  [/F/O/W][/P=polynomial order ] srcWave
-ImageRestore::ImageRestore [/Z /ITER=iterations  /DEST=destWave] srcWave=wSrc , psfWave=wPSF  [, relaxationGamma=h , startingImage=wRecon ]
-ImageRotate::ImageRotate [flags] ImageMatrix
-ImageSave::ImageSave [ flags ] waveName  [ [as] fileNameStr ]
-ImageSeedFill::ImageSeedFill [/O][/B=backgroundValue ][/C][/K=killCount ] [/R=roiWave ] [adaptive=factor, fillNumber=num, fuzzyCenter=fcVal, fuzzyProb=fpVal, fuzzyScale=fsVal, fuzzyWidth=fwVal, min=minval, max=maxval ], seedP=row, seedQ=col, seedR=layer, seedX=xLoc, seedY=yLoc, seedZ=zLoc, target=setValue, srcWave=srcImage
-ImageSkeleton3d::ImageSkeleton3D [/DEST=destWave /METH=method /Z ] srcWave
-ImageSnake::ImageSnake [flags ] srcWave
-ImageStats::ImageStats [ flags ] imageWave
-ImageThreshold::ImageThreshold [flags] imageMatrix
-ImageTransform::ImageTransform [ flags ] Method imageMatrix
-ImageUnwrapPhase::ImageUnwrapPhase  [/Q] [/E] [/M=method ] [/L] [/R=RoiWave ] [/MAX=len ] [qualityWave=qWave,] srcWave=waveName
-ImageWindow::ImageWindow [/I][/O][/P=param ] method  srcWave
-IndependentModule::IndependentModule
-IndependentModuleList::IndependentModuleList( listSepStr )
-IndexedDir::IndexedDir(pathName, index, flags [, separatorStr ])
-IndexedFile::IndexedFile(pathName, index, fileTypeOrExtStr  [, creatorStr, separatorStr ])
-IndexSort::IndexSort [ /DIML ] indexWaveName, sortedWaveName [, sortedWaveName ]...
-IndexToScale::IndexToScale(wave, index, dim)
-Inf::Inf
-InsertPoints::InsertPoints [ /M=dim /V=value ] beforeElement, numElements, waveName [, waveName ]...
-InstantFrequency::InstantFrequency [flags] srcWave [ (startX,endX) ]
-int::int
-int64::int64
-Integrate::Integrate [/DIM = d  /METH=m  /P/T][typeFlags ] yWaveA  [/X = xWaveA ][/D = destWaveA ] [, yWaveB  [/X = xWaveB ][/D = destWaveB ][, ...]]
-Integrate1D::Integrate1D(UserFunctionName, min_x, max_x [, options [, count ] [, pWave ]]])
-Integrate2D::Integrate2D [/Q /Z=zFlag /OPTS=options] [ keyword = value ...]
-IntegrateODE::IntegrateODE [/E=eps /F=errMethod  /M=m /Q= quiet /R=(startX, endX) /S=waveName /STOP={stopWave, mode} /U=u  /X=xvaluespec  /XRUN={dx0, Xmax} /CVOP={solver, jacobian, extendedErrors}] derivFunc,  cwaveName,  ywaveSpec
-interp::interp(x1, xwaveName, ywaveName )
-Interp2D::Interp2D (srcWaveName, x, y)
-Interp3D::Interp3D(srcWave, x, y, z [, triangulationWave ])
-Interp3DPath::Interp3DPath 3dWave tripletPathWave
-Interp4D::
-Interp4DPath::
-Interpolate2::Interpolate2 [flags ] [ xWave , ] yWave
-Interpolate3D::Interpolate3D [/Z ] /RNGX={x0,dx,nx}/RNGY={y0,dy,ny}/RNGZ={z0,dz,nz} /DEST=dataFolderAndName, triangulationWave=tWave, srcWave=sWave
-inverseERF::inverseErf(x )
-inverseERFC::inverseErfc(x )
-ItemsInList::ItemsInList(listStr  [, listSepStr ])
-j::j
-JacobiCn::JacobiCn(x, k )
-JacobiSn::JacobiSn(x, k )
-JCAMPLoadWave::JCAMPLoadWave /A[=baseName ] /D /H /I /N[=baseName ] /O /P=pathName /Q /R /V /W [ fileNameStr ]
-jlim::jlim
-JointHistogram::JointHistogram [flags] wave1, wave2 [, wave3, wave4]
-JSONSimple::
-JulianToDate::JulianToDate(julianDay, format )
-KillBackground::KillBackground
-KillControl::KillControl [/W=winName ] controlName
-KillDataFolder::KillDataFolder [/Z] dataFolderSpec
-KillFIFO::KillFIFO FIFOName
-KillFreeAxis::KillFreeAxis [/W=winName ] axisName
-KillPath::KillPath [/A/Z] pathName
-KillPICTs::KillPICTs [/A/Z] [PICTName [, PICTName ]...]
-KillStrings::KillStrings [/A/Z] [stringName [, stringName ]...]
-KillVariables::KillVariables [/A/Z] [variableName [, variableName ]...]
-KillWaves::KillWaves [/A/F/Z] waveName [, waveName ]...
-KillWindow::KillWindow [/Z] winName
-KillXOP::
-KMeans::KMeans [/CAN /DEAD=method  /DIST=mode  /INIT=method  /INW=iWave /NCLS=num  /OUT=format  /SEED=val  /TER=method  /TERN=num /Z] populationWave
-Label::Label [/W=winName /Z] axisName, labelStr
-Laguerre::laguerre(n, x)
-LaguerreA::laguerreA(n, k, x)
-LaguerreGauss::laguerreGauss(p, m, r)
-LambertW::LambertW(z, branch)
-LastExpermentLoadTime::
-Layout::Layout [/A=(rows,cols)/B=(r,g,b[,a]) /C=color /G=g  /HIDE=h /I/K=k /M /P=orientation  /R/S/T /W=(left,top,right,bottom)] [objectSpec [, objectSpec ]...] [as titleStr ]
-Layout::Layout
-LayoutInfo::LayoutInfo(winNameStr, itemNameStr )
-LayoutMarquee::LayoutMarquee
-LayoutPageAction::LayoutPageAction [/W=winName ] [ keyword = value  [, keyword = value ...] ]
-LayoutSlideShow::LayoutSlideShow [/W=winName ] [keyword = value ] ...
-LayoutStyle::LayoutStyle
-leftx::leftx(waveName )
-Legend::Legend [/A=attach /C/E[=exterior]/F=frame /H=legendSymbolWidth /H={legendSymbolWidth, minThickness, maxThickness } /J/K /M[=saMeSize]/N=name /R=newName /S=style /T=tabSpec /V=vis /W=winName /X=xoffset /Y=yoffset ] [legendStr ]
-LegendreA::legendreA(n, m, x )
-LHNullOperation::
-limit::limit(num, low, high )
-LinearFeedbackShiftRegister::LinearFeedbackShiftRegister /N=nbits [/TAPS={t1, t2, ...} /TAPB=tapbits /MAX=index /MROR[=mirror] /INIT=initialValue /STOP=stopValue /LEN=length /DEST=destWave /FREE /MODE=doBitTrain ]
-ListBox::ListBox [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-ListBoxControl::ListBoxControl
-ListMatch::ListMatch(listStr, matchStr [, listSepStr ] )
-ListToTextWave::ListToTextWave(listStr, separatorStr)
-ListToWaveRefWave::ListToWaveRefWave(stringList [, options])
-ln::ln(num )
-LoadData::LoadData [/D /GREP={regExpStr,grepMode,objectTypeMask,grepFlags} /I /J=objectNamesStr /L=loadFlags /O[=overwriteMode ] /P=pathName  /Q /R /S=subDataFolderStr /T[=topLevelName ] ] fileOrFolderNameStr
-LoadExps::
-LoadPackagePreferences::LoadPackagePreferences [ /MIS=mismatch  /P=pathName ] packageName , prefsFileName, recordID, prefsStruct
-LoadPICT::LoadPICT [/M=promptStr /O /P=pathName /Q /Z] [fileNameStr ] [, pictName ]
-LoadWave::LoadWave [flags] fileNameStr
-LoadXOP::
-Loess::Loess [/CONF={confInt, ciPlusWaveName [,ciMinusWaveName]} /DEST=destWaveName /DFCT[={destFactorWaveName1 [,destFactorWaveName...]}] /E=extrapolate /N=neighbors  /ORD=order  /PASS=passes  /R=robust /SMTH= sf  /TIME=secs /V=verbose /Z=z ] srcWave=srcWaveName  [, factors=factorWaveName1 [, factorWaveName2...]]
-log::log(num )
-logNormalNoise::logNormalNoise(m,s )
-LombPeriodogram::LombPeriodogram [ /NF=numFrequencies  /DESP=datafolderAndName   /DEST=datafolderAndName  /FR=frequencyResolution  /Q /Z ] srcTimeWave, srcAmpWave [, srcFreqWave ]
-lorentzianNoise::lorentzianNoise(a, b)
-LowerStr::LowerStr(str )
-Macro::Macro
-MacroInfo::MacroInfo(macroNameStr )
-MacroList::MacroList(matchStr, separatorStr, optionsStr )
-MacroPath::MacroPath(macroNameStr)
-magsqr::magsqr(z )
-Make::Make [flags ] waveName  [, waveName ]...
-MakeIndex::MakeIndex [/A/C/R] sortKeyWaves, indexWave
-MandelbrotPoint::MandelbrotPoint(x, y, maxIterations, algorithm )
-MarcumQ::MarcumQ(m, a, b)
-MarkPerfTestTime::MarkPerfTestTime idval
-MatrixBalance::MatrixBalance [flags] srcWave
-MatrixCondition::MatrixCondition(wave2D, mode )
-MatrixConvolve::MatrixConvolve [/R=roiWave ] coefMatrix, dataMatrix
-MatrixCorr::MatrixCorr [/COV][/DEGC] waveA  [, waveB ]
-MatrixDet::MatrixDet(dataMatrix )
-MatrixDot::MatrixDot(waveA, waveB )
-MatrixEigenV::MatrixEigenV [ flags ] matrixA [, matrixB ]
-MatrixFactor::MatrixFactor [ flags ] srcWave
-MatrixFilter::MatrixFilter [/b=b /M=rank /N=n /P=p /R=roiWave /T] Method  dataMatrix
-MatrixGaussJ::MatrixGaussJ matrixA , vectorB
-MatrixGLM::MatrixGLM  [/Z] matrixA, matrixB, waveD
-MatrixInverse::MatrixInverse [[/D]/P][/G][/O] srcWave
-MatrixLinearSolve::MatrixLinearSolve [/D={subDiagonals,superDiagonals }/M=method /O/Z] [/L][/U] matrixA  matrixB
-MatrixLinearSolveTD::MatrixLinearSolveTD [/Z]  upperW, mainW, lowerW, matrixB
-MatrixLLS::MatrixLLS [/M=method  /O/Z] matrixA  matrixB
-MatrixLUBkSub::MatrixLUBkSub matrtixL, matrixU, index, vectorB
-MatrixLUD::MatrixLUD [/B /CMF /PMAT /MIND /SUMP] srcWave
-MatrixLUDTD::MatrixLUDTD [/FM/PMAT/MIND/SUMP] srcMain , srcUpper , srcLower
-MatrixMultiply::MatrixMultiply matrixA [/T], matrixB [/T] [, additional matrices ]
-MatrixMultiplyAdd::MatrixMultiplyAdd [/ZC or /DC] [/A=alpha] [/B=beta] matA[/T], matB[/T] matC
-MatrixOP::MatrixOp [ /C /FREE /NTHR=n  /O /S ] destwave = expression
-MatrixRank::MatrixRank(matrixWaveA  [, conditionNumberA ])
-MatrixReverseBalance::MatrixReverseBalance [flags] scaleWave, eigenvectorsWave
-MatrixSchur::MatrixSchur [/Z] srcMatrix
-MatrixSolve::MatrixSolve method, matrixA, vectorB
-MatrixSparse::MatrixSparse [flags] [keyword = value]
-MatrixSVBkSub::MatrixSVBkSub matrixU, vectorW, matrixV, vectorB
-MatrixSVD::MatrixSVD [/B][/O/U=UMatrixOptions /V=VMatrixOptions /Z] matrixWave
-MatrixTrace::MatrixTrace(dataMatrix )
-MatrixTranspose::MatrixTranspose [/H] matrix
-max::max(num1, num2  [, num3, ... num200 ] )
-mean::mean(waveName  [, x1, x2  ] )
-MeasureStyledText::MeasureStyledText [/W=winName /A=axisName /B=baselineMode /F=fontName /SIZE=fontSize /STYL=fontStyle] [styledTextStr]
-median::median(waveName  [, x1, x2  ] )
-Menu::Menu
-min::min(num1, num2  [, num3, ... num200 ] )
-MLLoadWave::MLLoadWave [/Q/O/B/I/A[=baseName]/N[=name]/P=pathName /R/C/M[=m]/Y=y/T/E/V/S[=s]/G/Z] fileNameStr
-mod::mod(num, div )
-ModDate::ModDate(waveName )
-Modify::Modify
-ModifyBoxPlot::ModifyBoxPlot [/W=winName] [keyword=value, keyword=value, ...]
-ModifyBrowser::ModifyBrowser [/M] [ keyword = value  [, keyword = value ...] ]
-ModifyCamera::ModifyCamera /W=winName  [ /Z ]  keyword=value
-ModifyContour::ModifyContour [/W=winName ] contourInstanceName , keyword = value  [, keyword = value ...]
-ModifyControl::ModifyControl [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-ModifyControlList::ModifyControlList [/Z] listStr  [, keyword =value ]...
-ModifyFreeAxis::ModifyFreeAxis [/W=winName ] axisName, master=mastName  [, hook=funcName ]
-ModifyGizmo::ModifyGizmo [flags] keyword  [=value ]
-ModifyGraph::ModifyGraph [/W=winName /Z] [frameInset= i, frameStyle= f , gfMult=f, gFont=fontStr, gfSize=gfs, gfRelSize=pct, gmSize=gms, height=heightSpec, swapXY=s, useComma=uc, useDotForX=u, UIControl=f, useLongMinus=m, width=widthSpec]
-ModifyImage::ModifyImage [/W=winName ] imageInstance , keyword =value  [, keyword =value  ...]
-ModifyLayout::ModifyLayout [/W=winName /I/M/Z] [bgRGB=(r,g,b[,a]), columns(obj)=c, fidelity(obj)=f, frame(obj)=f, height(obj)=h,  left(obj)=l, mag=m, rows(obj)=r, top(obj)=t, trans(obj)=t,  units=u, width(obj)=w]
-ModifyPanel::ModifyPanel [/W=winName ] [cbRGB=(r,g,b[,a]), drawInOrder=d, expand=e, fixedSize=f,  frameInset=i, frameStyle=f, noEdit=e  ]
-ModifyProcedure::ModifyProcedure [/A[=all] /W=procWinTitleListStr] /Z[=z][procedure=functionOrMacroNameStr, hide=h, lock=ro, writeProtect=wp, userCanOverride=ovr]
-ModifyTable::ModifyTable [/W=winName /Z] [keyword=value, keyword=value, ...]
-ModifyViolinPlot::ModifyViolinPlot [/W=winName] [keyword=value, keyword=value, ...]
-ModifyWaterfall::ModifyWaterfall [/W=winName ] keyword = value  [, keyword = value  ...]
-ModuleName::ModuleName
-MoveDataFolder::MoveDataFolder [ /O=options /Z ] sourceDataFolderSpec, destDataFolderPath
-MoveFile::MoveFile [/D/I[=i ]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFileStr ]  [ as destFileOrFolderStr ]
-MoveFolder::MoveFolder [/D /I[=i]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFolderStr ]  [ as destFolderStr ]
-MoveString::MoveString sourceString, destDataFolderPath [newname ]
-MoveSubwindow::MoveSubwindow [/W=winName ] [fguide=(gLeft, gTop, gRight, gBottom ), fnum=(left, top, right, bottom ), pguide=(gLeft, gTop, gRight, gBottom )]
-MoveVariable::MoveVariable sourceVar, destDataFolderPath [newname ]
-MoveWave::MoveWave sourceWave, [destDataFolderPath:] [newName ]
-MoveWindow::MoveWindow [/C/F/I/M/P=procedureTitleAsName /W=winName] left, top, right, bottom
-MPFXEMGPeak::MPFXEMGPeak(cw, yw, xw)
-MPFXExpConvExpPeak::MPFXExpConvExpPeak(cw, yw, xw)
-MPFXGaussPeak::MPFXGaussPeak(cw, yw, xw)
-MPFXLorentzianPeak::MPFXLorentzianPeak(cw, yw, xw)
-MPFXVoigtPeak::MPFXVoigtPeak(cw, yw, xw)
-MultiTaperPSD::MultiTaperPSD [flags] srcWave
-MultiThread::MultiThread
-MultiThreadingControl::MultiThreadingControl keyword [=value]
-NameOfWave::NameOfWave(wave )
-NaN::NaN
-NeuralNetworkRun::NeuralNetworkRun [/Q/Z] Input=testWave, WeightsWave1=w1, WeightsWave2=w2
-NeuralNetworkTrain::NeuralNetworkTrain [/Q/Z] [keyword = value ] ...
-NewCamera::NewCamera [/HIDE=h  /HOST=hcSpec /K=k /S=sequence  /N=winName /W=(left,top,right,bottom ) ] [hardwareName=hwName]
-NewDataFolder::NewDataFolder [/O/S] dataFolderSpec
-NewFIFO::NewFIFO FIFOName
-NewFIFOChan::NewFIFOChan [/B/C/D/I/S/U/W/Y=numType ] FIFOName, channelName, offset, gain, minusFS, plusFS, unitsStr [, vectPnts ]
-NewFreeAxis::NewFreeAxis [/L/R/B/T/O/W=winName ] axisName
-NewFreeDataFolder::NewFreeDataFolder()
-NewFreeWave::NewFreeWave(type , npoints [, nameStr])
-NewGizmo::NewGizmo [ /FG=(gLeft, gTop, gRight, gBottom) /HOST=hcSpec /I /N=name  /T=titleStr /K=k /W=(left,top,right,bottom)]
-NewImage::NewImage [/F/G=g /HIDE=h /HOST=hcSpec /K=k /N=name /S=s ] matrix
-NewLayout::NewLayout [=(r,g,b[,a]) /C=color /HIDE=h /K=k /N=name /P=orientation /W=(left,top,right,bottom)] [as titleStr ]
-NewMovie::NewMovie [flags] [as fileNameStr ]
-NewNotebook::NewNotebook [flags ] [as titleStr ]
-NewPanel::NewPanel [ /EXP=e EXT=e /FG=(gLeft, gTop, gRight, gBottom )/FLT[=f  ] /HIDE=h /HOST=hcSpec /I/K=k /M/N=name /NA=n /W=(left, top, right, bottom ) ] [as titleStr ]
-NewPath::NewPath [/C/M=messageStr /O/Q/Z] pathName  [, pathToFolderStr]
-NewWaterfall::NewWaterfall [/FG=(gLeft, gTop, gRight, gBottom )/HIDE=h /HOST=hcSpec /I/K=k /M /N=name /PG=(gLeft, gTop, gRight, gBottom )/W=(left,top,right,bottom )] matrixWave  [vs {xWave,yWave }]
-norm::norm(srcWave )
-NormalizeUnicode::NormalizeUnicode(sourceTextStr, normalizationForm[, options])
-note::note(waveName )
-Note::Note [/K/NOCR] waveName [, str ]
-Notebook::Notebook winName, keyword =value [, keyword =value ]...
-NotebookAction::NotebookAction [/W=winName ] keyword = value  [, keyword = value ...]
-NotUsed00000::
-NotUsed00001::
-num2char::num2char(num  [, options ] )
-num2istr::num2istr(num )
-num2str::num2str(num [, formatStr ] )
-NumberByKey::NumberByKey(keyStr, kwListStr  [, keySepStr  [, listSepStr [, matchCase ]]])
-numpnts::numpnts(waveName )
-numtype::numtype(num )
-NumVarOrDefault::NumVarOrDefault(pathStr, defVal )
-NVAR::NVAR
-NVAR_Exists::NVAR_Exists(name )
-Open::Open [ /A /C=creatorStr  /D[=mode ] /F=fileFilterStr  /M=messageStr  /MULT=m  /P=pathName /R /T=typeStr  /Z[=z] ] refNum  [as fileNameStr]
-OpenHelp::OpenHelp [flags] fileNameStr
-OpenNotebook::OpenNotebook [/A /ENCG=textEncoding /K=k  /M=messageStr  /N=winName  /P=pathName /R /T=typeStr  /V=visible  /W=(left,top,right,bottom) /Z] [fileNameStr ]
-OpenProc::OpenProc  [flags ] [fileNameStr ]
-OperationList::OperationList(matchStr, separatorStr, optionsStr )
-Optimize::Optimize [ flags ] funcSpec, pWave
-Override::Override
-p::p
-p2rect::p2rect(z )
-PadString::PadString(str, finalLength, padValue )
-Panel::Panel
-PanelResolution::PanelResolution(wName )
-ParamIsDefault::ParamIsDefault(pName )
-ParseFilePath::ParseFilePath(mode, pathInStr, separatorStr, whichEnd, whichElement)
-ParseOperationTemplate::ParseOperationTemplate [/C=c /S=s /T/TS] cmdTemplate
-PathInfo::PathInfo [/S  /SHOW ] pathName
-PathList::PathList(matchStr, separatorStr, optionsStr )
-PauseForUser::PauseForUser [/C] mainWindowName  [, targetWindowName ]
-PauseUpdate::PauseUpdate
-PCA::PCA [/ALL/COV/CVAR/IE/IND/LEIV/NF/O /Q /RSD[=rsdMode ] /RMS/SCMT /SCR/SDM/SEVC/SL/SQEV/SRMT/U/VAR/WSTR=waveListStr /Z] [wave0, wave1, wave2 ... wave99 ]
-pcsr::pcsr(cursorName  [, graphNameStr ])
-Pi::Pi
-PICTInfo::PICTInfo(pictNameStr )
-PICTList::PICTList(matchStr, separatorStr, optionsStr )
-Picture::Picture
-PixelFromAxisVal::PixelFromAxisVal(graphNameStr, axNameStr, val )
-PlayMovie::PlayMovie [/I/M/P=pathName /W=(left, top, right, bottom) /Z] [as fileNameStr ]
-PlayMovieAction::PlayMovieAction [/A/Z] keyword  [=value ] [, keyword  [=value ]]
-PlaySound::PlaySound [/A [=a ] /BITS=bits /C] soundWave
-pnt2x::pnt2x(waveName, pointNum )
-Point::Point
-PointF::PointF
-poissonNoise::poissonNoise(num )
-poly::poly(coefsWaveName, x1 )
-poly2D::poly2D(coefsWaveName, x1, y1 )
-PolygonArea::PolygonArea(xWave, yWave )
-PolygonOp::PolygonOp [flags] [keyword=value]
-Popup::Popup menuList
-PopupContextualMenu::PopupContextualMenu [/C=(xpix, ypix) /N /ASYN[=func] ] popupStr
-PopupMenu::PopupMenu [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-PopupMenuControl::PopupMenuControl
-PossiblyQuoteName::PossiblyQuoteName(nameStr )
-Preferences::Preferences [/Q] [newPrefsState ]
-PrimeFactors::PrimeFactors [/Q]  inNumber
-Print::Print [/C/D/F/LEN/S/SR] expression  [, expression ]...
-printf::printf formatStr [, parameter  [, parameter ]...]
-PrintGraphs::PrintGraphs [ flags ] graphSpec  [, graphSpec ]...
-PrintLayout::PrintLayout [/C=num /D] winName
-PrintNotebook::PrintNotebook [/B=hiResMethod /P=(startPage,endPage)/S=s] notebookName
-PrintSettings::PrintSettings [ /I /M /W=winName ] [ keyword = value  [, keyword = value ...] ]
-PrintTable::PrintTable [ /P=(startPage,endPage) /S=s ] winName
-Proc::Proc
-ProcedureText::ProcedureText(macroOrFunctionNameStr  [, linesOfContext  [, procedureWinTitleStr ]])
-ProcedureVersion::ProcedureVersion(macroOrFunctionNameStr [, procedureWinTitleStr ])
-ProcGlobal::ProcGlobal
-Project::Project [/C={long,lat }/M=method /P={p1,p2,...}] longitudeWave, latitudeWave
-Prompt::Prompt variableName, titleStr  [, popup, menuListStr ]
-PulseStats::PulseStats [/A=n /B=box /F=f  /L=(startLevel, endLevel )/M=dx /P/Q /R=(startX,endX )/T=dx ] waveName
-PutScrapText::PutScrapText textStr
-pwd::pwd
-Python::
-PythonFile::
-q::q
-qcsr::qcsr(cursorName  [, graphNameStr ])
-Quit::Quit [/N/Y]
-r::r
-r2polar::r2polar(z )
-RatioFromNumber::RatioFromNumber [/MERR=maxError /MITS=maxIterations /V[=v ]] num
-ReadVariables::ReadVariables
-real::real(z )
-Rect::Rect
-RectF::RectF
-Redimension::Redimension [/B/C/D/E=e /I/N=n /R/S/U/W/Y=numType ] waveName, [waveName ]...
-Remez::Remez [/N=num /Q[=iter] ] frWave, wtWave, gridWave, coefsWave
-Remove::Remove
-RemoveByKey::RemoveByKey(keyStr, kwListStr  [, keySepStr  [, listSepStr [, matchCase ]]])
-RemoveContour::RemoveContour [/W=winName ] contourInstanceName [, contourInstanceName ]...
-RemoveEnding::RemoveEnding(str  [, endingStr ])
-RemoveFromGizmo::RemoveFromGizmo [flags][keyword = value]
-RemoveFromGraph::RemoveFromGraph [/W=winName /Z] traceName [,traceName ]...
-RemoveFromLayout::RemoveFromLayout objectSpec [, objectSpec ]...
-RemoveFromList::RemoveFromList(itemOrListStr, listStr  [, listSepStr  [, matchCase ]])
-RemoveFromTable::RemoveFromTable  [/W=winName ] columnSpec [,columnSpec]...
-RemoveImage::RemoveImage [/W=winName /Z] imageInstance
-RemoveLayoutObjects::RemoveLayoutObjects [/PAGE=page /W=winName /Z] objectSpec  [, objectSpec ]
-RemoveListItem::RemoveListItem(index, listStr  [, listSepStr  [, offset ]])
-RemovePath::RemovePath [/A/Z] pathName
-Rename::Rename oldName, newName
-RenameDataFolder::RenameDataFolder sourceDataFolderSpec, newName
-RenamePath::RenamePath oldName, newName
-RenamePICT::RenamePICT oldName, newName
-RenameWindow::RenameWindow oldName, newName
-ReorderImages::ReorderImages [/W=winName ] anchorImage, {imageA, imageB,...}
-ReorderTraces::ReorderTraces [/W=winName  /L[=axisName] /R[=axisName]] anchorTrace, {traceA, traceB,...}
-ReplaceNumberByKey::ReplaceNumberByKey(keyStr, kwListStr, newNum [, keySepStr  [, listSepStr  [, case ]]])
-ReplaceString::ReplaceString(replaceThisStr, inStr, withThisStr  [, caseSense  [, maxReplace ] ])
-ReplaceStringByKey::ReplaceStringByKey(keyStr, kwListStr, newTextStr  [, keySepStr  [, listSepStr  [, matchCase ]]])
-ReplaceText::ReplaceText [/N=name /W=winName ] textStr
-ReplaceWave::ReplaceWave [/W=winName ] allinCDF
-ReplicateString::ReplicateString(str, totalNumCopies)
-Resample::Resample [/COEF [=coefsWaveName ]/UP=upSample /DOWN=downSample /SAME=sWaveName /RATE=sampRate /DIM=dim /E=endEffect /N=numReconstructionSamples /WINF=windowKind ] waveName [,waveName ]...
-ResumeUpdate::ResumeUpdate
-return::return [expression ]
-Reverse::Reverse [/DIM=d /P][typeFlags ] waveA  [/D=destWaveA ] [, waveB [/D=destWaveB ] [,...]]
-RGBAColor::RGBAColor
-RGBColor::RGBColor
-rightx::rightx(waveName )
-root::root
-Rotate::Rotate rotPoints, waveName [, waveName ]...
-round::round(num )
-rtGlobals::rtGlobals
-s::s
-Save::Save [flags] waveList [as fileNameStr ]
-SaveData::SaveData [/D[=d]/O/I/Q/R/P=pathName  /J=objectNamesStr /L=saveFlags /M=modDateTime  /T[=topLevelName ] ] fileOrFolderNameStr
-SaveExperiment::SaveExperiment [ flags ] [as fileName ]
-SaveGizmoCopy::SaveGizmoCopy [/I /O /P=pathName /T=saveType /W=winName /Z ] [fileNameStr ]
-SaveGraphCopy::SaveGraphCopy [/I /O /P=pathName /T=saveType /W=winName /Z ] [as fileNameStr ]
-SaveNotebook::SaveNotebook [flags ] notebookName  [as fileNameStr ]
-SavePackagePreferences::SavePackagePreferences [ /FLSH=flush  /KILL /P=pathName ]   packageName , prefsFileName, recordID , prefsStruct
-SavePICT::SavePICT [flags] [as fileNameStr ]
-SaveTableCopy::SaveTableCopy [/A=a /I/M=termStr /N=n /O/P=pathName /S=s /T=saveType /F=f  /W=winName  /Z ] [as fileNameStr ]
-sawtooth::sawtooth(num )
-scaleToIndex::ScaleToIndex(waveName, coordValue, dim )
-ScreenResolution::ScreenResolution
-sec::sec(angle )
-sech::sech(x)
-Secs2Date::Secs2Date(seconds, format  [, sep ])
-Secs2Time::Secs2Time(seconds, format [, fracDigits ])
-SelectNumber::SelectNumber(whichOne , val1, val2  [, val3  ])
-SelectString::SelectString(whichOne , str1, str2  [, str3 ])
-SetActiveSubwindow::SetActiveSubwindow subWinSpec
-SetAxis::SetAxis [/W=winName /A[=a ]/E=z /N=n /R/Z] axisName [, num1, num2 ]
-SetBackground::SetBackground numericExpression
-SetDashPattern::SetDashPattern dashNumber, {d1,s1 [,d2,s2 ]...}
-SetDataFolder::SetDataFolder dataFolderSpec
-SetDimLabel::SetDimLabel dimNumber,dimIndex,label,wavelist
-SetDrawEnv::SetDrawEnv [/W=winName ]  keyword  [=value ][, keyword  [=value ]]...
-SetDrawLayer::SetDrawLayer [/W=winName /K] layerName
-SetEnvironmentVariable::SetEnvironmentVariable(varName, varValue)
-SetFileFolderInfo::SetFileFolderInfo [ /CDAT=cDate /CRE8=creatorStr /D /FTYP=typeStr /INV=inv  /MDAT=mDate /P=pathName /R=r /RO=ro /STA=st /UTC[=u] /Z=z] ] [fileOrFolderNameStr]
-SetFormula::SetFormula waveOrVariableName, expressionStr
-SetIdlePeriod::SetIdlePeriod period
-SetIgorHook::SetIgorHook  [/K/L] [hookType  [=procName ] ]
-SetIgorMenuMode::SetIgorMenuMode MenuNameStr, MenuItemStr, Action
-SetIgorOption::SetIgorOption [mainKeyword,] keyword=value
-SetIgorProcess::
-SetMarquee::SetMarquee [/W=winName ] left, top, right, bottom
-SetProcessSleep::SetProcessSleep sleepTicks
-SetRandomSeed::SetRandomSeed seed
-SetScale::SetScale [/I/P] dim, num1, num2  [, unitsStr ] [, waveName ]...
-SetVariable::SetVariable [/Z] ctrlName [ keyword = value  [, keyword = value ...] ]
-SetVariableControl::SetVariableControl
-SetWaveLock::SetWaveLock lockVal, waveList
-SetWaveTextEncoding::SetWaveTextEncoding [flags ] newTextEncoding , elements, [wave , wave, ...]
-SetWindow::SetWindow winName [ keyword = value  [, keyword = value ...] ]
-ShowDependency::
-ShowIgorMenus::ShowIgorMenus  [MenuNameStr  [,MenuNameStr ] ...
-ShowInfo::ShowInfo [ /CP=num /W=winName ]
-ShowTools::ShowTools  [/W=winName /A] [ toolName ]
-sign::sign(num )
-Silent::Silent num
-sin::sin(angle )
-sinc::sinc(num )
-sinh::sinh(num )
-sinIntegral::SinIntegral(z )
-Sleep::Sleep [ /A /W /B /C=cursor  /PROG={cancelButtonTitleStr, continueButtonTitleStr, abortMode} /Q/S /T ] timeSpec
-Slider::Slider [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-SliderControl::SliderControl
-Slow::Slow ticks
-Smooth::Smooth [ /B[=b ] /BLPF[=roundMode] /DIM = dim  /E=endEffect  /EVEN[=evenAllowed ] /F[=f ] /M=threshold  /MPCT=percentile  /R=replacement  /S=sgOrder ] num, wave0 [,wave1 ]...
-SmoothCustom::SmoothCustom [/E=endEffect] coefsWaveName, waveName [, waveName ]...
-Sort::Sort [ /A /DIML /C /R ] sortKeyWaves, sortedWaveName [, sortedWaveName ]...
-SortColumns::SortColumns [flags] keyWaves={waveList }, sortWaves={waveList }
-SortList::SortList(listStr  [, listSepStr  [, options ])
-SoundInRecord::SoundInRecord [/BITS=bits /Z] wave
-SoundInSet::SoundInSet [/Z] [gain=g, agc=a ]
-SoundInStartChart::SoundInStartChart [/Z] buffersize , destFIFOname
-SoundInStatus::SoundInStatus [ format={intOrFloat, channels, bits, frequency} ]
-SoundInStopChart::SoundInStopChart [/Z]
-SoundLoadWave::SoundLoadWave [ /I [= filterStr] /O /P=pathName  /Q /S=(startT,endT ) ] waveName  [ ,fileNameStr  ]
-SoundSaveWave::SoundSaveWave [ /BITS=bits /I /O /P=pathName /Q ] typeStr, waveName [ , fileNameStr ]
-SpecialCharacterInfo::SpecialCharacterInfo(notebookNameStr, specialCharacterNameStr, whichStr )
-SpecialCharacterList::SpecialCharacterList(notebookNameStr, separatorStr, mask, flags )
-SpecialDirPath::SpecialDirPath(dirIDStr, domain, flags, createDir )
-SphericalBessJ::sphericalBessJ(n, x [, accuracy ])
-SphericalBessJD::sphericalBessJD(n, x [, accuracy ])
-SphericalBessY::sphericalBessY(n, x [, accuracy ])
-SphericalBessYD::sphericalBessYD(n, x [, accuracy ])
-SphericalHarmonics::sphericalHarmonics(L, M, θ, φ)
-SphericalInterpolate::SphericalInterpolate triangulationDataWave, dataPointsWave, newLocationsWave
-SphericalTriangulate::SphericalTriangulate [/Z] tripletWaveName
-SplitString::SplitString /E=regExprStr str , substring1 [, substring2, ... substringN]
-SplitWave::SplitWave [flags]  srcWave
-sprintf::sprintf stringName, formatStr [,parameter]...
-sqrt::sqrt(num )
-sscanf::sscanf scanStr, formatStr, var [, var ]
-Stack::Stack [flags] [objectName ] [, objectName ]...
-StackWindows::StackWindows [flags] [windowName ] [, windowName ]...
-StartMSTimer::StartMSTimer
-Static::Static
-StatsAngularDistanceTest::StatsAngularDistanceTest [/ALPH=significance /APRX=m /T=k /Q/Z /WSTR=waveListString ] [srcWave1, srcWave2, srcWave3... ]
-StatsANOVA1Test::StatsANOVA1Test [/ALPH=significance /BF/Q/Z/T=k /W/WSTR=wList]  [wave1,wave2,... wave100 ]
-StatsANOVA2NRTest::StatsANOVA2NRTest [/ALPH=significance  /MODL=modelNumber  /Q/Z /T=k ]  srcWave
-StatsANOVA2RMTest::StatsANOVA2RMTest [/ALPH=significance /Q/Z/T=k ]  srcWave
-StatsANOVA2Test::StatsANOVA2Test [/ALPH=significance  /FAKE=num  /MODL=modelNumber  /T=k /Q/Z] srcWave
-StatsBetaCDF::StatsBetaCDF(x, p, q  [, a, b ])
-StatsBetaPDF::StatsBetaPDF(x, p, q  [, a, b ])
-StatsBinomialCDF::StatsBinomialCDF(x, p, Ν )
-StatsBinomialPDF::StatsBinomialPDF(x, p, Ν )
-StatsCauchyCDF::StatsCauchyCDF(x, µ, σ)
-StatsCauchyPDF::StatsCauchyPDF(x, µ, σ)
-StatsChiCDF::StatsChiCDF(x, n )
-StatsChiPDF::StatsChiPDF(x, n )
-StatsChiTest::StatsChiTest [/NCON=nCon /S/Z] srcWave1, srcWave2
-StatsCircularCorrelationTest::StatsCircularCorrelationTest [/ALPH=alpha  /T=k /NAA/PAA/PAL/Z/Q] waveA, waveB
-StatsCircularMeans::StatsCircularMeans [/ALPH=significance /CI/Q/Z/T=k ] srcWave
-StatsCircularMoments::StatsCircularMoments [/ALPH=alpha /AXD=p /CYCL=cycle /GRPD={start, delta } /KUPR/LOS/M=moment /MODE=mode /ORGN=origin /Q/RAYL[=meanDirection ]/SAW/T=k /Z] srcWave
-StatsCircularTwoSampleTest::StatsCircularTwoSampleTest [/ALPH=alpha  /T=k  /NSOA /NPR /PSOA /PPR /Z /Q ] waveA, waveB
-StatsCMSSDCDF::StatsCMSSDCDF(C, n )
-StatsCochranTest::StatsCochranTest [/Q/Z/ALPH=significance /T=k /WSTR=wList ]   [wave1,wave2, ... wave100 ]
-StatsContingencyTable::StatsContingencyTable [/ALPH=significance /COR=mode /FEXT={row, col}/HTRG/LLIK/Q/Z /T=k ] srcWave
-StatsCorrelation::StatsCorrelation(waveA [, waveB ] )
-StatsDExpCDF::StatsDExpCDF(x, µ, σ )
-StatsDExpPDF::StatsDExpPdf(x, µ, σ)
-StatsDIPTest::StatsDIPTest [/Z] srcWave
-StatsDunnettTest::StatsDunnettTest [/ALPH=significance /Q/Z/T=k /WSTR=wList /CIDX=controlIndex /SWN/TAIL=tailCode ] [wave1, wave2,... wave100 ]
-StatsErlangCDF::StatsErlangCDF(x, b, c)
-StatsErlangPDF::StatsErlangPDF(x, b, c)
-StatsErrorPDF::StatsErrorPDF(x, a, b, c)
-StatsEValueCDF::StatsEValueCDF(x, µ, σ )
-StatsEValuePDF::StatsEValuePDF(x, µ, σ )
-StatsExpCDF::StatsExpCDF(x, µ, σ )
-StatsExpPDF::StatsExpPDF(x, µ, σ )
-StatsFCDF::StatsFCDF(x, n1, n2 )
-StatsFPDF::StatsFPDF(x, n1, n2  )
-StatsFriedmanCDF::StatsFriedmanCDF(x, n, m, method, useTable )
-StatsFriedmanTest::StatsFriedmanTest [/ALPH=significance /RW/T=k /Q/Z/WSTR=wList ]   [wave1,wave2,... wave100 ]
-StatsFTest::StatsFTest [/ALPH=significance /TAIL=tc /T=km /Q/Z] wave1, wave2
-StatsGammaCDF::StatsGammaCDF(x, µ, σ, γ )
-StatsGammaPDF::StatsGammaPDF(x, µ, σ, γ )
-StatsGeometricCDF::StatsGeometricCDF(x, p )
-StatsGeometricPDF::StatsGeometricPDF(x, p )
-StatsGEVCDF::StatsGEVCDF(x, µ, σ, ξ)
-StatsGEVPDF::StatsGEVPDF(x, µ, σ, ξ)
-StatsHodgesAjneTest::StatsHodgesAjneTest [/ALPH=significance /Q/SA=specAngle /Z /T=k ] srcWave
-StatsHyperGCDF::StatsHyperGCDF(x, m, n, k )
-StatsHyperGPDF::StatsHyperGPDF(x, m, n, k )
-StatsInvBetaCDF::StatsInvBetaCDF(cdf, p, q  [, a, b ])
-StatsInvBinomialCDF::StatsInvBinomialCDF(cdf, p,  Ν )
-StatsInvCauchyCDF::StatsInvCauchyCDF(cdf, µ, σ)
-StatsInvChiCDF::StatsInvChiCDF(x, n )
-StatsInvCMSSDCDF::StatsInvCMSSDCDF(cdf, n )
-StatsInvDExpCDF::StatsInvDExpCDF(cdf, µ, σ)
-StatsInvEValueCDF::StatsInvEValueCDF(cdf, µ, σ )
-StatsInvExpCDF::StatsInvExpCDF(cdf, µ, σ )
-StatsInvFCDF::StatsInvFCDF(x, n1, n2  )
-StatsInvFriedmanCDF::StatsInvFriedmanCDF(cdf, n, m, method, useTable )
-StatsInvGammaCDF::StatsInvGammaCDF(cdf, µ, σ, γ )
-StatsInvGeometricCDF::StatsInvGeometricCDF(cdf, p )
-StatsInvKuiperCDF::StatsInvKuiperCDF(cdf )
-StatsInvLogisticCDF::StatsInvLogisticCDF(cdf, a, b )
-StatsInvLogNormalCDF::StatsInvLogNormalCDF(cdf , sigma , theta , mu )
-StatsInvMaxwellCDF::StatsInvMaxwellCDF(cdf, k )
-StatsInvMooreCDF::StatsInvMooreCDF(cdf, N )
-StatsInvNBinomialCDF::StatsInvNBinomialCDF(cdf, k, p )
-StatsInvNCChiCDF::StatsInvNCChiCDF(cdf, n, d )
-StatsInvNCFCDF::StatsInvNCFCDF(cdf, n1, n2, d )
-StatsInvNormalCDF::StatsInvNormalCDF(cdf,  µ, σ )
-StatsInvParetoCDF::StatsInvParetoCDF(cdf, a, c )
-StatsInvPoissonCDF::StatsInvPoissonCDF(cdf, λ )
-StatsInvPowerCDF::StatsInvPowerCDF(cdf, b, c )
-StatsInvQCDF::StatsInvQCDF (cdf, r, c, df )
-StatsInvQpCDF::StatsInvQpCDF(ng, nt, df, alpha, side, sSizeWave )
-StatsInvRayleighCDF::StatsInvRayleighCDF(cdf  [, σ [, µ ]])
-StatsInvRectangularCDF::StatsInvRectangularCDF(cdf, a, b )
-StatsInvSpearmanCDF::StatsInvSpearmanCDF(cdf, N )
-StatsInvStudentCDF::StatsInvStudentCDF(cdf, n )
-StatsInvTopDownCDF::StatsInvTopDownCDF(cdf, N )
-StatsInvTriangularCDF::StatsInvTriangularCDF(cdf, a, b, c )
-StatsInvUsquaredCDF::StatsInvUSquaredCDF(cdf, n, m, method, useTable )
-StatsInvVonMisesCDF::StatsInvVonMisesCDF(cdf, a, b )
-StatsInvWeibullCDF::StatsInvWeibullCDF(cdf, µ, σ, γ)
-StatsJBTest::StatsJBTest [/ALPH=alpha  /T=k /Z/Q] srcWave
-StatsKDE::StatsKDE [flags] srcWave
-StatsKendallTauTest::StatsKendallTauTest [/Q/Z] [/T=k]  wave1 [,wave2]
-StatsKSTest::StatsKSTest [/ALPH=alpha  /CDFF=func  /T=k /Z/Q] srcWave  [, distWave ]
-StatsKuiperCDF::StatsKuiperCDF(V )
-StatsKWTest::StatsKWTest [/ALPH=significance /Q/Z/T=k /WSTR=wList ] [wave1, wave2,... wave100 ]
-StatsLinearCorrelationTest::StatsLinearCorrelationTest [/ALPH=alpha  /T=k /RHO=rhoValue /Q/Z] waveA, waveB
-StatsLinearRegression::StatsLinearRegression [/ALPH=alpha /T=k /Z/Q/WSTR=strList /BCIW/BPIW/TUK/DET=index ] [wave0, wave1,...]
-StatsLogisticCDF::StatsLogisticCDF(x, a, b )
-StatsLogisticPDF::StatsLogisticPDF(x, a, b )
-StatsLogNormalCDF::StatsLogNormalCDF(x, σ [, θ, µ ])
-StatsLogNormalPDF::StatsLogNormalPDF(x, σ [, θ, µ ])
-StatsMaxwellCDF::StatsMaxwellCDF(x, k )
-StatsMaxwellPDF::StatsMaxwellPDF(x, k )
-StatsMedian::StatsMedian(waveName )
-StatsMooreCDF::StatsMooreCDF(x, N )
-StatsMultiCorrelationTest::StatsMultiCorrelationTest [/ALPH=alpha  /T=k /Z/Q/TUK/CON={controlRow, tails }/CONT=contrastWave ] corrWave, sizeWave
-StatsNBinomialCDF::StatsNBinomialCDF(x, k, p )
-StatsNBinomialPDF::StatsNBinomialPDF(x, k, p )
-StatsNCChiCDF::StatsNCChiCDF(x, n, d )
-StatsNCChiPDF::StatsNCChiPDF(x, n, d )
-StatsNCFCDF::StatsNCFCDF(x, n1, n2, d )
-StatsNCFPDF::StatsNCFPDF(x, n1, n2, d )
-StatsNCTCDF::StatsNCTCDF(x, df, d )
-StatsNCTPDF::StatsNCTPDF(x, df, d )
-StatsNormalCDF::StatsNormalCDF(x, µ, σ )
-StatsNormalPDF::StatsNormalPDF(x, µ, σ )
-StatsNPMCTest::StatsNPMCTest [/Q/Z/ALPH=val /SWN/T=k /TAIL=tailCode /WSTR=waveListString /TUK/SNK/DHW/CIDX=controlIndex /CONW=contrastWave ] [wave1, wave2,... wave100 ]
-StatsNPNominalSRTest::StatsNPNominalSRTest [/ALPH=alpha  /P={m,n,u }/T=k /Z/Q] [srcWave ]
-StatsParetoCDF::StatsParetoCDF(x, a, c )
-StatsParetoPDF::StatsParetoPDF(x, a, c )
-StatsPermute::StatsPermute(waveA, waveB, dir )
-StatsPoissonCDF::StatsPoissonCDF(x, λ )
-StatsPoissonPDF::StatsPoissonPDF(x, λ )
-StatsPowerCDF::StatsPowerCDF(x, b, c )
-StatsPowerNoise::StatsPowerNoise(b, c )
-StatsPowerPDF::StatsPowerPDF(x, b, c )
-StatsQCDF::StatsQCDF (q, r, c, df )
-StatsQpCDF::StatsQpCDF(q, nr, nt, df, side, sSizeWave )
-StatsQuantiles::StatsQuantiles [/ALL/BOX/iNaN/IW/TM/Z/Q/QM=method /STBL/TRIM=tValue ] srcWave
-StatsRankCorrelationTest::StatsRankCorrelationTest [/ALPH=alpha /P=method /Q /T=k /Z] waveA, waveB
-StatsRayleighCDF::StatsRayleighCDF(x [, σ [, µ ]])
-StatsRayleighPDF::StatsRayleighPDF(x [, σ  [, µ ]])
-StatsRectangularCDF::StatsRectangularCDF(x, a, b )
-StatsRectangularPDF::StatsRectangularPDF(x, a, b )
-StatsResample::StatsResample /N=numPoints [ /ITER=n  /JCKN=ufunc  /K /Q /SQ=m  /WS=m  /Z ] srcWave
-StatsRunsCDF::StatsRunsCDF(n,  r )
-StatsSample::StatsSample /N=numPoints [ /CMPL /MC /MR /Z ] srcWave
-StatsScheffeTest::StatsScheffeTest [/ALPH=val /T=k /Q/SWN/Z/WSTR=waveListString /CONW=contrastWave ] [wave1, wave2,... wave100 ]
-StatsShapiroWilkTest::StatsShapiroWilkTest [/Q/Z] srcWave
-StatsSignTest::StatsSignTest [/ALPH=significance /Q/Z/T=k ]  wave1,wave2
-StatsSpearmanRhoCDF::StatsSpearmanRhoCDF(r, N )
-StatsSRTest::StatsSRTest [ /ALPH=alpha  /P /NAPR /NP /T=k  /Z /Q ] srcWave
-StatsStudentCDF::StatsStudentCDF(t, n )
-StatsStudentPDF::StatsStudentPDF(t, n )
-StatsTopDownCDF::StatsTopDownCDF(r, N )
-StatsTriangularCDF::StatsTriangularCDF(x, a, b, c )
-StatsTriangularPDF::StatsTriangularPDF(x, a, b, c )
-StatsTrimmedMean::StatsTrimmedMean(waveName, trimValue )
-StatsTTest::StatsTTest [/ALPH=alpha  /CI /DFM=m  /MEAN=meanV  /PAIR /TAIL=n  /T=k /Z /Q] wave1  [, wave2 ]
-StatsTukeyTest::StatsTukeyTest [/ALPH=val /NK/Q/Z/SWN/T=k /WSTR=wList ] [wave1, wave2,... wave100 ]
-StatsUSquaredCDF::StatsUSquaredCDF(u2, n, m, method, useTable )
-StatsVariancesTest::StatsVariancesTest [/ALPH=val /Q/Z/METH=m /WSTR=strList ]  [wave1, wave2,... wave100 ]
-StatsVonMisesCDF::StatsVonMisesCDF(x, a, b )
-StatsVonMisesNoise::StatsVonMisesNoise(a, b )
-StatsVonMisesPDF::StatsVonMisesPDF(θ, a, b )
-StatsWaldCDF::StatsWaldCDF(x, µ, λ )
-StatsWaldPDF::StatsWaldPDF(x, µ, λ )
-StatsWatsonUSquaredTest::StatsWatsonUSquaredTest [/ALPH=val /Q/Z/T=k]  srcWave1, srcWave2
-StatsWatsonWilliamsTest::StatsWatsonWilliamsTest [/ALPH=val /Q/Z/T=k /WSTR=waveListString ] [srcWave1, srcWave2, srcWave3,...]
-StatsWeibullCDF::StatsWeibullCDF(x, µ, σ, γ)
-StatsWeibullPDF::StatsWeibullPDF(x, µ, σ, γ)
-StatsWheelerWatsonTest::StatsWheelerWatsonTest [/ALPH=val /Q/Z/T=k /WSTR=waveListString ] [srcWave1, srcWave2, srcWave3,...]
-StatsWilcoxonRankTest::StatsWilcoxonRankTest [/ALPH=val /APRX=m /T=k /TAIL=tail /Q/Z]  waveA, waveB
-StatsWRCorrelationTest::StatsWRCorrelationTest [/ALPH=val /T=k /Z/Q]  waveA, waveB
-STFT::STFT [flags] srcWave
-StopMSTimer::StopMSTimer(timerRefNum )
-str2num::str2num(str )
-StrAllocCount::
-StrConstant::Strconstant
-String::String [/G] strName[/N=name][=strExpr ] [, strName[/N=name][=strExpr ]... ]
-StringByKey::StringByKey(keyStr, kwListStr  [, keySepStr  [, listSepStr [, matchCase ]]])
-stringCRC::StringCRC(inCRC,str)
-StringFromList::StringFromList(index, listStr  [, listSepStr  [, offset ]])
-stringIsNull::
-StringList::StringList(matchStr, separatorStr [, dfr ])
-stringmatch::StringMatch(string, matchStr )
-StringToUnsignedByteWave::StringToUnsignedByteWave(str)
-strlen::strlen(str )
-strsearch::strsearch(str, findThisStr, start  [, options])
-strswitch-case-endswitch::strswitch(<string expression>)		case <string value>:			<code>			break		case <string value>:			<code>			break	endswitch
-STRUCT::STRUCT
-StructFill::StructFill [ /AC=createFlags /SDFR=dfr ] structVar
-StructGet::StructGet [/B=b ] structVar, waveStruct [[colNum ]]
-StructPut::StructPut [/B=b ] structVar, waveStruct [[colNum ]]
-Structure::Structure
-StrVarOrDefault::StrVarOrDefault(pathStr, defStrVal )
-StudentA::StudentA(t, DegFree )
-StudentT::StudentT(Prob, DegFree )
-Submenu::Submenu
-sum::sum(waveName  [, x1, x2  ] )
-SumDimension::SumDimension [/D=dimension  /DEST=destWave  /Y=numType ] srcWave
-SumSeries::SumSeries [flags] keyword=value
-SVAR::SVAR
-SVAR_Exists::SVAR_Exists(name )
-switch-case-endswitch::switch(<numeric expression>)		case <numeric value>:			<code>			break		case <numeric value>:			<code>			break	endswitch
-t::t
-TabControl::TabControl [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-TabControl::TabControl
-Table::Table
-TableInfo::TableInfo(winNameStr, itemIndex)
-TableStyle::TableStyle
-Tag::Tag [flags] [taggedObjectName, xAttach  [, textStr ]]
-TagVal::TagVal(code )
-TagWaveRef::TagWaveRef()
-tan::tan(angle )
-tanh::tanh(num )
-TestFileUtils::
-TestOperation::
-Text2Bezier::Text2Bezier[/O/FS=fontSize] fontNameStr, fstyle, textStr, xWaveName, yWaveName
-TextBox::TextBox [/W=winName /A=anchorCode /B=(r,g,b[,a])/B=trans /C/D={thickMult  [, shadowThick [, haloThick ]]}/E[=exterior ] /F=frame /G=(r,g,b) /H=legendSymbolWidth /K/LS= linespace /M[=saMeSize ] /N=name /O=rot /R=newName /S=style /T=tabSpec /V=vis /X=xOffset /Y=yOffset /Z=freeze [textStr ]
-TextEncoding::TextEncoding
-TextEncodingCode::TextEncodingCode(textEncodingNameStr )
-TextEncodingName::TextEncodingName(textEncoding , index )
-TextFile::TextFile(pathName, index  [, creatorStr ])
-TextHistogram::TextHistogram [ flags ] srcTextWave
-ThreadGroupCreate::ThreadGroupCreate(nt )
-ThreadGroupGetDF::ThreadGroupGetDF(tgID, waitms )
-ThreadGroupGetDFR::ThreadGroupGetDFR(tgID, waitms )
-ThreadGroupPutDF::ThreadGroupPutDF tgID, datafolder
-ThreadGroupRelease::ThreadGroupRelease(tgID [, beGraceful] )
-ThreadGroupWait::ThreadGroupWait(tgID, waitms )
-ThreadProcessorCount::ThreadProcessorCount
-ThreadReturnValue::ThreadReturnValue(tgID, index )
-ThreadSafe::ThreadSafe
-ThreadStart::ThreadStart tgID, index, WorkerFunc (param1, param2,...)
-ticks::ticks
-TickWavesFromAxis::TickWavesFromAxis [ /W=graphName /DEST= {textWaveName, numericWaveName} /O /AUTO=mode ] axisName
-Tile::Tile [/A=(rows,cols) /BBOX[=ubb] /G=grout  /I /M /O=objTypes /PA[=preserve] /R /S/W=(left,top,right,bottom)] [objectName [, objectName ]...]
-TileWindows::TileWindows [flags] [windowName [, windowName ]...]
-time::time()
-timetest::
-TitleBox::TitleBox [/Z] ctrlname  [ keyword = value  [, keyword = value ...] ]
-ToCommandLine::ToCommandLine commandsStr
-ToolsGrid::ToolsGrid [/W=winName ] keyword = value  [, keyword = value ...]
-TraceFromPixel::TraceFromPixel(xpixel, ypixel, optionsString )
-TraceInfo::TraceInfo(graphNameStr, yWaveNameStr, instance )
-TraceNameList::TraceNameList(graphNameStr, separatorStr, optionsFlag )
-TraceNameToWaveRef::TraceNameToWaveRef(graphNameStr, traceNameStr )
-Triangulate3d::Triangulate3D [/OUT=format ] srcWave
-TrimString::TrimString(str  [, simplifyInternalSpaces ])
-trunc::trunc(num )
-try::The try flow control keyword marks the beginning of the initial code block in a try-catch-endtry flow control construct.See AlsoThe try-catch-endtry flow control statement for details.
-try-catch-endtry::try		<code>	catch		<code to handle abort>	endtry
-uint64::uint64
-UniqueName::UniqueName(baseName, objectType, startSuffix  [, windowNameStr ])
-UnPadString::UnPadString(str, padValue )
-UnsetEnvironmentVariable::UnsetEnvironmentVariable(varName)
-Unwrap::Unwrap modulus, waveName [, waveName ]...
-UnzipFile::UnzipFile [ /O[=mode] /PASS=passwordStr /PIN=inputPathName /POUT=outputPathName /Z[=z] ] inputFileStr, outputFolderStr
-UpperStr::UpperStr(str )
-URLDecode::URLDecode(inputStr)
-URLEncode::URLEncode(inputStr)
-URLRequest::URLRequest [ flags ] url=urlStr [method=methodName, headers=headersStr]
-ValDisplay::ValDisplay [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
-Variable::Variable [/C/D/G] varName[/N=name][=numExpr ][, varName[/N=name][=numExpr ]]...
-VariableList::VariableList(matchStr, separatorStr, variableTypeCode [, dfr ] )
-Variance::Variance(inWave [ , x1, x2 ] )
-vcsr::vcsr(cursorName  [, graphNameStr ])
-version::version
-VoigtFunc::VoigtFunc(X, Y)
-VoigtPeak::VoigtPeak(w, x)
-WAVE::WAVE
-WaveClear::WAVEClear localName  [, localName1...]
-WaveCRC::WaveCRC(inCRC, waveName [,checkHeader])
-WaveDataToString::WaveDataToString(wave)
-WaveDims::WaveDims(wave )
-WaveExists::WaveExists(wave )
-WaveHash::WaveHash(wave, method)
-WaveInfo::WaveInfo(wave, 0)
-WaveList::WaveList(matchStr, separatorStr, optionsStr [, dfr ] )
-WaveMax::WaveMax(waveName  [, x1, x2  ])
-WaveMeanStdv::WaveMeanStdv srcWave  binSizeWave
-WaveMin::WaveMin(waveName  [, x1, x2  ])
-WaveMinAndMax::WaveMinAndMax(wave [, x1, x2 ])
-WaveModCount::WaveModCount(wave )
-WaveName::WaveName(windowNameStr, index, type )
-WaveRefCount::
-WaveRefIndexed::WaveRefIndexed(windowNameStr, index, type )
-WaveRefIndexedDFR::WaveRefIndexedDFR(dfr, index )
-WaveRefsEqual::WaveRefsEqual(w1 , w2 )
-WaveRefWaveToList::WaveRefWaveToList(waveRefWave, option)
-WaveStats::WaveStats [flags] waveName
-WaveTextEncoding::WaveTextEncoding(wave , element , getEffectiveTextEncoding )
-WaveTracking::WaveTracking [/FREE /GLBL /LOCL] keyword
-WaveTransform::WaveTransform [flags] keyword  srcWave
-WaveType::WaveType(waveName [,selector ] )
-WaveUnits::WaveUnits(waveName, dimNumber )
-wfprintf::wfprintf refNumOrStr, formatStr [/R=(startX, endX )] waveName  [, waveName ]...
-WhichListItem::WhichListItem(itemStr, listStr  [, listSepStr  [, startIndex  [, matchCase ] ]])
-WignerTransform::WignerTransform [/Z][/WIDE=wSize ] [/GAUS=gaussianWidth ][/DEST=destWave ] srcWave
-Window::Window
-WindowFunction::WindowFunction [/FFT[=f  ] /DEST=destWave ] windowKind, srcWave
-WinList::WinList(matchStr, separatorStr, optionsStr )
-WinName::WinName(index, windowTypes  [, visibleWindowsOnly  [, floatKind ]])
-WinRecreation::WinRecreation(winStr, options )
-WinType::WinType(winNameStr )
-WMAxisHookStruct::WMAxisHookStruct
-WMBackgroundStruct::WMBackgroundStruct
-WMButtonAction::WMButtonAction
-WMCheckboxAction::WMCheckboxAction
-WMConcatenatePaths::
-WMCustomControlAction::WMCustomControlAction
-WMDebuggerString::
-WMDebuggerWaveRef::
-WMDrawUserShapeStruct::WMDrawUserShapeStruct
-WMDumpOperationInfo::
-WMEmitSignpost::
-WMFindWholeWord::
-WMFitInfoStruct::WMFitInfoStruct
-WMGizmoHookStruct::WMGizmoHookStruct
-WMListboxAction::WMListboxAction
-WMMarkerHookStruct::WMMarkerHookStruct
-WMPopupAction::WMPopupAction
-WMSetVariableAction::WMSetVariableAction
-WMSliderAction::WMSliderAction
-WMStartSignpost::
-WMStopSignpost::
-WMTabControlAction::WMTabControlAction
-WMTooltipHookStruct::WMTooltipHookStruct
-WMWinHookStruct::WMWinHookStruct
-wnoise::wnoise(shape, scale )
-x::x
-x2pnt::x2pnt(waveName, x1 )
-xcsr::xcsr(cursorName  [, graphNameStr ])
-XLLoadWave::XLLoadWave [flags ] fileNameStr
-XWaveName::XWaveName(graphNameStr, traceNameStr )
-XWaveRefFromTrace::XWaveRefFromTrace(graphNameStr, traceNameStr )
-y::y
-z::z
-zcsr::zcsr(cursorName  [, graphNameStr ])
-ZernikeR::ZernikeR(n,m,r )
-zeta::zeta(a, b [, terms ])
+ProgrammingTopic::-::-
+ProgrammingTopic::--::--
+ProgrammingTopic::!::!
+ProgrammingTopic::!=::!=
+ProgrammingTopic::#define::#define
+ProgrammingTopic::#if-#elif-#endif::#if-#elif-#endif
+ProgrammingTopic::#if-#endif::#if-#endif
+ProgrammingTopic::#ifdef-#endif::#ifdef-#endif
+ProgrammingTopic::#ifndef-#endif::#ifndef-#endif
+ProgrammingTopic::#include::#include
+ProgrammingTopic::#pragma::#pragma
+ProgrammingTopic::#undef::#undef
+ProgrammingTopic::$::$
+ProgrammingTopic::%^::%^
+ProgrammingTopic::&::&
+ProgrammingTopic::&&::&&
+ProgrammingTopic::*::*
+ProgrammingTopic::/::/
+ProgrammingTopic:://:://
+ProgrammingTopic::? :::? :
+ProgrammingTopic::^::^
+ProgrammingTopic::|::|
+ProgrammingTopic::||::||
+ProgrammingTopic::~::~
+ProgrammingTopic::+::+
+ProgrammingTopic::++::++
+ProgrammingTopic::<::<
+ProgrammingTopic::<<::<<
+ProgrammingTopic::<=::<=
+ProgrammingTopic::==::==
+ProgrammingTopic::>::>
+ProgrammingTopic::>=::>=
+ProgrammingTopic::>>::>>
+Operation::Abort::Abort [errorMessageStr ]
+ProgrammingTopic::AbortOnRTE::AbortOnRTE
+ProgrammingTopic::AbortOnValue::AbortOnValue abortCondition, abortCode
+Function::abs::abs(num )
+Function::acos::acos(num )
+Function::acosh::acosh(num )
+Operation::AddFIFOData::AddFIFOData FIFOName, FIFO_channelExpr [, FIFO_channelExpr ]...
+Operation::AddFIFOVectData::AddFIFOVectData FIFOName, FIFO_channelKeyExpr [, FIFO_channelKeyExpr ]...
+Function::AddListItem::AddListItem(itemStr, listStr  [, listSepStr  [, itemNum ]])
+Operation::AddMovieAudio::AddMovieAudio soundWave
+Operation::AddMovieFrame::AddMovieFrame [/PICT=pictName ]
+Operation::AddWavesToBoxPlot::AddWavesToBoxPlot [/W=winName /T=traceName /INST=traceInstance] wave [, wave ] ...
+Operation::AddWavesToViolinPlot::AddWavesToViolinPlot [/W=winName /T=traceName /INST=traceInstance] wave [, wave ] ...
+Operation::AdoptFiles::AdoptFiles [ flags ]
+ProgrammingTopic::AfterCompiledHook::AfterCompiledHook( )
+ProgrammingTopic::AfterFileOpenHook::AfterFileOpenHook(refNum, fileNameStr, pathNameStr, fileTypeStr, fileCreatorStr, fileKind )
+ProgrammingTopic::AfterMDIFrameSizedHook::AfterMDIFrameSizedHook(param )
+ProgrammingTopic::AfterWindowCreatedHook::AfterWindowCreatedHook(windowNameStr, winType )
+Function::AiryA::airyA(x [, accuracy ])
+Function::AiryAD::airyAD(x [, accuracy ])
+Function::AiryB::airyB(x [, accuracy ])
+Function::AiryBD::airyBD(x [, accuracy ])
+Function::alog::alog(num )
+Function::AnnotationInfo::AnnotationInfo(winNameStr, annotationNameStr  [, options  ] )
+Function::AnnotationList::AnnotationList(winNameStr )
+Operation::APMath::APMath [/EX=exDigits /N=numDigits /V/Z] destStr = Expression
+Operation::Append::Append
+Operation::AppendBoxPlot::AppendBoxPlot [axis flags ][/W=winName /TN=traceName /VERT[=doVert] /CATL[=doCatLabels]] wave[, wave, ...] [vs xWave]
+Operation::AppendImage::AppendImage [/G=g /W=winName ][axisFlags ] matrix   [vs {xWaveName, yWaveName }]
+Operation::AppendLayoutObject::AppendLayoutObject [flags] objectType  objectName
+Operation::AppendMatrixContour::AppendMatrixContour [axisFlags ][/W=winName /F=formatStr ] zWave [vs {xWave, yWave }]
+Operation::AppendText::AppendText [/W=winName /N=name /NOCR[=n ]] textStr
+Operation::AppendToGizmo::AppendToGizmo [flags] keyword [=value ]
+Operation::AppendToGraph::AppendToGraph [/W=winName /B[=axisName ] /C=(r,g,b[,a]) /L[=axisName ] /NCAT/Q/R [=axisName ] /T[=axisName ]/VERT] waveName  [, waveName ] ... [vs xwaveName ]
+Operation::AppendToLayout::AppendToLayout [/G=g /I/M/R/T/S] objectSpec  [, objectSpec ]...
+Operation::AppendToTable::AppendToTable  [/W=winName ] columnSpec [, columnSpec ]...
+Operation::AppendViolinPlot::AppendViolinPlot [axis flags ][/W=winName /TN=traceName /VERT[=doVert] /CATL[=doCatLabels]] wave[, wave, ...] [vs xWave]
+Operation::AppendXYZContour::AppendXYZContour [axisFlags ][/W=winName /F=formatStr ] zWave [vs {xWave, yWave }]
+Function::area::area(waveName  [, x1, x2  ] )
+Function::areaXY::areaXY(XWaveName, YWaveName  [, x1, x2  ] )
+Function::asin::asin(num )
+Function::asinh::asinh(num )
+Function::atan::atan(num )
+Function::atan2::atan2(y1, x1 )
+Function::atanh::atanh(num )
+Operation::AutoPositionWindow::AutoPositionWindow[/E][/M=m ][/R=relWindow ] [windowName ]
+Function::AxisInfo::AxisInfo(graphNameStr, axisNameStr )
+Function::AxisLabel::AxisLabel(graphNameStr, axisNameStr [, escapeBackslashes])
+Function::AxisList::AxisList(graphNameStr )
+Function::AxisValFromPixel::AxisValFromPixel(graphNameStr, axNameStr, pixel )
+Operation::BackgroundInfo::BackgroundInfo
+Function::Base64Decode::Base64Decode(inputStr)
+Function::Base64Encode::Base64Encode(inputStr)
+Operation::Beep::Beep
+ProgrammingTopic::BeforeDebuggerOpensHook::BeforeDebuggerOpensHook(errorInRoutineStr, stoppedByBreakpoint )
+ProgrammingTopic::BeforeExperimentSaveHook::BeforeExperimentSaveHook(refNum, fileNameStr, pathNameStr, fileTypeStr, fileCreatorStr, fileKind )
+ProgrammingTopic::BeforeFileOpenHook::BeforeFileOpenHook(refNum, fileNameStr, pathNameStr, fileTypeStr, fileCreatorStr, fileKind )
+ProgrammingTopic::BeforeUncompiledHook::BeforeUncompiledHook(changeCode, procedureWindowTitleStr, textChangeStr )
+Function::Besseli::Besseli(n, z )
+Function::Besselj::Besselj(n, z )
+Function::Besselk::Besselk(n, z )
+Function::Bessely::Bessely(n, z )
+Function::beta::beta(a, b )
+Function::betai::betai(a, b, x [, accuracy ])
+Operation::BezierToPolygon::BezierToPolygon [ /DSTX=destXWave /DSTY=dstYWave /FREE /NSEG=nseg ] bezXWave, bezYWave
+Function::BinarySearch::BinarySearch(waveName, val )
+Function::BinarySearchInterp::BinarySearchInterp(waveName, val )
+Function::binomial::binomial(n, k )
+Function::binomialln::binomialln(a, b )
+Function::binomialNoise::binomialNoise(n, p )
+Operation::BoundingBall::BoundingBall [/F/Z] scatterWave
+Operation::BoxSmooth::BoxSmooth box, srcWave, smoothedWave
+ProgrammingTopic::break::break
+Operation::BrowseURL::BrowseURL [/Z ] urlStr
+Operation::BuildMenu::BuildMenu menuNameStr
+Operation::Button::Button [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+ProgrammingTopic::ButtonControl::ButtonControl
+Function::cabs::cabs(z )
+ProgrammingTopic::CameraWindow::CameraWindow
+Function::CaptureHistory::CaptureHistory(refnum, stopCapturing )
+Function::CaptureHistoryStart::CaptureHistoryStart()
+ProgrammingTopic::catch::The catch flow control keyword marks the beginning of code in a try-catch-endtry flow control construct for handling any abort conditions.See AlsoThe try-catch-endtry flow control statement for details.
+Operation::cd::cd dataFolderSpec
+ProgrammingTopic::CDFFunc::CDFFunc
+Function::ceil::ceil(num )
+Function::centerOfMass::centerOfMass(srcWave [, x1, x2] )
+Function::centerOfMassXY::centerOfMassXY(waveX, waveY)
+Function::cequal::cequal(z1, z2 )
+Function::char2num::char2num(str )
+Operation::Chart::Chart ctrlName [ keyword = value  [, keyword = value ...] ]
+Function::chebyshev::chebyshev(n, x )
+Function::chebyshevU::chebyshevU(n, x )
+Operation::CheckBox::CheckBox [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+ProgrammingTopic::CheckboxControl::CheckboxControl
+Operation::CheckDisplayed::CheckDisplayed [/A/W=winName ] waveName [, waveName ]...
+Function::CheckName::CheckName(nameStr, objectType   [, windowNameStr ])
+Function::ChildWindowList::ChildWindowList(hostNameStr )
+Operation::ChooseColor::ChooseColor [/A[=a]/C=(r,g,b[,a] )]
+Function::CleanupName::CleanupName(nameStr, beLiberal  [, maxBytes ])
+Operation::Close::Close [/A] [fileRefNum ]
+Operation::CloseHelp::CloseHelp [ /ALL /FILE=fileNameStr  /NAME=helpNameStr  /P=pathName ]
+Operation::CloseMovie::CloseMovie
+Operation::CloseProc::CloseProc  /NAME=procNameStr  [/P=PathName ] [/COMP=[compile ] [/D=[delete ]] [/SAVE[=savePathStr ]]
+Function::cmplx::cmplx(realPart, imagPart )
+Function::cmpstr::CmpStr(str1, str2  [, flags ])
+Operation::ColorScale::ColorScale [flags] [, keyword = value, ...] [axisLabelStr ]
+Operation::ColorTab2Wave::ColorTab2Wave colorTableName
+ProgrammingTopic::complex::complex
+Operation::Concatenate::Concatenate [ /DL /FREE /KILL /NP[=dim ] /O] [typeFlags ]  waveListStr, destWave
+Function::conj::conj(z )
+ProgrammingTopic::Constant::Constant
+ProgrammingTopic::continue::continue
+Function::ContourInfo::ContourInfo(graphNameStr, contourWaveNameStr, instanceNumber )
+Function::ContourNameList::ContourNameList(graphNameStr, separatorStr )
+Function::ContourNameToWaveRef::ContourNameToWaveRef(graphNameStr, contourNameStr )
+Function::ContourZ::ContourZ(graphNameStr, contourNameStr, instance, x, y [,pointFindingTolerance] )
+Operation::ControlBar::ControlBar [ /EXP=e /L/R/B/T/W=graphName ]barHeight
+Operation::ControlInfo::ControlInfo [/W=winName ] controlName
+Function::ControlNameList::ControlNameList(winNameStr  [, listSepStr  [, matchStr ] ])
+Operation::ControlUpdate::ControlUpdate [/A /W=winName ] [controlName ]
+Operation::ConvertGlobalStringTextEncoding::ConvertGlobalStringTextEncoding [flags ] originalTextEncoding, newTextEncoding , [string , string, ...]
+Function::ConvertTextEncoding::ConvertTextEncoding(sourceTextStr , sourceTextEncoding , destTextEncoding , mapErrorMode, options )
+Operation::ConvexHull::ConvexHull [/C/E/I/S/T=tolerance /V/Z] xwave, ywave
+Operation::Convolve::Convolve [/A/C] srcWaveName, destWaveName [, destWaveName ]...
+Operation::CopyDimLabels::CopyDimLabels [flags] srcWave, destWave [, destWave]...
+Operation::CopyFile::CopyFile [/D /I[=i ]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFileStr ]  [ as destFileOrFolderStr ]
+Operation::CopyFolder::CopyFolder [/D/I[=i]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFolderStr ]  [ as destFolderStr ]
+Operation::CopyScales::CopyScales [/I/P] srcWaveName, waveName [, waveName ]...
+Operation::Correlate::Correlate [/AUTO/C/NODC] srcWaveName, destWaveName [, destWaveName ]...
+Function::cos::cos(angle )
+Function::cosh::cosh(num )
+Function::cosIntegral::CosIntegral(z )
+Function::cot::cot(angle )
+Function::coth::coth(num )
+Function::CountObjects::CountObjects(sourceFolderStr, objectType )
+Function::CountObjectsDFR::CountObjectsDFR(dfr, objectType )
+Function::cpowi::cpowi(num, ipow )
+Operation::CreateAliasShortcut::CreateAliasShortcut [/D/I[=i ]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [targetFileDirStr ]  [ as aliasFileStr ]
+Operation::CreateBrowser::CreateBrowser [/M] [ keyword = value  [, keyword = value ...] ]
+Function::CreateDataObjectName::CreateDataObjectName(dfr, nameInStr, objectType, suffixNum, options)
+Function::CreationDate::CreationDate(waveName )
+Operation::Cross::Cross [ /DEST=destWave  /FREE /T /Z] vectorA, vectorB  [, vectorC ]
+Function::csc::csc(angle )
+Function::csch::csch(x)
+Function::CsrInfo::CsrInfo(cursorName  [, graphNameStr ])
+Function::CsrWave::CsrWave(cursorName  [, graphNameStr  [, wantTraceName ]])
+Function::CsrWaveRef::CsrWaveRef(cursorName  [, graphNameStr ])
+Function::CsrXWave::CsrXWave(cursorName  [, graphNameStr ])
+Function::CsrXWaveRef::CsrXWaveRef(cursorName  [, graphNameStr ])
+Function::CTabList::CTabList()
+Operation::CtrlBackground::CtrlBackground [start[=startTicks ], period=deltaTicks, dialogsOK=d, noBurst=n, stop]
+Operation::CtrlFIFO::CtrlFIFO FIFOName, [deltaT=dt, note=noteStr, file=oRefNum, rfile=rRefNum, rdfile=rRefNum, doffset=dataOffset, dsize=dataSize, swap, size=s, start, stop, close, flush]
+Operation::CtrlNamedBackground::CtrlNamedBackground taskName , keyword  = value  [, keyword  = value ...]
+Operation::Cursor::Cursor [flags] cursorName  traceName  x_value
+ProgrammingTopic::CursorStyle::CursorStyle
+Operation::CurveFit::CurveFit [ flags ] fitType, [kwCWave=coefWaveName ,] waveName  [ flag parameters ]
+Operation::CustomControl::CustomControl [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+Operation::CWT::CWT [ flags ] srcWave
+Function::DataFolderDir::DataFolderDir(mode [, dfr ] )
+Function::DataFolderExists::DataFolderExists(dataFolderNameStr )
+Function::DataFolderList::DataFolderList(matchStr, separatorStr [, dfr ] )
+Function::DataFolderRefChanges::DataFolderRefChanges(dfr, changeType)
+Function::DataFolderRefsEqual::DataFolderRefsEqual(dfr1 , dfr2 )
+Function::DataFolderRefStatus::DataFolderRefStatus(dfr )
+Function::date::date()
+Function::date2secs::date2secs(year, month, day )
+Function::datetime::DateTime
+Function::DateToJulian::dateToJulian(year, month, day )
+Function::Dawson::dawson(x )
+Operation::Debugger::Debugger
+Operation::DebuggerOptions::DebuggerOptions [enable=en, debugOnAbort=doa, debugOnError=doe, NVAR_SVAR_WAVE_Checking=nvwc]
+ProgrammingTopic::default::default
+Operation::DefaultFont::DefaultFont [/U] "fontName "
+Operation::DefaultGuiControls::DefaultGUIControls [/W=winName /Mac/Win] [ appearance ]
+Operation::DefaultGuiFont::DefaultGUIFont [/W=winName /Mac/Win] group= {fNameStr, fSize, fStyle } [, ...]
+ProgrammingTopic::DefaultTab::DefaultTab
+Operation::DefaultTextEncoding::DefaultTextEncoding [encoding=textEncoding , overrideDefault=override ]
+Function::defined::defined(symbol)
+Operation::DefineGuide::DefineGuide [/W=winName ] newGuideName = {[guideName1, val  [, guideName2 ]]} [, ...]
+Operation::DelayUpdate::DelayUpdate
+Operation::DeleteAnnotations::DeleteAnnotations [flags] [tagOffscreen, tagTraceHidden, invisible, offsetOffscreen, tooSmall[=size ]]
+Operation::DeleteFile::DeleteFile [/I/M=messageStr /P=pathName  /Z ]  [fileNameStr  ]
+Operation::DeleteFolder::DeleteFolder [/I/M=messageStr /P=pathName /Z ]  [folderNameStr  ]
+Operation::DeletePoints::DeletePoints [/M=dim ] startElement, numElements, waveName [, waveName ]...
+Function::deltax::deltax(waveName )
+ProgrammingTopic::DFREF::DFREF
+Operation::Differentiate::Differentiate [/DIM = d  /EP=e  /METH=m  /P ][typeFlags ] yWaveA  [/X=xWaveA ] [/D=destWaveA ][, yWaveB  [/X=xWaveB ][/D=destWaveB ][, ...]]
+Function::digamma::digamma(x )
+Function::dilogarithm::Dilogarithm(z)
+Function::DimDelta::DimDelta(waveName, dimNumber )
+Function::DimOffset::DimOffset(waveName, dimNumber )
+Function::DimSize::DimSize(waveName, dimNumber )
+Operation::dir::Dir [dataFolderSpec ]
+Operation::Display::Display [/B[=axisName /HIDE=h /FG=(gLeft, gTop, gRight, gBottom ) /HOST=hcSpec /I/K=k /L[=axisName]/M /N=name /PG=(gLeft, gTop, gRight, gBottom )/R[=axisName ] /T[=axisName ] /VERT/W=(left, top, right, bottom )] [waveName [,waveName ] ... [vs xwaveName ]] [as titleStr ]
+Operation::DisplayHelpTopic::DisplayHelpTopic [/K=k  /Z] TopicString
+Operation::DisplayProcedure::DisplayProcedure [/B=winTitleOrName  /L=lineNum  /W=procWinTitle ] [functionOrMacroNameStr ]
+Operation::DoAlert::DoAlert [/T=titleStr] alertType, promptStr
+Operation::DoIgorMenu::DoIgorMenu [/C /OVRD] MenuNameStr, MenuItemStr
+ProgrammingTopic::DoPrompt::DoPrompt [/HELP=helpStr ] dialogTitleStr, variable  [, variable ]...
+ProgrammingTopic::double::double
+Operation::DoUpdate::DoUpdate [ /E=e  /W=targWin  /SPIN=ticks ]
+ProgrammingTopic::do-while::do		<code>	while (<expression>)
+Operation::DoWindow::DoWindow [/B[=bname ]/C/D/F/H/HIDE=h /K/N/R/W=targWin ] [windowName ]
+Operation::DoXOPIdle::DoXOPIdle
+Operation::DPSS::DPSS [flags] numPoints, numWindows
+Operation::DrawAction::DrawAction [/L=layerName /W=winName  ] keyword = value [, keyword = value ...]
+Operation::DrawArc::DrawArc [/W=winName /X/Y] xOrg, yOrg, arcRadius, startAngle, stopAngle
+Operation::DrawBezier::DrawBezier [/W=winName /ABS] xOrg, yOrg, hScaling, vScaling, xWaveName, yWaveName
+Operation::DrawLine::DrawLine [/W=winName ] x0, y0, x1, y1
+Operation::DrawOval::DrawOval [/W=winName ] left, top, right, bottom
+Operation::DrawPICT::DrawPICT [/W=winName ][/RABS ] left, top, hScaling, vScaling, pictName
+Operation::DrawPoly::DrawPoly [/W=winName /ABS] xorg, yorg, hScaling, vScaling, xWaveName, yWaveName
+Operation::DrawRect::DrawRect [/W=winName ] left, top, right, bottom
+Operation::DrawRRect::DrawRRect [/W=winName ] left, top, right, bottom
+Operation::DrawText::DrawText [/W=winName ] x0, y0, textStr
+Operation::DrawUserShape::DrawUserShape [/W=winName /MO=options] x0, y0, x1, y1, userFuncName, textString, privateString
+ProgrammingTopic::DrawUserShape::DrawUserShape
+Operation::DSPDetrend::DSPDetrend [/F=function /M=maskWave /P=polyOrder /Q]  srcWave
+Operation::DSPPeriodogram::DSPPeriodogram [/DB /DBR=ref  /COHR /DLSG /NODC=val  /NOR=value  /Q /SEGN={ptsPerSegment , overlapPts } /R=[start, end ] /R=(startX, endX) /WIN=windowKind  /Z ] srcWave [, srcWave2 ]
+Operation::Duplicate::Duplicate [/O/R=(startX,endX )[(startY, endY )...]] [typeFlags ]  srcWaveName, destWaveName [, destWaveName ]...
+Operation::DuplicateDataFolder::DuplicateDataFolder [ /O=options /Z ] sourceDataFolderSpec, destDataFolderSpec
+Operation::DWT::DWT [/I/S/D/P=num/T=type /N=num /V=value] srcWaveName, destWaveName
+Function::e::e
+Operation::EdgeStats::EdgeStats [/A=avgPts /B=box /F=frac /L=(startLevel, endLevel ) /P /Q /R=(startX, endX ) /T=dx ] waveName
+Operation::Edit::Edit [ /FG=(gLeft, gTop, gRight, gBottom) /HIDE=h /HOST=hcSpec /I/K=k /M/N=name/W=(left, top, right, bottom)] [columnSpec [,columnSpec]...] [as titleStr]
+Function::ei::ei(x )
+Function::ellipticE::EllipticE(x)
+Function::ellipticK::EllipticK(x)
+ProgrammingTopic::End::End
+ProgrammingTopic::EndMacro::EndMacro
+ProgrammingTopic::EndStructure::EndStructure
+ProgrammingTopic::endtry::The endtry flow control keyword marks the end of a try-catch-endtry flow control construct.See AlsoThe try-catch-endtry flow control statement for details.
+Function::enoise::enoise(num  [, RNG ])
+Function::equalWaves::EqualWaves(waveA, waveB , selector  [, tolerance ])
+Function::erf::erf(num  [, accuracy ])
+Function::erfc::erfc(num  [, accuracy ])
+Function::erfcw::erfcw(z )
+Function::erfcx::erfcx(num )
+Operation::ErrorBars::ErrorBars [/W=winName /CLIP=clip /L=lineThick /T=thick /X=xWidth /Y=yWidth /RGB=strokeColor ] traceName, mode [errorSpecification ]
+Operation::EstimatePeakSizes::EstimatePeakSizes [/B=baseWave ] [/X=xWave ] [/E=bothEdgesWave ] edgePct, maxWidth, box, npks, peakCentersWave, peakWave, peakAmplitudesWave, peakWidthsWave
+Operation::Execute::Execute [/Z] cmdStr
+Operation::ExecuteScriptText::ExecuteScriptText [/B /W=waitTime /UNQ /Z] textStr
+Function::exists::exists(objNameStr )
+Function::exp::exp(num )
+Operation::ExperimentInfo::ExperimentInfo [ /Q[=quiet ] ] [ keyword=value [, keyword=value ...] ]
+Operation::ExperimentModified::ExperimentModified  [newModifiedState ]
+Function::expInt::expInt(n, x )
+Function::expIntegralE1::ExpIntegralE1(z )
+Function::expNoise::expNoise(b )
+Operation::ExportGizmo::ExportGizmo [flags] keyword [=value]
+Operation::Extract::Extract [ /FREE /INDX /O ][ typeFlags ] srcWave, destWave, LogicalExpression
+Function::factorial::factorial(n )
+Function::Faddeeva::Faddeeva(z)
+Function::fakedata::FakeData(waveName )
+Operation::FastGaussTransform::FastGaussTransform [/AERR=aprxErr, /WDTH=h, /OUTW=locWave, /OUT1={x1,nx,x2 },  /OUT2={x1,nx,x2,y1,ny,y2 }, /OUT3={x1,nx,x2,y1,ny,y2,z1,nz,z2 }, /Q, /RX=rx, /RY=ry, /TET=nTerms, /Z] srcLocationsWave, srcWeightsWave
+Operation::FastOp::FastOp destWave = prod1 [± prod2  [± prod3 ]]
+Function::faverage::faverage(waveName  [, x1, x2  ] )
+Function::faverageXY::faverageXY(XWaveName, YWaveName  [, x1, x2  ] )
+Operation::FBinRead::FBinRead [/B[=b ]/F=f ] refNum, objectName
+Operation::FBinWrite::FBinWrite [/B[=b ]/F=f ] refNum, objectName
+Function::FetchURL::FetchURL(urlStr )
+Operation::FFT::FFT [flags]  srcWave
+Operation::FGetPos::FGetPos refNum
+Operation::FIFO2Wave::FIFO2Wave [/R=[startPoint,endPoint ]/S=s ] FIFOName, channelName, waveName
+Operation::FIFOStatus::FIFOStatus [/Q] FIFOName
+Operation::FilterFIR::FilterFIR [/COEF[=coefsWaveName ] /DIM= d /E=endEffect  /ENDV={sv[,ev]} /HI={f1, f2, n } /LO={f1, f2, n } /NMF={fc, fw [, eps, nMult ]} /WINF=windowKindName] waveName [, waveName ]...
+Operation::FilterIIR::FilterIIR [/CASC /COEF[=coefsWaveName] /DIM=d /ENDV=ev /HI=fHigh  /LO=fLow /N={fNotch, notchQ } /ORD=order /Z=z /ZP] [waveName , ... ]
+Operation::FindAPeak::FindAPeak [/B=baseWaveName ] minamp, pol, box, peakWave [ (startX,endX ) ]
+Operation::FindContour::FindContour [/DSTX=destXWave /DSTY=dstYWave ] matrixWave, level
+Function::FindDimLabel::FindDimLabel(waveName, dimNumber, labelString )
+Operation::FindDuplicates::FindDuplicates [flags ] srcWave
+Operation::FindLevel::FindLevel [/B=box /EDGE=e /P/Q/R=(startX,endX )/T=dx ] waveName, level
+Operation::FindLevels::FindLevels [/B=box /D=destWaveName /DEST=destWaveName /EDGE=e /M=minWidthX /N=maxLevels /P/Q  /R=(startX,endX)/T=dx]waveName, level
+Function::FindListItem::FindListItem(itemStr, listStr  [, listSepStr  [, start  [, matchCase ]]])
+Operation::FindPeak::FindPeak [/B=box /I/M=minAmp /N/P/Q/R=(startX,endX )] waveName
+Operation::FindPointsInPoly::FindPointsInPoly xWaveName, yWaveName, xPolyWaveName, yPolyWaveName
+Operation::FindRoots::FindRoots [/B=[doBracket ]][/F=trustRegion ] [/H=highBracket  /L=lowBracket ] [/I=maxIters ] [/Q] [/T=tol ] [/X=startXSpec ] funcspec, pWave  [, funcspec, pwave  [, ...]]
+Operation::FindSequence::FindSequence [/I=iValueWave /M=match  /R=reverse  /S=start /T=tolerance /U=uValueWave /V=rValueWave /Z] srcWave
+Operation::FindValue::FindValue [/I=iValue /S=start /T=tolerance /U=uValue /V=rValue /Z] srcWave
+ProgrammingTopic::FitFunc::FitFunc
+Function::floor::floor(num )
+Operation::FMaxFlat::FMaxFlat [/SYM[=sym] /Z[=z] ] beta, gamma, coefsWave
+Function::FontList::FontList(separatorStr  [, options ])
+Function::FontSizeHeight::FontSizeHeight(fontNameStr, fontSize, fontstyle  [,appearanceStr ] )
+Function::FontSizeStringWidth::FontSizeStringWidth(fontNameStr, fontSize, fontstyle, theStr [,appearanceStr] )
+ProgrammingTopic::for-endfor::for(<initialization>; <continuation test>; <update>)		<code>	endfor
+ProgrammingTopic::for-var-in-wave::for(<type> varName : <wave>)		<code>	endfor
+Operation::FPClustering::FPClustering [/NOR][/SHUB=startHub][/MAXR=maxRad] [/Q/Z] srcWave
+Operation::fprintf::fprintf refNum,formatStr  [, parameter]...
+Operation::FReadLine::FReadLine [/N=n /ENCG=textEncoding /T=termcharStr ] refNum, stringVarName
+Function::FresnelCos::fresnelCos(x )
+Function::FresnelSin::fresnelSin(x )
+Operation::FSetPos::FSetPos refNum, filePos
+Operation::FStatus::FStatus refNum
+Operation::FTPCreateDirectory::FTPCreateDirectory [ /N=portNumber /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr
+Operation::FTPDelete::FTPDelete [ /D /N=portNumber /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr
+Operation::FTPDownload::FTPDownload [ /D /I/M=messageStr /N=portNumber /O[=mode]/P=pathName /S=showProgress /T=transferType /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr, localPathStr
+Operation::FTPUpload::FTPUpload [ /D /I/M=messageStr /N=portNumber /O[=mode]/P=pathName /S=showProgress /T=transferType /U=userNameStr /V=diagnosticMode /W=passwordStr /Z ] urlStr, localPathStr
+Operation::FuncFit::FuncFit [ flags ] fitFuncName, cwaveName, waveName  [ flag parameters ]
+Operation::FuncFitMD::FuncFitMD [ flags ] fitFuncName, cwaveName, waveName  [ flag parameters ]
+ProgrammingTopic::FUNCREF::FUNCREF
+Function::FuncRefInfo::FuncRefInfo(funcRef )
+ProgrammingTopic::Function::Function [ /C /D /S /DF /WAVE ]
+Function::FunctionInfo::FunctionInfo(functionNameStr [, procedureWinTitleStr ])
+Function::FunctionList::FunctionList(matchStr, separatorStr, optionsStr )
+Function::FunctionPath::FunctionPath(functionNameStr)
+ProgrammingTopic::GalleryGlobal::GalleryGlobal
+Function::gamma::gamma(num )
+Function::gammaEuler::gammaEuler
+Function::gammaInc::gammaInc(a, x  [, upperTail ])
+Function::gammaNoise::gammaNoise(a [,b ])
+Function::gammln::gammln(num  [, accuracy ])
+Function::gammp::gammp(a, x  [, accuracy ])
+Function::gammq::gammq(a, x  [, accuracy ])
+Function::Gauss::Gauss(x,xc,wx[,y,yc,wy [,z,zc,wz [,t,tc,wt ]]])
+Function::Gauss1D::Gauss1D(w, x )
+Function::Gauss2D::Gauss2D(w, x, y )
+Operation::GBLoadWave::GBLoadWave [flags] fileNameStr
+Function::gcd::gcd(A, B )
+Function::GeometricMean::GeometricMean(a, b)
+Operation::GetAxis::GetAxis [/W=winName /Q] axisName
+Function::GetBrowserLine::GetBrowserLine (fullPathStr [, mode])
+Function::GetBrowserSelection::GetBrowserSelection (index [, mode ])
+Operation::GetCamera::GetCamera [/DEF/Q /W=winName /Z ]  keyword=value
+Function::GetDataFolder::GetDataFolder(mode [, dfr ] )
+Function::GetDataFolderDFR::GetDataFolderDFR( )
+Function::GetDefaultFont::GetDefaultFont(winName )
+Function::GetDefaultFontSize::GetDefaultFontSize(graphNameStr, axisNameStr )
+Function::GetDefaultFontStyle::GetDefaultFontStyle(graphNameStr, axisNameStr )
+Function::GetDimLabel::GetDimLabel(waveName, dimNumber, dimIndex )
+Function::GetEnvironmentVariable::GetEnvironmentVariable(varName)
+Function::GetErrMessage::GetErrMessage(errorCode [, substitutionOption ])
+Operation::GetFileFolderInfo::GetFileFolderInfo [/D /P=pathName /Q /UTC[=u] /Z[=z]] [fileOrFolderNameStr]
+Function::GetFormula::GetFormula(objName )
+Operation::GetGizmo::GetGizmo [/N/Z] keyword  [=value ]
+Function::GetIndependentModuleName::GetIndependentModuleName()
+Function::GetIndexedObjName::GetIndexedObjName(sourceFolderStr, objectType, index )
+Function::GetIndexedObjNameDFR::GetIndexedObjNameDFR(dfr, objectType, index )
+Function::GetKeyState::GetKeyState(flags)
+Operation::GetLastUserMenuInfo::GetLastUserMenuInfo
+Operation::GetMarquee::GetMarquee [/K/W=winName  /Z] [axisName [, axisName ]]
+Operation::GetMouse::GetMouse [ /W=winName ]
+Function::GetRTErrMessage::GetRTErrMessage()
+Function::GetRTError::GetRTError(flag )
+Function::GetRTLocation::GetRTLocation(sleepMS )
+Function::GetRTLocInfo::GetRTLocInfo(code )
+Function::GetRTStackInfo::GetRTStackInfo(selector )
+Function::GetScrapText::GetScrapText()
+Operation::GetSelection::GetSelection winType, winName, bitflags
+Function::GetUserData::GetUserData(winName, objID, userdataName )
+Function::GetWavesDataFolder::GetWavesDataFolder(waveName, kind )
+Function::GetWavesDataFolderDFR::GetWavesDataFolderDFR(waveName )
+Operation::GetWindow::GetWindow [/Z] winName  keyword
+Function::GetWindowBrowserSelection::
+Function::GizmoInfo::GizmoInfo(nameStr, key )
+ProgrammingTopic::GizmoPlot::GizmoPlot
+Function::GizmoScale::GizmoScale(dataValue, dimNumber [, gizmoNameStr ] )
+Function::gnoise::gnoise(num [, RNG ])
+ProgrammingTopic::Graph::Graph
+ProgrammingTopic::GraphMarquee::GraphMarquee
+Operation::GraphNormal::GraphNormal [/W=winName ]
+ProgrammingTopic::GraphStyle::GraphStyle
+Operation::GraphWaveDraw::GraphWaveDraw [/W=winName /B/F[=f ]/L/M/O/R/T] [yWave, xWave]
+Operation::GraphWaveEdit::GraphWaveEdit [/M /NI /ND /T=t  /W=winName ] traceName
+Operation::Grep::Grep [ flags ] [srcFileStr ] [srcTextWaveName] [ as [destFileOrFolderStr ]										[, destTextWaveName] ]
+Function::GrepList::GrepList(listStr, regExprStr [,reverse  [, listSepStr ]] )
+Function::GrepString::GrepString(string, regExprStr )
+ProgrammingTopic::GridStyle::GridStyle
+Operation::GroupBox::GroupBox [/Z] ctrlname  [ keyword = value  [, keyword = value ...] ]
+Function::GuideInfo::GuideInfo(winNameStr, guideNameStr )
+Function::GuideNameList::GuideNameList(winNameStr, optionsStr )
+Operation::Hanning::Hanning waveName [, waveName ]...
+Function::Hash::Hash(inputStr, method )
+Operation::HCluster::HCluster [ /ITYP=it /OTYP=ot /LINK=nm /DISS=dm /P=pow /VARW=varWave /DEST={dMatrixName, dendrodrogramName} /O ] sourceWave
+Function::hcsr::hcsr(cursorName  [, graphNameStr ])
+Function::HDF5AttributeInfo::HDF5AttributeInfo(locationID, objectNameStr, objectType, attributeNameStr, options, di )
+Operation::HDF5CloseFile::HDF5CloseFile [ /A /Z ] fileID
+Operation::HDF5CloseGroup::HDF5CloseGroup [ /Z ] groupID
+Operation::HDF5Control::HDF5Control [ keyword = value  [, keyword = value ...] ]
+Operation::HDF5CreateFile::HDF5CreateFile [ /I /O /P=pathName /Z ] fileID as fileNameStr
+Operation::HDF5CreateGroup::HDF5CreateGroup [ /Z ] locationID, nameStr, groupID
+Operation::HDF5CreateLink::HDF5CreateLink [ /EXT={pathName, filePath} /HARD=makeHardLink /Q /Z ] targetLocationID, targetName, linkLocationID, linkName
+ProgrammingTopic::HDF5DataInfo::HDF5DataInfo
+Function::HDF5DatasetInfo::HDF5DatasetInfo(locationID, datasetNameStr, options, di )
+ProgrammingTopic::HDF5DatatypeInfo::HDF5DatatypeInfo
+Operation::HDF5DimensionScale::HDF5DimensionScale [ /Z ] [ keyword = value  [, keyword = value ...] ]
+Operation::HDF5Dump::HDF5Dump [ [ /A[=attributeNameStr ] /ATTR=dumpAttributes /D=datasetNameStr /G=groupNameStr /H=dumpHeaderOnly /I=dumpObjectIDs /L=linkNameStr /Q /P=pathName /PROP=dumpProperties /R=dumpAsASCII /T=datatypeNameStr /TIME=timeInSeconds /W=widthInColumns /Z ] fileNameStr
+Operation::HDF5DumpErrors::HDF5DumpErrors [ /CLR=clear /Q ]
+Operation::HDF5FlushFile::HDF5FlushFile [/A /Z ] fileID
+Function::HDF5LibraryInfo::HDF5LibraryInfo(options)
+Function::HDF5LinkInfo::HDF5LinkInfo(locationID, pathStr, options, li)
+ProgrammingTopic::HDF5LinkInfoStruct::HDF5LinkInfoStruct
+Operation::HDF5ListAttributes::HDF5ListAttributes [ /SEP=separatorStr /TYPE=type /Z ] locationID, nameStr
+Operation::HDF5ListGroup::HDF5ListGroup [ /CONT=continue /ERR=errorFlags /F /R[=mode ] /ORDR=order /SEP=separatorStr /TYPE=typeMask /Z ] locationID, nameStr
+Operation::HDF5LoadData::HDF5LoadData [ /A=attributeNameStr /COMP={mode, memberName} /ENUM=enumMode /GRPH=showInGraph /IGOR=attributesMask /N=name /O /OPTS=options /Q /SLAB=slabWave /T=showInTable /TRAN=transpose /TYPE=objectType /VAR=varMode /Z ] locationID, nameStr
+Operation::HDF5LoadGroup::HDF5LoadGroup [ /CONT=continue /ENUM=enumMode /IGOR=attributesMask /IMAG=lookForFormalImages /L=loadFlags /N=name /O /ORDR=order /OPTS=options /R[=mode ] /T[=topLevelName ] /TRAN=transpose /VAR=varMode /Z ] dataFolderSpec, locationID, nameStr
+Operation::HDF5LoadImage::HDF5LoadImage [ /CMDL=colorModelStr /GRPH=showInGraph /N=name /O /PAL=paletteNumber /PALN=palNameStr /SCLI={offset, multiplier, min, max, round} /SCLP={offset, multiplier, min, max, round} /Q /Z ] locationID, nameStr
+Operation::HDF5OpenFile::HDF5OpenFile [ /I /P=pathName /R /Z ] fileID [as fileNameStr ]
+Operation::HDF5OpenGroup::HDF5OpenGroup [ /Z ] locationID, nameStr, groupID
+Operation::HDF5SaveData::HDF5SaveData [ /A={attributeNameStr [, options ]} /APND=append /ENUM={enumList [, keyValSepStr, keyValTermStr ]} /IGOR=attributesMask /GZIP={compressionLevel, shuffle} /LAYO={layout [, chunkSizeList ]} /MAXD={maxDimSizeList} /O /OPTS=options /REF=refMode /SLAB=slabWave /STRF={fixedLength,paddingMode,charset} /TRAN=transpose /WRIT=write /Z ] wave, locationID [, nameStr ]
+ProgrammingTopic::HDF5SaveDataHook::HDF5SaveDataHook(s)
+ProgrammingTopic::HDF5SaveDataHookStruct::HDF5SaveDataHookStruct
+Operation::HDF5SaveGroup::HDF5SaveGroup [ flags ] dataFolderSpec, locationID, nameStr
+Operation::HDF5SaveImage::HDF5SaveImage [ /COMP=compatibility /CTAB={colorTable, zMin, zMax, reverse} /DIR /GRAY /O /PALD=palDatasetStr /PALN=palNameStr /PALW=paletteWave /Z ] wave, locationID [, nameStr ]
+Function::HDF5TypeInfo::HDF5TypeInfo(locationID, datasetOrGroupNameStr, attributeNameStr, memberName, options, dti)
+Operation::HDF5UnlinkObject::HDF5UnlinkObject [ /Z ] locationID, nameStr
+Function::hermite::hermite(n, x )
+Function::hermiteGauss::hermiteGauss(n, x )
+Operation::HideIgorMenus::HideIgorMenus  [MenuNameStr  [,MenuNameStr ] ...
+Operation::HideInfo::HideInfo [/W=winName ]
+Operation::HideProcedures::HideProcedures
+Operation::HideTools::HideTools  [/W=winName /A]
+Operation::HilbertTransform::HilbertTransform [flags] srcWave
+Operation::Histogram::Histogram [ flags ] srcWaveName, destWaveName
+Function::HyperG0F1::hyperG0F1(b, z)
+Function::HyperG1F1::hyperG1F1(a, b, z)
+Function::HyperG2F1::hyperG2F1(a, b, c, z)
+Function::HyperGNoise::hyperGNoise(m, n, k )
+Function::HyperGPFQ::hyperGPFQ(waveA, waveB, z)
+Function::i::i
+Operation::ICA::ICA [flags] srcWave
+ProgrammingTopic::if-else-endif::if (<expression>)		<code>	else		<code>	endif
+ProgrammingTopic::if-elseif-endif::if (<expression>)		<code>	elseif (<expression>)		<code>	else		<code>	endif
+ProgrammingTopic::if-endif::if (<expression>)		<code>	endif
+Operation::IFFT::IFFT [flags] srcWave
+ProgrammingTopic::IgorBeforeNewHook::IgorBeforeNewHook(igorApplicationNameStr )
+ProgrammingTopic::IgorBeforeQuitHook::IgorBeforeQuitHook(unsavedExp, unsavedNotebooks, unsavedProcedures )
+Function::IgorInfo::IgorInfo(selector )
+ProgrammingTopic::IgorMenuHook::IgorMenuHook(isSelection, menuStr, itemStr, itemNo, activeWindowStr, wType )
+ProgrammingTopic::IgorQuitHook::IgorQuitHook(igorApplicationNameStr )
+ProgrammingTopic::IgorStartOrNewHook::IgorStartOrNewHook(igorApplicationNameStr )
+Function::IgorVersion::IgorVersion()
+ProgrammingTopic::IgorVersion::IgorVersion
+Function::imag::imag(z )
+Operation::ImageAnalyzeParticles::ImageAnalyzeParticles  [ flags ] keyword  imageMatrix
+Operation::ImageBlend::ImageBlend [/A=alpha /W=alphaWave ] srcWaveA, srcWaveB  [, destWave ]
+Operation::ImageBoundaryToMask::ImageBoundaryToMask width=w, height=h, xwave=xwavename, ywave=ywavename  [, scalingWave=scalingWaveName,  [seedX=xVal, seedY=yVal ]]
+Operation::ImageComposite::ImageComposite [/Z /FREE /DEST=destWave] srcImageA, srcImageB
+Operation::ImageEdgeDetection::ImageEdgeDetection [flags] Method  ImageMatrix
+Operation::ImageFileInfo::ImageFileInfo [/P=pathName ] fileNameStr
+Operation::ImageFilter::ImageFilter [/N=n /O/P=p /b=b /R=roiWave ] Method  dataMatrix
+Operation::ImageFocus::ImageFocus [/ED=edepth /METH=method /Q/Z] stackWave
+Operation::ImageFromXYZ::ImageFromXYZ [/AS] xyzWave , dataMatrix , countMatrix
+Operation::ImageGenerateROIMask::ImageGenerateROIMask [/E=e /I=i /W=winName ] imageInstance
+Operation::ImageGLCM::ImageGLCM [/Z /FREE /D=distance /E=structure /P=plane /HTFP /DEST=destGLCM /DETP=destParamWave] srcWave
+Operation::ImageHistModification::ImageHistModification [/A [/B=bins ][/C=cFactor ]] [/H=hRegions ] [/O/I] [/R=roiSpec ][/V=vRegions ][/W=waveName ] ImageMatrix
+Operation::ImageHistogram::ImageHistogram [/I/P=plane /R=roiWave /S] imageMatrix
+Function::ImageInfo::ImageInfo(graphNameStr, imageWaveNameStr, instanceNumber )
+Operation::ImageInterpolate::ImageInterpolate [ flags ] Method  srcWave
+Operation::ImageLineProfile::ImageLineProfile  [/P=plane /S/SC/V] xWave=xwave, yWave=ywave, srcwave=srcwave [, width=value, widthWave=wWave ]
+Operation::ImageLoad::ImageLoad  [ flags ] [fileNameStr ]
+Operation::ImageMorphology::ImageMorphology [/E=SE#  /I=iterations /L/N/O/R=roiSpec  /S= StructureElement  /W=whiteValue  /X=xOrigin  /Y=yOrigin /Z=zOrigin ] Method  ImageMatrix
+Function::ImageNameList::ImageNameList(graphNameStr, separatorStr )
+Function::ImageNameToWaveRef::ImageNameToWaveRef(graphNameStr, imageNameStr )
+Operation::ImageRegistration::ImageRegistration [flags] [testMask=testMaskWave ] [refMask=refMaskWave ] testWave=imageWave1, refWave=imageWave2
+Operation::ImageRemoveBackground::ImageRemoveBackground /R=roiWave  [/F/O/W][/P=polynomial order ] srcWave
+Operation::ImageRestore::ImageRestore [/Z /ITER=iterations  /DEST=destWave] srcWave=wSrc , psfWave=wPSF  [, relaxationGamma=h , startingImage=wRecon ]
+Operation::ImageRotate::ImageRotate [flags] ImageMatrix
+Operation::ImageSave::ImageSave [ flags ] waveName  [ [as] fileNameStr ]
+Operation::ImageSeedFill::ImageSeedFill [/O][/B=backgroundValue ][/C][/K=killCount ] [/R=roiWave ] [adaptive=factor, fillNumber=num, fuzzyCenter=fcVal, fuzzyProb=fpVal, fuzzyScale=fsVal, fuzzyWidth=fwVal, min=minval, max=maxval ], seedP=row, seedQ=col, seedR=layer, seedX=xLoc, seedY=yLoc, seedZ=zLoc, target=setValue, srcWave=srcImage
+Operation::ImageSkeleton3d::ImageSkeleton3D [/DEST=destWave /METH=method /Z ] srcWave
+Operation::ImageSnake::ImageSnake [flags ] srcWave
+Operation::ImageStats::ImageStats [ flags ] imageWave
+Operation::ImageThreshold::ImageThreshold [flags] imageMatrix
+Operation::ImageTransform::ImageTransform [ flags ] Method imageMatrix
+Operation::ImageUnwrapPhase::ImageUnwrapPhase  [/Q] [/E] [/M=method ] [/L] [/R=RoiWave ] [/MAX=len ] [qualityWave=qWave,] srcWave=waveName
+Operation::ImageWindow::ImageWindow [/I][/O][/P=param ] method  srcWave
+ProgrammingTopic::IndependentModule::IndependentModule
+Function::IndependentModuleList::IndependentModuleList( listSepStr )
+Function::IndexedDir::IndexedDir(pathName, index, flags [, separatorStr ])
+Function::IndexedFile::IndexedFile(pathName, index, fileTypeOrExtStr  [, creatorStr, separatorStr ])
+Operation::IndexSort::IndexSort [ /DIML ] indexWaveName, sortedWaveName [, sortedWaveName ]...
+Function::IndexToScale::IndexToScale(wave, index, dim)
+Function::Inf::Inf
+Operation::InsertPoints::InsertPoints [ /M=dim /V=value ] beforeElement, numElements, waveName [, waveName ]...
+Operation::InstantFrequency::InstantFrequency [flags] srcWave [ (startX,endX) ]
+ProgrammingTopic::int::int
+ProgrammingTopic::int64::int64
+Operation::Integrate::Integrate [/DIM = d  /METH=m  /P/T][typeFlags ] yWaveA  [/X = xWaveA ][/D = destWaveA ] [, yWaveB  [/X = xWaveB ][/D = destWaveB ][, ...]]
+Function::Integrate1D::Integrate1D(UserFunctionName, min_x, max_x [, options [, count ] [, pWave ]]])
+Operation::Integrate2D::Integrate2D [/Q /Z=zFlag /OPTS=options] [ keyword = value ...]
+Operation::IntegrateODE::IntegrateODE [/E=eps /F=errMethod  /M=m /Q= quiet /R=(startX, endX) /S=waveName /STOP={stopWave, mode} /U=u  /X=xvaluespec  /XRUN={dx0, Xmax} /CVOP={solver, jacobian, extendedErrors}] derivFunc,  cwaveName,  ywaveSpec
+Function::interp::interp(x1, xwaveName, ywaveName )
+Function::Interp2D::Interp2D (srcWaveName, x, y)
+Function::Interp3D::Interp3D(srcWave, x, y, z [, triangulationWave ])
+Operation::Interp3DPath::Interp3DPath 3dWave tripletPathWave
+Function::Interp4D::
+Operation::Interp4DPath::
+Operation::Interpolate2::Interpolate2 [flags ] [ xWave , ] yWave
+Operation::Interpolate3D::Interpolate3D [/Z ] /RNGX={x0,dx,nx}/RNGY={y0,dy,ny}/RNGZ={z0,dz,nz} /DEST=dataFolderAndName, triangulationWave=tWave, srcWave=sWave
+Function::inverseERF::inverseErf(x )
+Function::inverseERFC::inverseErfc(x )
+Function::ItemsInList::ItemsInList(listStr  [, listSepStr ])
+Function::j::j
+Function::JacobiCn::JacobiCn(x, k )
+Function::JacobiSn::JacobiSn(x, k )
+Operation::JCAMPLoadWave::JCAMPLoadWave /A[=baseName ] /D /H /I /N[=baseName ] /O /P=pathName /Q /R /V /W [ fileNameStr ]
+Operation::JointHistogram::JointHistogram [flags] wave1, wave2 [, wave3, wave4]
+Function::JulianToDate::JulianToDate(julianDay, format )
+Operation::KillBackground::KillBackground
+Operation::KillControl::KillControl [/W=winName ] controlName
+Operation::KillDataFolder::KillDataFolder [/Z] dataFolderSpec
+Operation::KillFIFO::KillFIFO FIFOName
+Operation::KillFreeAxis::KillFreeAxis [/W=winName ] axisName
+Operation::KillPath::KillPath [/A/Z] pathName
+Operation::KillPICTs::KillPICTs [/A/Z] [PICTName [, PICTName ]...]
+Operation::KillStrings::KillStrings [/A/Z] [stringName [, stringName ]...]
+Operation::KillVariables::KillVariables [/A/Z] [variableName [, variableName ]...]
+Operation::KillWaves::KillWaves [/A/F/Z] waveName [, waveName ]...
+Operation::KillWindow::KillWindow [/Z] winName
+Operation::KMeans::KMeans [/CAN /DEAD=method  /DIST=mode  /INIT=method  /INW=iWave /NCLS=num  /OUT=format  /SEED=val  /TER=method  /TERN=num /Z] populationWave
+Operation::Label::Label [/W=winName /Z] axisName, labelStr
+Function::Laguerre::laguerre(n, x)
+Function::LaguerreA::laguerreA(n, k, x)
+Function::LaguerreGauss::laguerreGauss(p, m, r)
+Function::LambertW::LambertW(z, branch)
+Operation::Layout::Layout [/A=(rows,cols)/B=(r,g,b[,a]) /C=color /G=g  /HIDE=h /I/K=k /M /P=orientation  /R/S/T /W=(left,top,right,bottom)] [objectSpec [, objectSpec ]...] [as titleStr ]
+ProgrammingTopic::Layout::Layout
+Function::LayoutInfo::LayoutInfo(winNameStr, itemNameStr )
+ProgrammingTopic::LayoutMarquee::LayoutMarquee
+Operation::LayoutPageAction::LayoutPageAction [/W=winName ] [ keyword = value  [, keyword = value ...] ]
+Operation::LayoutSlideShow::LayoutSlideShow [/W=winName ] [keyword = value ] ...
+ProgrammingTopic::LayoutStyle::LayoutStyle
+Function::leftx::leftx(waveName )
+Operation::Legend::Legend [/A=attach /C/E[=exterior]/F=frame /H=legendSymbolWidth /H={legendSymbolWidth, minThickness, maxThickness } /J/K /M[=saMeSize]/N=name /R=newName /S=style /T=tabSpec /V=vis /W=winName /X=xoffset /Y=yoffset ] [legendStr ]
+Function::LegendreA::legendreA(n, m, x )
+Function::limit::limit(num, low, high )
+Operation::LinearFeedbackShiftRegister::LinearFeedbackShiftRegister /N=nbits [/TAPS={t1, t2, ...} /TAPB=tapbits /MAX=index /MROR[=mirror] /INIT=initialValue /STOP=stopValue /LEN=length /DEST=destWave /FREE /MODE=doBitTrain ]
+Operation::ListBox::ListBox [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+ProgrammingTopic::ListBoxControl::ListBoxControl
+Function::ListMatch::ListMatch(listStr, matchStr [, listSepStr ] )
+Function::ListToTextWave::ListToTextWave(listStr, separatorStr)
+Function::ListToWaveRefWave::ListToWaveRefWave(stringList [, options])
+Function::ln::ln(num )
+Operation::LoadData::LoadData [/D /GREP={regExpStr,grepMode,objectTypeMask,grepFlags} /I /J=objectNamesStr /L=loadFlags /O[=overwriteMode ] /P=pathName  /Q /R /S=subDataFolderStr /T[=topLevelName ] ] fileOrFolderNameStr
+Operation::LoadPackagePreferences::LoadPackagePreferences [ /MIS=mismatch  /P=pathName ] packageName , prefsFileName, recordID, prefsStruct
+Operation::LoadPICT::LoadPICT [/M=promptStr /O /P=pathName /Q /Z] [fileNameStr ] [, pictName ]
+Operation::LoadWave::LoadWave [flags] fileNameStr
+Operation::Loess::Loess [/CONF={confInt, ciPlusWaveName [,ciMinusWaveName]} /DEST=destWaveName /DFCT[={destFactorWaveName1 [,destFactorWaveName...]}] /E=extrapolate /N=neighbors  /ORD=order  /PASS=passes  /R=robust /SMTH= sf  /TIME=secs /V=verbose /Z=z ] srcWave=srcWaveName  [, factors=factorWaveName1 [, factorWaveName2...]]
+Function::log::log(num )
+Function::logNormalNoise::logNormalNoise(m,s )
+Operation::LombPeriodogram::LombPeriodogram [ /NF=numFrequencies  /DESP=datafolderAndName   /DEST=datafolderAndName  /FR=frequencyResolution  /Q /Z ] srcTimeWave, srcAmpWave [, srcFreqWave ]
+Function::lorentzianNoise::lorentzianNoise(a, b)
+Function::LowerStr::LowerStr(str )
+ProgrammingTopic::Macro::Macro
+Function::MacroInfo::MacroInfo(macroNameStr )
+Function::MacroList::MacroList(matchStr, separatorStr, optionsStr )
+Function::MacroPath::MacroPath(macroNameStr)
+Function::magsqr::magsqr(z )
+Operation::Make::Make [flags ] waveName  [, waveName ]...
+Operation::MakeIndex::MakeIndex [/A/C/R] sortKeyWaves, indexWave
+Function::MandelbrotPoint::MandelbrotPoint(x, y, maxIterations, algorithm )
+Function::MarcumQ::MarcumQ(m, a, b)
+Operation::MarkPerfTestTime::MarkPerfTestTime idval
+Operation::MatrixBalance::MatrixBalance [flags] srcWave
+Function::MatrixCondition::MatrixCondition(wave2D, mode )
+Operation::MatrixConvolve::MatrixConvolve [/R=roiWave ] coefMatrix, dataMatrix
+Operation::MatrixCorr::MatrixCorr [/COV][/DEGC] waveA  [, waveB ]
+Function::MatrixDet::MatrixDet(dataMatrix )
+Function::MatrixDot::MatrixDot(waveA, waveB )
+Operation::MatrixEigenV::MatrixEigenV [ flags ] matrixA [, matrixB ]
+Operation::MatrixFactor::MatrixFactor [ flags ] srcWave
+Operation::MatrixFilter::MatrixFilter [/b=b /M=rank /N=n /P=p /R=roiWave /T] Method  dataMatrix
+Operation::MatrixGaussJ::MatrixGaussJ matrixA , vectorB
+Operation::MatrixGLM::MatrixGLM  [/Z] matrixA, matrixB, waveD
+Operation::MatrixInverse::MatrixInverse [[/D]/P][/G][/O] srcWave
+Operation::MatrixLinearSolve::MatrixLinearSolve [/D={subDiagonals,superDiagonals }/M=method /O/Z] [/L][/U] matrixA  matrixB
+Operation::MatrixLinearSolveTD::MatrixLinearSolveTD [/Z]  upperW, mainW, lowerW, matrixB
+Operation::MatrixLLS::MatrixLLS [/M=method  /O/Z] matrixA  matrixB
+Operation::MatrixLUBkSub::MatrixLUBkSub matrtixL, matrixU, index, vectorB
+Operation::MatrixLUD::MatrixLUD [/B /CMF /PMAT /MIND /SUMP] srcWave
+Operation::MatrixLUDTD::MatrixLUDTD [/FM/PMAT/MIND/SUMP] srcMain , srcUpper , srcLower
+Operation::MatrixMultiply::MatrixMultiply matrixA [/T], matrixB [/T] [, additional matrices ]
+Operation::MatrixMultiplyAdd::MatrixMultiplyAdd [/ZC or /DC] [/A=alpha] [/B=beta] matA[/T], matB[/T] matC
+Operation::MatrixOP::MatrixOp [ /C /FREE /NTHR=n  /O /S ] destwave = expression
+Function::MatrixRank::MatrixRank(matrixWaveA  [, conditionNumberA ])
+Operation::MatrixReverseBalance::MatrixReverseBalance [flags] scaleWave, eigenvectorsWave
+Operation::MatrixSchur::MatrixSchur [/Z] srcMatrix
+Operation::MatrixSolve::MatrixSolve method, matrixA, vectorB
+Operation::MatrixSparse::MatrixSparse [flags] [keyword = value]
+Operation::MatrixSVBkSub::MatrixSVBkSub matrixU, vectorW, matrixV, vectorB
+Operation::MatrixSVD::MatrixSVD [/B][/O/U=UMatrixOptions /V=VMatrixOptions /Z] matrixWave
+Function::MatrixTrace::MatrixTrace(dataMatrix )
+Operation::MatrixTranspose::MatrixTranspose [/H] matrix
+Function::max::max(num1, num2  [, num3, ... num200 ] )
+Function::mean::mean(waveName  [, x1, x2  ] )
+Operation::MeasureStyledText::MeasureStyledText [/W=winName /A=axisName /B=baselineMode /F=fontName /SIZE=fontSize /STYL=fontStyle] [styledTextStr]
+Function::median::median(waveName  [, x1, x2  ] )
+ProgrammingTopic::Menu::Menu
+Function::min::min(num1, num2  [, num3, ... num200 ] )
+Operation::MLLoadWave::MLLoadWave [/Q/O/B/I/A[=baseName]/N[=name]/P=pathName /R/C/M[=m]/Y=y/T/E/V/S[=s]/G/Z] fileNameStr
+Function::mod::mod(num, div )
+Function::ModDate::ModDate(waveName )
+Operation::Modify::Modify
+Operation::ModifyBoxPlot::ModifyBoxPlot [/W=winName] [keyword=value, keyword=value, ...]
+Operation::ModifyBrowser::ModifyBrowser [/M] [ keyword = value  [, keyword = value ...] ]
+Operation::ModifyCamera::ModifyCamera /W=winName  [ /Z ]  keyword=value
+Operation::ModifyContour::ModifyContour [/W=winName ] contourInstanceName , keyword = value  [, keyword = value ...]
+Operation::ModifyControl::ModifyControl [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+Operation::ModifyControlList::ModifyControlList [/Z] listStr  [, keyword =value ]...
+Operation::ModifyFreeAxis::ModifyFreeAxis [/W=winName ] axisName, master=mastName  [, hook=funcName ]
+Operation::ModifyGizmo::ModifyGizmo [flags] keyword  [=value ]
+Operation::ModifyGraph::ModifyGraph [/W=winName /Z] [frameInset= i, frameStyle= f , gfMult=f, gFont=fontStr, gfSize=gfs, gfRelSize=pct, gmSize=gms, height=heightSpec, swapXY=s, useComma=uc, useDotForX=u, UIControl=f, useLongMinus=m, width=widthSpec]
+Operation::ModifyImage::ModifyImage [/W=winName ] imageInstance , keyword =value  [, keyword =value  ...]
+Operation::ModifyLayout::ModifyLayout [/W=winName /I/M/Z] [bgRGB=(r,g,b[,a]), columns(obj)=c, fidelity(obj)=f, frame(obj)=f, height(obj)=h,  left(obj)=l, mag=m, rows(obj)=r, top(obj)=t, trans(obj)=t,  units=u, width(obj)=w]
+Operation::ModifyPanel::ModifyPanel [/W=winName ] [cbRGB=(r,g,b[,a]), drawInOrder=d, expand=e, fixedSize=f,  frameInset=i, frameStyle=f, noEdit=e  ]
+Operation::ModifyProcedure::ModifyProcedure [/A[=all] /W=procWinTitleListStr] /Z[=z][procedure=functionOrMacroNameStr, hide=h, lock=ro, writeProtect=wp, userCanOverride=ovr]
+Operation::ModifyTable::ModifyTable [/W=winName /Z] [keyword=value, keyword=value, ...]
+Operation::ModifyViolinPlot::ModifyViolinPlot [/W=winName] [keyword=value, keyword=value, ...]
+Operation::ModifyWaterfall::ModifyWaterfall [/W=winName ] keyword = value  [, keyword = value  ...]
+ProgrammingTopic::ModuleName::ModuleName
+Operation::MoveDataFolder::MoveDataFolder [ /O=options /Z ] sourceDataFolderSpec, destDataFolderPath
+Operation::MoveFile::MoveFile [/D/I[=i ]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFileStr ]  [ as destFileOrFolderStr ]
+Operation::MoveFolder::MoveFolder [/D /I[=i]/M=messageStr /O/P=pathName /S=saveMessageStr /Z[=z ] ]  [srcFolderStr ]  [ as destFolderStr ]
+Operation::MoveString::MoveString sourceString, destDataFolderPath [newname ]
+Operation::MoveSubwindow::MoveSubwindow [/W=winName ] [fguide=(gLeft, gTop, gRight, gBottom ), fnum=(left, top, right, bottom ), pguide=(gLeft, gTop, gRight, gBottom )]
+Operation::MoveVariable::MoveVariable sourceVar, destDataFolderPath [newname ]
+Operation::MoveWave::MoveWave sourceWave, [destDataFolderPath:] [newName ]
+Operation::MoveWindow::MoveWindow [/C/F/I/M/P=procedureTitleAsName /W=winName] left, top, right, bottom
+Function::MPFXEMGPeak::MPFXEMGPeak(cw, yw, xw)
+Function::MPFXExpConvExpPeak::MPFXExpConvExpPeak(cw, yw, xw)
+Function::MPFXGaussPeak::MPFXGaussPeak(cw, yw, xw)
+Function::MPFXLorentzianPeak::MPFXLorentzianPeak(cw, yw, xw)
+Function::MPFXVoigtPeak::MPFXVoigtPeak(cw, yw, xw)
+Operation::MultiTaperPSD::MultiTaperPSD [flags] srcWave
+ProgrammingTopic::MultiThread::MultiThread
+Operation::MultiThreadingControl::MultiThreadingControl keyword [=value]
+Function::NameOfWave::NameOfWave(wave )
+Function::NaN::NaN
+Operation::NeuralNetworkRun::NeuralNetworkRun [/Q/Z] Input=testWave, WeightsWave1=w1, WeightsWave2=w2
+Operation::NeuralNetworkTrain::NeuralNetworkTrain [/Q/Z] [keyword = value ] ...
+Operation::NewCamera::NewCamera [/HIDE=h  /HOST=hcSpec /K=k /S=sequence  /N=winName /W=(left,top,right,bottom ) ] [hardwareName=hwName]
+Operation::NewDataFolder::NewDataFolder [/O/S] dataFolderSpec
+Operation::NewFIFO::NewFIFO FIFOName
+Operation::NewFIFOChan::NewFIFOChan [/B/C/D/I/S/U/W/Y=numType ] FIFOName, channelName, offset, gain, minusFS, plusFS, unitsStr [, vectPnts ]
+Operation::NewFreeAxis::NewFreeAxis [/L/R/B/T/O/W=winName ] axisName
+Function::NewFreeDataFolder::NewFreeDataFolder()
+Function::NewFreeWave::NewFreeWave(type , npoints [, nameStr])
+Operation::NewGizmo::NewGizmo [ /FG=(gLeft, gTop, gRight, gBottom) /HOST=hcSpec /I /N=name  /T=titleStr /K=k /W=(left,top,right,bottom)]
+Operation::NewImage::NewImage [/F/G=g /HIDE=h /HOST=hcSpec /K=k /N=name /S=s ] matrix
+Operation::NewLayout::NewLayout [=(r,g,b[,a]) /C=color /HIDE=h /K=k /N=name /P=orientation /W=(left,top,right,bottom)] [as titleStr ]
+Operation::NewMovie::NewMovie [flags] [as fileNameStr ]
+Operation::NewNotebook::NewNotebook [flags ] [as titleStr ]
+Operation::NewPanel::NewPanel [ /EXP=e EXT=e /FG=(gLeft, gTop, gRight, gBottom )/FLT[=f  ] /HIDE=h /HOST=hcSpec /I/K=k /M/N=name /NA=n /W=(left, top, right, bottom ) ] [as titleStr ]
+Operation::NewPath::NewPath [/C/M=messageStr /O/Q/Z] pathName  [, pathToFolderStr]
+Operation::NewWaterfall::NewWaterfall [/FG=(gLeft, gTop, gRight, gBottom )/HIDE=h /HOST=hcSpec /I/K=k /M /N=name /PG=(gLeft, gTop, gRight, gBottom )/W=(left,top,right,bottom )] matrixWave  [vs {xWave,yWave }]
+Function::norm::norm(srcWave )
+Function::NormalizeUnicode::NormalizeUnicode(sourceTextStr, normalizationForm[, options])
+Function::note::note(waveName )
+Operation::Note::Note [/K/NOCR] waveName [, str ]
+Operation::Notebook::Notebook winName, keyword =value [, keyword =value ]...
+Operation::NotebookAction::NotebookAction [/W=winName ] keyword = value  [, keyword = value ...]
+Function::num2char::num2char(num  [, options ] )
+Function::num2istr::num2istr(num )
+Function::num2str::num2str(num [, formatStr ] )
+Function::NumberByKey::NumberByKey(keyStr, kwListStr  [, keySepStr  [, listSepStr [, matchCase ]]])
+Function::numpnts::numpnts(waveName )
+Function::numtype::numtype(num )
+Function::NumVarOrDefault::NumVarOrDefault(pathStr, defVal )
+ProgrammingTopic::NVAR::NVAR
+Function::NVAR_Exists::NVAR_Exists(name )
+Operation::Open::Open [ /A /C=creatorStr  /D[=mode ] /F=fileFilterStr  /M=messageStr  /MULT=m  /P=pathName /R /T=typeStr  /Z[=z] ] refNum  [as fileNameStr]
+Operation::OpenHelp::OpenHelp [flags] fileNameStr
+Operation::OpenNotebook::OpenNotebook [/A /ENCG=textEncoding /K=k  /M=messageStr  /N=winName  /P=pathName /R /T=typeStr  /V=visible  /W=(left,top,right,bottom) /Z] [fileNameStr ]
+Function::OperationList::OperationList(matchStr, separatorStr, optionsStr )
+Operation::Optimize::Optimize [ flags ] funcSpec, pWave
+ProgrammingTopic::Override::Override
+Function::p::p
+Function::p2rect::p2rect(z )
+Function::PadString::PadString(str, finalLength, padValue )
+ProgrammingTopic::Panel::Panel
+Function::PanelResolution::PanelResolution(wName )
+Function::ParamIsDefault::ParamIsDefault(pName )
+Function::ParseFilePath::ParseFilePath(mode, pathInStr, separatorStr, whichEnd, whichElement)
+Operation::ParseOperationTemplate::ParseOperationTemplate [/C=c /S=s /T/TS] cmdTemplate
+Operation::PathInfo::PathInfo [/S  /SHOW ] pathName
+Function::PathList::PathList(matchStr, separatorStr, optionsStr )
+Operation::PauseForUser::PauseForUser [/C] mainWindowName  [, targetWindowName ]
+Operation::PauseUpdate::PauseUpdate
+Operation::PCA::PCA [/ALL/COV/CVAR/IE/IND/LEIV/NF/O /Q /RSD[=rsdMode ] /RMS/SCMT /SCR/SDM/SEVC/SL/SQEV/SRMT/U/VAR/WSTR=waveListStr /Z] [wave0, wave1, wave2 ... wave99 ]
+Function::pcsr::pcsr(cursorName  [, graphNameStr ])
+Function::Pi::Pi
+Function::PICTInfo::PICTInfo(pictNameStr )
+Function::PICTList::PICTList(matchStr, separatorStr, optionsStr )
+ProgrammingTopic::Picture::Picture
+Function::PixelFromAxisVal::PixelFromAxisVal(graphNameStr, axNameStr, val )
+Operation::PlayMovie::PlayMovie [/I/M/P=pathName /W=(left, top, right, bottom) /Z] [as fileNameStr ]
+Operation::PlayMovieAction::PlayMovieAction [/A/Z] keyword  [=value ] [, keyword  [=value ]]
+Operation::PlaySound::PlaySound [/A [=a ] /BITS=bits /C] soundWave
+Function::pnt2x::pnt2x(waveName, pointNum )
+ProgrammingTopic::Point::Point
+ProgrammingTopic::PointF::PointF
+Function::poissonNoise::poissonNoise(num )
+Function::poly::poly(coefsWaveName, x1 )
+Function::poly2D::poly2D(coefsWaveName, x1, y1 )
+Function::PolygonArea::PolygonArea(xWave, yWave )
+Operation::PolygonOp::PolygonOp [flags] [keyword=value]
+ProgrammingTopic::Popup::Popup menuList
+Operation::PopupContextualMenu::PopupContextualMenu [/C=(xpix, ypix) /N /ASYN[=func] ] popupStr
+Operation::PopupMenu::PopupMenu [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+ProgrammingTopic::PopupMenuControl::PopupMenuControl
+Function::PossiblyQuoteName::PossiblyQuoteName(nameStr )
+Operation::Preferences::Preferences [/Q] [newPrefsState ]
+Operation::PrimeFactors::PrimeFactors [/Q]  inNumber
+Operation::Print::Print [/C/D/F/LEN/S/SR] expression  [, expression ]...
+Operation::printf::printf formatStr [, parameter  [, parameter ]...]
+Operation::PrintGraphs::PrintGraphs [ flags ] graphSpec  [, graphSpec ]...
+Operation::PrintLayout::PrintLayout [/C=num /D] winName
+Operation::PrintNotebook::PrintNotebook [/B=hiResMethod /P=(startPage,endPage)/S=s] notebookName
+Operation::PrintSettings::PrintSettings [ /I /M /W=winName ] [ keyword = value  [, keyword = value ...] ]
+Operation::PrintTable::PrintTable [ /P=(startPage,endPage) /S=s ] winName
+ProgrammingTopic::Proc::Proc
+Function::ProcedureText::ProcedureText(macroOrFunctionNameStr  [, linesOfContext  [, procedureWinTitleStr ]])
+Function::ProcedureVersion::ProcedureVersion(macroOrFunctionNameStr [, procedureWinTitleStr ])
+ProgrammingTopic::ProcGlobal::ProcGlobal
+Operation::Project::Project [/C={long,lat }/M=method /P={p1,p2,...}] longitudeWave, latitudeWave
+ProgrammingTopic::Prompt::Prompt variableName, titleStr  [, popup, menuListStr ]
+Operation::PulseStats::PulseStats [/A=n /B=box /F=f  /L=(startLevel, endLevel )/M=dx /P/Q /R=(startX,endX )/T=dx ] waveName
+Operation::PutScrapText::PutScrapText textStr
+Operation::pwd::pwd
+Operation::Python::
+Operation::PythonFile::
+Function::q::q
+Function::qcsr::qcsr(cursorName  [, graphNameStr ])
+Operation::Quit::Quit [/N/Y]
+Function::r::r
+Function::r2polar::r2polar(z )
+Operation::RatioFromNumber::RatioFromNumber [/MERR=maxError /MITS=maxIterations /V[=v ]] num
+Function::real::real(z )
+ProgrammingTopic::Rect::Rect
+ProgrammingTopic::RectF::RectF
+Operation::Redimension::Redimension [/B/C/D/E=e /I/N=n /R/S/U/W/Y=numType ] waveName, [waveName ]...
+Operation::Remez::Remez [/N=num /Q[=iter] ] frWave, wtWave, gridWave, coefsWave
+Operation::Remove::Remove
+Function::RemoveByKey::RemoveByKey(keyStr, kwListStr  [, keySepStr  [, listSepStr [, matchCase ]]])
+Operation::RemoveContour::RemoveContour [/W=winName ] contourInstanceName [, contourInstanceName ]...
+Function::RemoveEnding::RemoveEnding(str  [, endingStr ])
+Operation::RemoveFromGizmo::RemoveFromGizmo [flags][keyword = value]
+Operation::RemoveFromGraph::RemoveFromGraph [/W=winName /Z] traceName [,traceName ]...
+Operation::RemoveFromLayout::RemoveFromLayout objectSpec [, objectSpec ]...
+Function::RemoveFromList::RemoveFromList(itemOrListStr, listStr  [, listSepStr  [, matchCase ]])
+Operation::RemoveFromTable::RemoveFromTable  [/W=winName ] columnSpec [,columnSpec]...
+Operation::RemoveImage::RemoveImage [/W=winName /Z] imageInstance
+Operation::RemoveLayoutObjects::RemoveLayoutObjects [/PAGE=page /W=winName /Z] objectSpec  [, objectSpec ]
+Function::RemoveListItem::RemoveListItem(index, listStr  [, listSepStr  [, offset ]])
+Operation::RemovePath::RemovePath [/A/Z] pathName
+Operation::Rename::Rename oldName, newName
+Operation::RenameDataFolder::RenameDataFolder sourceDataFolderSpec, newName
+Operation::RenamePath::RenamePath oldName, newName
+Operation::RenamePICT::RenamePICT oldName, newName
+Operation::RenameWindow::RenameWindow oldName, newName
+Operation::ReorderImages::ReorderImages [/W=winName ] anchorImage, {imageA, imageB,...}
+Operation::ReorderTraces::ReorderTraces [/W=winName  /L[=axisName] /R[=axisName]] anchorTrace, {traceA, traceB,...}
+Function::ReplaceNumberByKey::ReplaceNumberByKey(keyStr, kwListStr, newNum [, keySepStr  [, listSepStr  [, case ]]])
+Function::ReplaceString::ReplaceString(replaceThisStr, inStr, withThisStr  [, caseSense  [, maxReplace ] ])
+Function::ReplaceStringByKey::ReplaceStringByKey(keyStr, kwListStr, newTextStr  [, keySepStr  [, listSepStr  [, matchCase ]]])
+Operation::ReplaceText::ReplaceText [/N=name /W=winName ] textStr
+Operation::ReplaceWave::ReplaceWave [/W=winName ] allinCDF
+Function::ReplicateString::ReplicateString(str, totalNumCopies)
+Operation::Resample::Resample [/COEF [=coefsWaveName ]/UP=upSample /DOWN=downSample /SAME=sWaveName /RATE=sampRate /DIM=dim /E=endEffect /N=numReconstructionSamples /WINF=windowKind ] waveName [,waveName ]...
+Operation::ResumeUpdate::ResumeUpdate
+ProgrammingTopic::return::return [expression ]
+Operation::Reverse::Reverse [/DIM=d /P][typeFlags ] waveA  [/D=destWaveA ] [, waveB [/D=destWaveB ] [,...]]
+ProgrammingTopic::RGBAColor::RGBAColor
+ProgrammingTopic::RGBColor::RGBColor
+Function::rightx::rightx(waveName )
+ProgrammingTopic::root::root
+Operation::Rotate::Rotate rotPoints, waveName [, waveName ]...
+Function::round::round(num )
+ProgrammingTopic::rtGlobals::rtGlobals
+Function::s::s
+Operation::Save::Save [flags] waveList [as fileNameStr ]
+Operation::SaveData::SaveData [/D[=d]/O/I/Q/R/P=pathName  /J=objectNamesStr /L=saveFlags /M=modDateTime  /T[=topLevelName ] ] fileOrFolderNameStr
+Operation::SaveExperiment::SaveExperiment [ flags ] [as fileName ]
+Operation::SaveGizmoCopy::SaveGizmoCopy [/I /O /P=pathName /T=saveType /W=winName /Z ] [fileNameStr ]
+Operation::SaveGraphCopy::SaveGraphCopy [/I /O /P=pathName /T=saveType /W=winName /Z ] [as fileNameStr ]
+Operation::SaveNotebook::SaveNotebook [flags ] notebookName  [as fileNameStr ]
+Operation::SavePackagePreferences::SavePackagePreferences [ /FLSH=flush  /KILL /P=pathName ]   packageName , prefsFileName, recordID , prefsStruct
+Operation::SavePICT::SavePICT [flags] [as fileNameStr ]
+Operation::SaveTableCopy::SaveTableCopy [/A=a /I/M=termStr /N=n /O/P=pathName /S=s /T=saveType /F=f  /W=winName  /Z ] [as fileNameStr ]
+Function::sawtooth::sawtooth(num )
+Function::scaleToIndex::ScaleToIndex(waveName, coordValue, dim )
+Function::ScreenResolution::ScreenResolution
+Function::sec::sec(angle )
+Function::sech::sech(x)
+Function::Secs2Date::Secs2Date(seconds, format  [, sep ])
+Function::Secs2Time::Secs2Time(seconds, format [, fracDigits ])
+Function::SelectNumber::SelectNumber(whichOne , val1, val2  [, val3  ])
+Function::SelectString::SelectString(whichOne , str1, str2  [, str3 ])
+Operation::SetActiveSubwindow::SetActiveSubwindow subWinSpec
+Operation::SetAxis::SetAxis [/W=winName /A[=a ]/E=z /N=n /R/Z] axisName [, num1, num2 ]
+Operation::SetBackground::SetBackground numericExpression
+Operation::SetDashPattern::SetDashPattern dashNumber, {d1,s1 [,d2,s2 ]...}
+Operation::SetDataFolder::SetDataFolder dataFolderSpec
+Operation::SetDimLabel::SetDimLabel dimNumber,dimIndex,label,wavelist
+Operation::SetDrawEnv::SetDrawEnv [/W=winName ]  keyword  [=value ][, keyword  [=value ]]...
+Operation::SetDrawLayer::SetDrawLayer [/W=winName /K] layerName
+Function::SetEnvironmentVariable::SetEnvironmentVariable(varName, varValue)
+Operation::SetFileFolderInfo::SetFileFolderInfo [ /CDAT=cDate /CRE8=creatorStr /D /FTYP=typeStr /INV=inv  /MDAT=mDate /P=pathName /R=r /RO=ro /STA=st /UTC[=u] /Z=z] ] [fileOrFolderNameStr]
+Operation::SetFormula::SetFormula waveOrVariableName, expressionStr
+Operation::SetIdlePeriod::SetIdlePeriod period
+Operation::SetIgorHook::SetIgorHook  [/K/L] [hookType  [=procName ] ]
+Operation::SetIgorMenuMode::SetIgorMenuMode MenuNameStr, MenuItemStr, Action
+Operation::SetIgorOption::SetIgorOption [mainKeyword,] keyword=value
+Operation::SetMarquee::SetMarquee [/W=winName ] left, top, right, bottom
+Operation::SetProcessSleep::SetProcessSleep sleepTicks
+Operation::SetRandomSeed::SetRandomSeed seed
+Operation::SetScale::SetScale [/I/P] dim, num1, num2  [, unitsStr ] [, waveName ]...
+Operation::SetVariable::SetVariable [/Z] ctrlName [ keyword = value  [, keyword = value ...] ]
+ProgrammingTopic::SetVariableControl::SetVariableControl
+Operation::SetWaveLock::SetWaveLock lockVal, waveList
+Operation::SetWaveTextEncoding::SetWaveTextEncoding [flags ] newTextEncoding , elements, [wave , wave, ...]
+Operation::SetWindow::SetWindow winName [ keyword = value  [, keyword = value ...] ]
+Operation::ShowIgorMenus::ShowIgorMenus  [MenuNameStr  [,MenuNameStr ] ...
+Operation::ShowInfo::ShowInfo [ /CP=num /W=winName ]
+Operation::ShowTools::ShowTools  [/W=winName /A] [ toolName ]
+Function::sign::sign(num )
+Operation::Silent::Silent num
+Function::sin::sin(angle )
+Function::sinc::sinc(num )
+Function::sinh::sinh(num )
+Function::sinIntegral::SinIntegral(z )
+Operation::Sleep::Sleep [ /A /W /B /C=cursor  /PROG={cancelButtonTitleStr, continueButtonTitleStr, abortMode} /Q/S /T ] timeSpec
+Operation::Slider::Slider [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+ProgrammingTopic::SliderControl::SliderControl
+Operation::Smooth::Smooth [ /B[=b ] /BLPF[=roundMode] /DIM = dim  /E=endEffect  /EVEN[=evenAllowed ] /F[=f ] /M=threshold  /MPCT=percentile  /R=replacement  /S=sgOrder ] num, wave0 [,wave1 ]...
+Operation::SmoothCustom::SmoothCustom [/E=endEffect] coefsWaveName, waveName [, waveName ]...
+Operation::Sort::Sort [ /A /DIML /C /R ] sortKeyWaves, sortedWaveName [, sortedWaveName ]...
+Operation::SortColumns::SortColumns [flags] keyWaves={waveList }, sortWaves={waveList }
+Function::SortList::SortList(listStr  [, listSepStr  [, options ])
+Operation::SoundInRecord::SoundInRecord [/BITS=bits /Z] wave
+Operation::SoundInSet::SoundInSet [/Z] [gain=g, agc=a ]
+Operation::SoundInStartChart::SoundInStartChart [/Z] buffersize , destFIFOname
+Operation::SoundInStatus::SoundInStatus [ format={intOrFloat, channels, bits, frequency} ]
+Operation::SoundInStopChart::SoundInStopChart [/Z]
+Operation::SoundLoadWave::SoundLoadWave [ /I [= filterStr] /O /P=pathName  /Q /S=(startT,endT ) ] waveName  [ ,fileNameStr  ]
+Operation::SoundSaveWave::SoundSaveWave [ /BITS=bits /I /O /P=pathName /Q ] typeStr, waveName [ , fileNameStr ]
+Function::SpecialCharacterInfo::SpecialCharacterInfo(notebookNameStr, specialCharacterNameStr, whichStr )
+Function::SpecialCharacterList::SpecialCharacterList(notebookNameStr, separatorStr, mask, flags )
+Function::SpecialDirPath::SpecialDirPath(dirIDStr, domain, flags, createDir )
+Function::SphericalBessJ::sphericalBessJ(n, x [, accuracy ])
+Function::SphericalBessJD::sphericalBessJD(n, x [, accuracy ])
+Function::SphericalBessY::sphericalBessY(n, x [, accuracy ])
+Function::SphericalBessYD::sphericalBessYD(n, x [, accuracy ])
+Function::SphericalHarmonics::sphericalHarmonics(L, M, θ, φ)
+Operation::SphericalInterpolate::SphericalInterpolate triangulationDataWave, dataPointsWave, newLocationsWave
+Operation::SphericalTriangulate::SphericalTriangulate [/Z] tripletWaveName
+Operation::SplitString::SplitString /E=regExprStr str , substring1 [, substring2, ... substringN]
+Operation::SplitWave::SplitWave [flags]  srcWave
+Operation::sprintf::sprintf stringName, formatStr [,parameter]...
+Function::sqrt::sqrt(num )
+Operation::sscanf::sscanf scanStr, formatStr, var [, var ]
+Operation::Stack::Stack [flags] [objectName ] [, objectName ]...
+Operation::StackWindows::StackWindows [flags] [windowName ] [, windowName ]...
+Function::StartMSTimer::StartMSTimer
+ProgrammingTopic::Static::Static
+Operation::StatsAngularDistanceTest::StatsAngularDistanceTest [/ALPH=significance /APRX=m /T=k /Q/Z /WSTR=waveListString ] [srcWave1, srcWave2, srcWave3... ]
+Operation::StatsANOVA1Test::StatsANOVA1Test [/ALPH=significance /BF/Q/Z/T=k /W/WSTR=wList]  [wave1,wave2,... wave100 ]
+Operation::StatsANOVA2NRTest::StatsANOVA2NRTest [/ALPH=significance  /MODL=modelNumber  /Q/Z /T=k ]  srcWave
+Operation::StatsANOVA2RMTest::StatsANOVA2RMTest [/ALPH=significance /Q/Z/T=k ]  srcWave
+Operation::StatsANOVA2Test::StatsANOVA2Test [/ALPH=significance  /FAKE=num  /MODL=modelNumber  /T=k /Q/Z] srcWave
+Function::StatsBetaCDF::StatsBetaCDF(x, p, q  [, a, b ])
+Function::StatsBetaPDF::StatsBetaPDF(x, p, q  [, a, b ])
+Function::StatsBinomialCDF::StatsBinomialCDF(x, p, Ν )
+Function::StatsBinomialPDF::StatsBinomialPDF(x, p, Ν )
+Function::StatsCauchyCDF::StatsCauchyCDF(x, µ, σ)
+Function::StatsCauchyPDF::StatsCauchyPDF(x, µ, σ)
+Function::StatsChiCDF::StatsChiCDF(x, n )
+Function::StatsChiPDF::StatsChiPDF(x, n )
+Operation::StatsChiTest::StatsChiTest [/NCON=nCon /S/Z] srcWave1, srcWave2
+Operation::StatsCircularCorrelationTest::StatsCircularCorrelationTest [/ALPH=alpha  /T=k /NAA/PAA/PAL/Z/Q] waveA, waveB
+Operation::StatsCircularMeans::StatsCircularMeans [/ALPH=significance /CI/Q/Z/T=k ] srcWave
+Operation::StatsCircularMoments::StatsCircularMoments [/ALPH=alpha /AXD=p /CYCL=cycle /GRPD={start, delta } /KUPR/LOS/M=moment /MODE=mode /ORGN=origin /Q/RAYL[=meanDirection ]/SAW/T=k /Z] srcWave
+Operation::StatsCircularTwoSampleTest::StatsCircularTwoSampleTest [/ALPH=alpha  /T=k  /NSOA /NPR /PSOA /PPR /Z /Q ] waveA, waveB
+Function::StatsCMSSDCDF::StatsCMSSDCDF(C, n )
+Operation::StatsCochranTest::StatsCochranTest [/Q/Z/ALPH=significance /T=k /WSTR=wList ]   [wave1,wave2, ... wave100 ]
+Operation::StatsContingencyTable::StatsContingencyTable [/ALPH=significance /COR=mode /FEXT={row, col}/HTRG/LLIK/Q/Z /T=k ] srcWave
+Function::StatsCorrelation::StatsCorrelation(waveA [, waveB ] )
+Function::StatsDExpCDF::StatsDExpCDF(x, µ, σ )
+Function::StatsDExpPDF::StatsDExpPdf(x, µ, σ)
+Operation::StatsDIPTest::StatsDIPTest [/Z] srcWave
+Operation::StatsDunnettTest::StatsDunnettTest [/ALPH=significance /Q/Z/T=k /WSTR=wList /CIDX=controlIndex /SWN/TAIL=tailCode ] [wave1, wave2,... wave100 ]
+Function::StatsErlangCDF::StatsErlangCDF(x, b, c)
+Function::StatsErlangPDF::StatsErlangPDF(x, b, c)
+Function::StatsErrorPDF::StatsErrorPDF(x, a, b, c)
+Function::StatsEValueCDF::StatsEValueCDF(x, µ, σ )
+Function::StatsEValuePDF::StatsEValuePDF(x, µ, σ )
+Function::StatsExpCDF::StatsExpCDF(x, µ, σ )
+Function::StatsExpPDF::StatsExpPDF(x, µ, σ )
+Function::StatsFCDF::StatsFCDF(x, n1, n2 )
+Function::StatsFPDF::StatsFPDF(x, n1, n2  )
+Function::StatsFriedmanCDF::StatsFriedmanCDF(x, n, m, method, useTable )
+Operation::StatsFriedmanTest::StatsFriedmanTest [/ALPH=significance /RW/T=k /Q/Z/WSTR=wList ]   [wave1,wave2,... wave100 ]
+Operation::StatsFTest::StatsFTest [/ALPH=significance /TAIL=tc /T=km /Q/Z] wave1, wave2
+Function::StatsGammaCDF::StatsGammaCDF(x, µ, σ, γ )
+Function::StatsGammaPDF::StatsGammaPDF(x, µ, σ, γ )
+Function::StatsGeometricCDF::StatsGeometricCDF(x, p )
+Function::StatsGeometricPDF::StatsGeometricPDF(x, p )
+Function::StatsGEVCDF::StatsGEVCDF(x, µ, σ, ξ)
+Function::StatsGEVPDF::StatsGEVPDF(x, µ, σ, ξ)
+Operation::StatsHodgesAjneTest::StatsHodgesAjneTest [/ALPH=significance /Q/SA=specAngle /Z /T=k ] srcWave
+Function::StatsHyperGCDF::StatsHyperGCDF(x, m, n, k )
+Function::StatsHyperGPDF::StatsHyperGPDF(x, m, n, k )
+Function::StatsInvBetaCDF::StatsInvBetaCDF(cdf, p, q  [, a, b ])
+Function::StatsInvBinomialCDF::StatsInvBinomialCDF(cdf, p,  Ν )
+Function::StatsInvCauchyCDF::StatsInvCauchyCDF(cdf, µ, σ)
+Function::StatsInvChiCDF::StatsInvChiCDF(x, n )
+Function::StatsInvCMSSDCDF::StatsInvCMSSDCDF(cdf, n )
+Function::StatsInvDExpCDF::StatsInvDExpCDF(cdf, µ, σ)
+Function::StatsInvEValueCDF::StatsInvEValueCDF(cdf, µ, σ )
+Function::StatsInvExpCDF::StatsInvExpCDF(cdf, µ, σ )
+Function::StatsInvFCDF::StatsInvFCDF(x, n1, n2  )
+Function::StatsInvFriedmanCDF::StatsInvFriedmanCDF(cdf, n, m, method, useTable )
+Function::StatsInvGammaCDF::StatsInvGammaCDF(cdf, µ, σ, γ )
+Function::StatsInvGeometricCDF::StatsInvGeometricCDF(cdf, p )
+Function::StatsInvKuiperCDF::StatsInvKuiperCDF(cdf )
+Function::StatsInvLogisticCDF::StatsInvLogisticCDF(cdf, a, b )
+Function::StatsInvLogNormalCDF::StatsInvLogNormalCDF(cdf , sigma , theta , mu )
+Function::StatsInvMaxwellCDF::StatsInvMaxwellCDF(cdf, k )
+Function::StatsInvMooreCDF::StatsInvMooreCDF(cdf, N )
+Function::StatsInvNBinomialCDF::StatsInvNBinomialCDF(cdf, k, p )
+Function::StatsInvNCChiCDF::StatsInvNCChiCDF(cdf, n, d )
+Function::StatsInvNCFCDF::StatsInvNCFCDF(cdf, n1, n2, d )
+Function::StatsInvNormalCDF::StatsInvNormalCDF(cdf,  µ, σ )
+Function::StatsInvParetoCDF::StatsInvParetoCDF(cdf, a, c )
+Function::StatsInvPoissonCDF::StatsInvPoissonCDF(cdf, λ )
+Function::StatsInvPowerCDF::StatsInvPowerCDF(cdf, b, c )
+Function::StatsInvQCDF::StatsInvQCDF (cdf, r, c, df )
+Function::StatsInvQpCDF::StatsInvQpCDF(ng, nt, df, alpha, side, sSizeWave )
+Function::StatsInvRayleighCDF::StatsInvRayleighCDF(cdf  [, σ [, µ ]])
+Function::StatsInvRectangularCDF::StatsInvRectangularCDF(cdf, a, b )
+Function::StatsInvSpearmanCDF::StatsInvSpearmanCDF(cdf, N )
+Function::StatsInvStudentCDF::StatsInvStudentCDF(cdf, n )
+Function::StatsInvTopDownCDF::StatsInvTopDownCDF(cdf, N )
+Function::StatsInvTriangularCDF::StatsInvTriangularCDF(cdf, a, b, c )
+Function::StatsInvUsquaredCDF::StatsInvUSquaredCDF(cdf, n, m, method, useTable )
+Function::StatsInvVonMisesCDF::StatsInvVonMisesCDF(cdf, a, b )
+Function::StatsInvWeibullCDF::StatsInvWeibullCDF(cdf, µ, σ, γ)
+Operation::StatsJBTest::StatsJBTest [/ALPH=alpha  /T=k /Z/Q] srcWave
+Operation::StatsKDE::StatsKDE [flags] srcWave
+Operation::StatsKendallTauTest::StatsKendallTauTest [/Q/Z] [/T=k]  wave1 [,wave2]
+Operation::StatsKSTest::StatsKSTest [/ALPH=alpha  /CDFF=func  /T=k /Z/Q] srcWave  [, distWave ]
+Function::StatsKuiperCDF::StatsKuiperCDF(V )
+Operation::StatsKWTest::StatsKWTest [/ALPH=significance /Q/Z/T=k /WSTR=wList ] [wave1, wave2,... wave100 ]
+Operation::StatsLinearCorrelationTest::StatsLinearCorrelationTest [/ALPH=alpha  /T=k /RHO=rhoValue /Q/Z] waveA, waveB
+Operation::StatsLinearRegression::StatsLinearRegression [/ALPH=alpha /T=k /Z/Q/WSTR=strList /BCIW/BPIW/TUK/DET=index ] [wave0, wave1,...]
+Function::StatsLogisticCDF::StatsLogisticCDF(x, a, b )
+Function::StatsLogisticPDF::StatsLogisticPDF(x, a, b )
+Function::StatsLogNormalCDF::StatsLogNormalCDF(x, σ [, θ, µ ])
+Function::StatsLogNormalPDF::StatsLogNormalPDF(x, σ [, θ, µ ])
+Function::StatsMaxwellCDF::StatsMaxwellCDF(x, k )
+Function::StatsMaxwellPDF::StatsMaxwellPDF(x, k )
+Function::StatsMedian::StatsMedian(waveName )
+Function::StatsMooreCDF::StatsMooreCDF(x, N )
+Operation::StatsMultiCorrelationTest::StatsMultiCorrelationTest [/ALPH=alpha  /T=k /Z/Q/TUK/CON={controlRow, tails }/CONT=contrastWave ] corrWave, sizeWave
+Function::StatsNBinomialCDF::StatsNBinomialCDF(x, k, p )
+Function::StatsNBinomialPDF::StatsNBinomialPDF(x, k, p )
+Function::StatsNCChiCDF::StatsNCChiCDF(x, n, d )
+Function::StatsNCChiPDF::StatsNCChiPDF(x, n, d )
+Function::StatsNCFCDF::StatsNCFCDF(x, n1, n2, d )
+Function::StatsNCFPDF::StatsNCFPDF(x, n1, n2, d )
+Function::StatsNCTCDF::StatsNCTCDF(x, df, d )
+Function::StatsNCTPDF::StatsNCTPDF(x, df, d )
+Function::StatsNormalCDF::StatsNormalCDF(x, µ, σ )
+Function::StatsNormalPDF::StatsNormalPDF(x, µ, σ )
+Operation::StatsNPMCTest::StatsNPMCTest [/Q/Z/ALPH=val /SWN/T=k /TAIL=tailCode /WSTR=waveListString /TUK/SNK/DHW/CIDX=controlIndex /CONW=contrastWave ] [wave1, wave2,... wave100 ]
+Operation::StatsNPNominalSRTest::StatsNPNominalSRTest [/ALPH=alpha  /P={m,n,u }/T=k /Z/Q] [srcWave ]
+Function::StatsParetoCDF::StatsParetoCDF(x, a, c )
+Function::StatsParetoPDF::StatsParetoPDF(x, a, c )
+Function::StatsPermute::StatsPermute(waveA, waveB, dir )
+Function::StatsPoissonCDF::StatsPoissonCDF(x, λ )
+Function::StatsPoissonPDF::StatsPoissonPDF(x, λ )
+Function::StatsPowerCDF::StatsPowerCDF(x, b, c )
+Function::StatsPowerNoise::StatsPowerNoise(b, c )
+Function::StatsPowerPDF::StatsPowerPDF(x, b, c )
+Function::StatsQCDF::StatsQCDF (q, r, c, df )
+Function::StatsQpCDF::StatsQpCDF(q, nr, nt, df, side, sSizeWave )
+Operation::StatsQuantiles::StatsQuantiles [/ALL/BOX/iNaN/IW/TM/Z/Q/QM=method /STBL/TRIM=tValue ] srcWave
+Operation::StatsRankCorrelationTest::StatsRankCorrelationTest [/ALPH=alpha /P=method /Q /T=k /Z] waveA, waveB
+Function::StatsRayleighCDF::StatsRayleighCDF(x [, σ [, µ ]])
+Function::StatsRayleighPDF::StatsRayleighPDF(x [, σ  [, µ ]])
+Function::StatsRectangularCDF::StatsRectangularCDF(x, a, b )
+Function::StatsRectangularPDF::StatsRectangularPDF(x, a, b )
+Operation::StatsResample::StatsResample /N=numPoints [ /ITER=n  /JCKN=ufunc  /K /Q /SQ=m  /WS=m  /Z ] srcWave
+Function::StatsRunsCDF::StatsRunsCDF(n,  r )
+Operation::StatsSample::StatsSample /N=numPoints [ /CMPL /MC /MR /Z ] srcWave
+Operation::StatsScheffeTest::StatsScheffeTest [/ALPH=val /T=k /Q/SWN/Z/WSTR=waveListString /CONW=contrastWave ] [wave1, wave2,... wave100 ]
+Operation::StatsShapiroWilkTest::StatsShapiroWilkTest [/Q/Z] srcWave
+Operation::StatsSignTest::StatsSignTest [/ALPH=significance /Q/Z/T=k ]  wave1,wave2
+Function::StatsSpearmanRhoCDF::StatsSpearmanRhoCDF(r, N )
+Operation::StatsSRTest::StatsSRTest [ /ALPH=alpha  /P /NAPR /NP /T=k  /Z /Q ] srcWave
+Function::StatsStudentCDF::StatsStudentCDF(t, n )
+Function::StatsStudentPDF::StatsStudentPDF(t, n )
+Function::StatsTopDownCDF::StatsTopDownCDF(r, N )
+Function::StatsTriangularCDF::StatsTriangularCDF(x, a, b, c )
+Function::StatsTriangularPDF::StatsTriangularPDF(x, a, b, c )
+Function::StatsTrimmedMean::StatsTrimmedMean(waveName, trimValue )
+Operation::StatsTTest::StatsTTest [/ALPH=alpha  /CI /DFM=m  /MEAN=meanV  /PAIR /TAIL=n  /T=k /Z /Q] wave1  [, wave2 ]
+Operation::StatsTukeyTest::StatsTukeyTest [/ALPH=val /NK/Q/Z/SWN/T=k /WSTR=wList ] [wave1, wave2,... wave100 ]
+Function::StatsUSquaredCDF::StatsUSquaredCDF(u2, n, m, method, useTable )
+Operation::StatsVariancesTest::StatsVariancesTest [/ALPH=val /Q/Z/METH=m /WSTR=strList ]  [wave1, wave2,... wave100 ]
+Function::StatsVonMisesCDF::StatsVonMisesCDF(x, a, b )
+Function::StatsVonMisesNoise::StatsVonMisesNoise(a, b )
+Function::StatsVonMisesPDF::StatsVonMisesPDF(θ, a, b )
+Function::StatsWaldCDF::StatsWaldCDF(x, µ, λ )
+Function::StatsWaldPDF::StatsWaldPDF(x, µ, λ )
+Operation::StatsWatsonUSquaredTest::StatsWatsonUSquaredTest [/ALPH=val /Q/Z/T=k]  srcWave1, srcWave2
+Operation::StatsWatsonWilliamsTest::StatsWatsonWilliamsTest [/ALPH=val /Q/Z/T=k /WSTR=waveListString ] [srcWave1, srcWave2, srcWave3,...]
+Function::StatsWeibullCDF::StatsWeibullCDF(x, µ, σ, γ)
+Function::StatsWeibullPDF::StatsWeibullPDF(x, µ, σ, γ)
+Operation::StatsWheelerWatsonTest::StatsWheelerWatsonTest [/ALPH=val /Q/Z/T=k /WSTR=waveListString ] [srcWave1, srcWave2, srcWave3,...]
+Operation::StatsWilcoxonRankTest::StatsWilcoxonRankTest [/ALPH=val /APRX=m /T=k /TAIL=tail /Q/Z]  waveA, waveB
+Operation::StatsWRCorrelationTest::StatsWRCorrelationTest [/ALPH=val /T=k /Z/Q]  waveA, waveB
+Operation::STFT::STFT [flags] srcWave
+Function::StopMSTimer::StopMSTimer(timerRefNum )
+Function::str2num::str2num(str )
+ProgrammingTopic::StrConstant::Strconstant
+Operation::String::String [/G] strName[/N=name][=strExpr ] [, strName[/N=name][=strExpr ]... ]
+Function::StringByKey::StringByKey(keyStr, kwListStr  [, keySepStr  [, listSepStr [, matchCase ]]])
+Function::stringCRC::StringCRC(inCRC,str)
+Function::StringFromList::StringFromList(index, listStr  [, listSepStr  [, offset ]])
+Function::stringIsNull::
+Function::StringList::StringList(matchStr, separatorStr [, dfr ])
+Function::stringmatch::StringMatch(string, matchStr )
+Function::StringToUnsignedByteWave::StringToUnsignedByteWave(str)
+Function::strlen::strlen(str )
+Function::strsearch::strsearch(str, findThisStr, start  [, options])
+ProgrammingTopic::strswitch-case-endswitch::strswitch(<string expression>)		case <string value>:			<code>			break		case <string value>:			<code>			break	endswitch
+ProgrammingTopic::STRUCT::STRUCT
+Operation::StructFill::StructFill [ /AC=createFlags /SDFR=dfr ] structVar
+Operation::StructGet::StructGet [/B=b ] structVar, waveStruct [[colNum ]]
+Operation::StructPut::StructPut [/B=b ] structVar, waveStruct [[colNum ]]
+ProgrammingTopic::Structure::Structure
+Function::StrVarOrDefault::StrVarOrDefault(pathStr, defStrVal )
+Function::StudentA::StudentA(t, DegFree )
+Function::StudentT::StudentT(Prob, DegFree )
+ProgrammingTopic::Submenu::Submenu
+Function::sum::sum(waveName  [, x1, x2  ] )
+Operation::SumDimension::SumDimension [/D=dimension  /DEST=destWave  /Y=numType ] srcWave
+Operation::SumSeries::SumSeries [flags] keyword=value
+ProgrammingTopic::SVAR::SVAR
+Function::SVAR_Exists::SVAR_Exists(name )
+ProgrammingTopic::switch-case-endswitch::switch(<numeric expression>)		case <numeric value>:			<code>			break		case <numeric value>:			<code>			break	endswitch
+Function::t::t
+Operation::TabControl::TabControl [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+ProgrammingTopic::TabControl::TabControl
+ProgrammingTopic::Table::Table
+Function::TableInfo::TableInfo(winNameStr, itemIndex)
+ProgrammingTopic::TableStyle::TableStyle
+Operation::Tag::Tag [flags] [taggedObjectName, xAttach  [, textStr ]]
+Function::TagVal::TagVal(code )
+Function::TagWaveRef::TagWaveRef()
+Function::tan::tan(angle )
+Function::tanh::tanh(num )
+Operation::Text2Bezier::Text2Bezier[/O/FS=fontSize] fontNameStr, fstyle, textStr, xWaveName, yWaveName
+Operation::TextBox::TextBox [/W=winName /A=anchorCode /B=(r,g,b[,a])/B=trans /C/D={thickMult  [, shadowThick [, haloThick ]]}/E[=exterior ] /F=frame /G=(r,g,b) /H=legendSymbolWidth /K/LS= linespace /M[=saMeSize ] /N=name /O=rot /R=newName /S=style /T=tabSpec /V=vis /X=xOffset /Y=yOffset /Z=freeze [textStr ]
+ProgrammingTopic::TextEncoding::TextEncoding
+Function::TextEncodingCode::TextEncodingCode(textEncodingNameStr )
+Function::TextEncodingName::TextEncodingName(textEncoding , index )
+Function::TextFile::TextFile(pathName, index  [, creatorStr ])
+Operation::TextHistogram::TextHistogram [ flags ] srcTextWave
+Function::ThreadGroupCreate::ThreadGroupCreate(nt )
+Function::ThreadGroupGetDF::ThreadGroupGetDF(tgID, waitms )
+Function::ThreadGroupGetDFR::ThreadGroupGetDFR(tgID, waitms )
+Operation::ThreadGroupPutDF::ThreadGroupPutDF tgID, datafolder
+Function::ThreadGroupRelease::ThreadGroupRelease(tgID [, beGraceful] )
+Function::ThreadGroupWait::ThreadGroupWait(tgID, waitms )
+Function::ThreadProcessorCount::ThreadProcessorCount
+Function::ThreadReturnValue::ThreadReturnValue(tgID, index )
+ProgrammingTopic::ThreadSafe::ThreadSafe
+Operation::ThreadStart::ThreadStart tgID, index, WorkerFunc (param1, param2,...)
+Function::ticks::ticks
+Operation::TickWavesFromAxis::TickWavesFromAxis [ /W=graphName /DEST= {textWaveName, numericWaveName} /O /AUTO=mode ] axisName
+Operation::Tile::Tile [/A=(rows,cols) /BBOX[=ubb] /G=grout  /I /M /O=objTypes /PA[=preserve] /R /S/W=(left,top,right,bottom)] [objectName [, objectName ]...]
+Operation::TileWindows::TileWindows [flags] [windowName [, windowName ]...]
+Function::time::time()
+Operation::TitleBox::TitleBox [/Z] ctrlname  [ keyword = value  [, keyword = value ...] ]
+Operation::ToCommandLine::ToCommandLine commandsStr
+Operation::ToolsGrid::ToolsGrid [/W=winName ] keyword = value  [, keyword = value ...]
+Function::TraceFromPixel::TraceFromPixel(xpixel, ypixel, optionsString )
+Function::TraceInfo::TraceInfo(graphNameStr, yWaveNameStr, instance )
+Function::TraceNameList::TraceNameList(graphNameStr, separatorStr, optionsFlag )
+Function::TraceNameToWaveRef::TraceNameToWaveRef(graphNameStr, traceNameStr )
+Operation::Triangulate3d::Triangulate3D [/OUT=format ] srcWave
+Function::TrimString::TrimString(str  [, simplifyInternalSpaces ])
+Function::trunc::trunc(num )
+ProgrammingTopic::try::The try flow control keyword marks the beginning of the initial code block in a try-catch-endtry flow control construct.See AlsoThe try-catch-endtry flow control statement for details.
+ProgrammingTopic::try-catch-endtry::try		<code>	catch		<code to handle abort>	endtry
+ProgrammingTopic::uint64::uint64
+Function::UniqueName::UniqueName(baseName, objectType, startSuffix  [, windowNameStr ])
+Function::UnPadString::UnPadString(str, padValue )
+Function::UnsetEnvironmentVariable::UnsetEnvironmentVariable(varName)
+Operation::Unwrap::Unwrap modulus, waveName [, waveName ]...
+Operation::UnzipFile::UnzipFile [ /O[=mode] /PASS=passwordStr /PIN=inputPathName /POUT=outputPathName /Z[=z] ] inputFileStr, outputFolderStr
+Function::UpperStr::UpperStr(str )
+Function::URLDecode::URLDecode(inputStr)
+Function::URLEncode::URLEncode(inputStr)
+Operation::URLRequest::URLRequest [ flags ] url=urlStr [method=methodName, headers=headersStr]
+Operation::ValDisplay::ValDisplay [/Z] ctrlName  [ keyword = value  [, keyword = value ...] ]
+Operation::Variable::Variable [/C/D/G] varName[/N=name][=numExpr ][, varName[/N=name][=numExpr ]]...
+Function::VariableList::VariableList(matchStr, separatorStr, variableTypeCode [, dfr ] )
+Function::Variance::Variance(inWave [ , x1, x2 ] )
+Function::vcsr::vcsr(cursorName  [, graphNameStr ])
+ProgrammingTopic::version::version
+Function::VoigtFunc::VoigtFunc(X, Y)
+Function::VoigtPeak::VoigtPeak(w, x)
+ProgrammingTopic::WAVE::WAVE
+ProgrammingTopic::WaveClear::WAVEClear localName  [, localName1...]
+Function::WaveCRC::WaveCRC(inCRC, waveName [,checkHeader])
+Function::WaveDataToString::WaveDataToString(wave)
+Function::WaveDims::WaveDims(wave )
+Function::WaveExists::WaveExists(wave )
+Function::WaveHash::WaveHash(wave, method)
+Function::WaveInfo::WaveInfo(wave, 0)
+Function::WaveList::WaveList(matchStr, separatorStr, optionsStr [, dfr ] )
+Function::WaveMax::WaveMax(waveName  [, x1, x2  ])
+Operation::WaveMeanStdv::WaveMeanStdv srcWave  binSizeWave
+Function::WaveMin::WaveMin(waveName  [, x1, x2  ])
+Function::WaveMinAndMax::WaveMinAndMax(wave [, x1, x2 ])
+Function::WaveModCount::WaveModCount(wave )
+Function::WaveName::WaveName(windowNameStr, index, type )
+Function::WaveRefIndexed::WaveRefIndexed(windowNameStr, index, type )
+Function::WaveRefIndexedDFR::WaveRefIndexedDFR(dfr, index )
+Function::WaveRefsEqual::WaveRefsEqual(w1 , w2 )
+Function::WaveRefWaveToList::WaveRefWaveToList(waveRefWave, option)
+Operation::WaveStats::WaveStats [flags] waveName
+Function::WaveTextEncoding::WaveTextEncoding(wave , element , getEffectiveTextEncoding )
+Operation::WaveTracking::WaveTracking [/FREE /GLBL /LOCL] keyword
+Operation::WaveTransform::WaveTransform [flags] keyword  srcWave
+Function::WaveType::WaveType(waveName [,selector ] )
+Function::WaveUnits::WaveUnits(waveName, dimNumber )
+Operation::wfprintf::wfprintf refNumOrStr, formatStr [/R=(startX, endX )] waveName  [, waveName ]...
+Function::WhichListItem::WhichListItem(itemStr, listStr  [, listSepStr  [, startIndex  [, matchCase ] ]])
+Operation::WignerTransform::WignerTransform [/Z][/WIDE=wSize ] [/GAUS=gaussianWidth ][/DEST=destWave ] srcWave
+ProgrammingTopic::Window::Window
+Operation::WindowFunction::WindowFunction [/FFT[=f  ] /DEST=destWave ] windowKind, srcWave
+Function::WinList::WinList(matchStr, separatorStr, optionsStr )
+Function::WinName::WinName(index, windowTypes  [, visibleWindowsOnly  [, floatKind ]])
+Function::WinRecreation::WinRecreation(winStr, options )
+Function::WinType::WinType(winNameStr )
+ProgrammingTopic::WMAxisHookStruct::WMAxisHookStruct
+ProgrammingTopic::WMBackgroundStruct::WMBackgroundStruct
+ProgrammingTopic::WMButtonAction::WMButtonAction
+ProgrammingTopic::WMCheckboxAction::WMCheckboxAction
+ProgrammingTopic::WMCustomControlAction::WMCustomControlAction
+ProgrammingTopic::WMDrawUserShapeStruct::WMDrawUserShapeStruct
+ProgrammingTopic::WMFitInfoStruct::WMFitInfoStruct
+ProgrammingTopic::WMGizmoHookStruct::WMGizmoHookStruct
+ProgrammingTopic::WMListboxAction::WMListboxAction
+ProgrammingTopic::WMMarkerHookStruct::WMMarkerHookStruct
+ProgrammingTopic::WMPopupAction::WMPopupAction
+ProgrammingTopic::WMSetVariableAction::WMSetVariableAction
+ProgrammingTopic::WMSliderAction::WMSliderAction
+ProgrammingTopic::WMTabControlAction::WMTabControlAction
+ProgrammingTopic::WMTooltipHookStruct::WMTooltipHookStruct
+ProgrammingTopic::WMWinHookStruct::WMWinHookStruct
+Function::wnoise::wnoise(shape, scale )
+Function::x::x
+Function::x2pnt::x2pnt(waveName, x1 )
+Function::xcsr::xcsr(cursorName  [, graphNameStr ])
+Operation::XLLoadWave::XLLoadWave [flags ] fileNameStr
+Function::XWaveName::XWaveName(graphNameStr, traceNameStr )
+Function::XWaveRefFromTrace::XWaveRefFromTrace(graphNameStr, traceNameStr )
+Function::y::y
+Function::z::z
+Function::zcsr::zcsr(cursorName  [, graphNameStr ])
+Function::ZernikeR::ZernikeR(n,m,r )
+Function::zeta::zeta(a, b [, terms ])

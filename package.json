@@ -1,11 +1,17 @@
 {
-  "name": "IgorProLS",
+  "name": "igorpro",
   "description": "Language server for Igor Pro",
   "author": "Ben Murphy-Baum",
   "license": "MIT",
   "version": "1.0.0",
   "publisher": "Ben Murphy-Baum",
-  "categories": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benmurphybaum/IgorProLS"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -14,7 +20,17 @@
   ],
   "main": "./client/out/extension",
   "contributes": {
-    "configuration": {}
+    "languages": [{
+      "id": "igorpro",
+      "aliases": ["Igor Pro", "igorpro"],
+      "extensions": [".ipf"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "igorpro",
+      "scopeName": "source.igorpro",
+      "path": "./syntaxes/igorpro.tmLanguage.json"
+    }]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -27,3 +43,4 @@
     "typescript": "^5.2.2"
   }
 }
+

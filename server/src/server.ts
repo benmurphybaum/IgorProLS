@@ -7,6 +7,7 @@ import {
   InitializeResult,
   CompletionParams,
   CompletionList,
+  Range,
 } from "vscode-languageserver/node";
 
 import { TextDocument } from "vscode-languageserver-textdocument";
@@ -23,7 +24,12 @@ connection.onInitialize((params: InitializeParams) => {
   const result: InitializeResult = {
     capabilities: {
       textDocumentSync: TextDocumentSyncKind.Incremental,
-      completionProvider: {},
+      completionProvider: {triggerCharacters: [
+        ...Array.from({ length: 26 }, (_, i) => String.fromCharCode(97 + i)), // 'a' to 'z'
+        ...Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)),  // 'A' to 'Z'
+        '#','_',
+      ],
+    }
     },
   };
 
@@ -38,11 +44,12 @@ connection.onCompletion((params: CompletionParams): CompletionList | null => {
   }
 
   // Getting the current line and word of the document lets us provide completion context
-  const content = doc.getText();
-  const currentLine = content.split("\n")[params.position.line];
+  const range: Range = { start: { line: params.position.line, character: 0 }, end: params.position};
+  const currentLine = doc.getText(range);
+
   const lineUntilCursor = currentLine.slice(0, params.position.character).trimStart();
   const currentWord = lineUntilCursor.replace(/.*\W(.*)/, "$1");
-
+  
   return completion(lineUntilCursor, currentWord, params);
 });
 
