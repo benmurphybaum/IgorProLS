@@ -1,10 +1,11 @@
 {
-  "name": "igorpro",
+  "name": "igorpro10",
+  "displayName": "Igor Pro 10",
   "description": "Language server for Igor Pro",
   "author": "Ben Murphy-Baum",
   "license": "MIT",
   "version": "1.0.0",
-  "publisher": "Wavefront Scientific",
+  "publisher": "WavefrontScientific",
   "repository": {
     "type": "git",
     "url": "https://github.com/benmurphybaum/IgorProLS"
