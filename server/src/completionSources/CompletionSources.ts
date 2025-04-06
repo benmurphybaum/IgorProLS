@@ -1,4 +1,4 @@
-import { CompletionItem } from "vscode-languageserver";
+import { CompletionItem, CompletionItemLabelDetails } from "vscode-languageserver";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -44,7 +44,11 @@ class CompletionSources
             {
                 const type: string = tokens[0];
                 const operation: string = tokens[1];
-                const tooltip: string = tokens[2];
+                const tooltip: string = tokens[2]
+
+                const labelDetails: CompletionItemLabelDetails = {
+                    detail: tooltip
+                  };
 
                 switch (type)
                 {
@@ -56,7 +60,8 @@ class CompletionSources
                         }
                         else
                         {
-                            this.functions.push({label: operation, kind: 3, detail: tooltip});
+                            
+                            this.functions.push({label: operation, kind: 3, labelDetails: labelDetails});
                         }
                         break;
                     }
@@ -68,7 +73,7 @@ class CompletionSources
                         }
                         else
                         {  
-                            this.operations.push({label: operation, kind: 3, detail: tooltip});
+                            this.operations.push({label: operation, kind: 3, labelDetails: labelDetails});
                         }
                         break;
                     }
