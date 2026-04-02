@@ -3,7 +3,96 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import * as https from "https";
 
-const DOCS_BASE_URL = "https://docs.wavemetrics.com/igorpro/commands";
+const SITEMAP_URL = "https://docs.wavemetrics.com/sitemap.xml";
+
+// Maps lowercase last-path-segment -> full URLs
+let sitemapIndex: Map<string, string[]> = new Map();
+let allDocUrls: string[] = [];
+let sitemapLoaded = false;
+
+function parseSitemapUrls(xml: string): string[] {
+  const urls: string[] = [];
+  const re = /<loc>([^<]+)<\/loc>/g;
+  let match;
+  while ((match = re.exec(xml)) !== null) {
+    urls.push(match[1]);
+  }
+  return urls;
+}
+
+function buildSitemapIndex(urls: string[]): Map<string, string[]> {
+  const index = new Map<string, string[]>();
+  for (const url of urls) {
+    const path = new URL(url).pathname;
+    const segments = path.split("/").filter(Boolean);
+    const slug = segments[segments.length - 1]?.toLowerCase();
+    if (slug) {
+      const existing = index.get(slug) || [];
+      existing.push(url);
+      index.set(slug, existing);
+    }
+  }
+  return index;
+}
+
+async function ensureSitemap(): Promise<void> {
+  if (sitemapLoaded) return;
+  try {
+    const xml = await fetchPage(SITEMAP_URL);
+    allDocUrls = parseSitemapUrls(xml);
+    sitemapIndex = buildSitemapIndex(allDocUrls);
+    sitemapLoaded = true;
+  } catch (e) {
+    process.stderr.write(`Failed to fetch sitemap: ${e}\n`);
+  }
+}
+
+const categoryPaths: Record<string, string[]> = {
+  "commands": ["/commands/"],
+  "programming": ["/programming/"],
+  "python-reference": ["/python/python-module-reference/"],
+  "python-general": ["/python/python-overview/", "/python/"],
+  "analysis": ["/analysis/"],
+  "igor-basics": ["/igor-basics/"],
+  "graphing": ["/graphing/"],
+  "advanced-topics": ["/advanced-topics/"],
+};
+
+function preferUrl(urls: string[], category?: string): string | undefined {
+  if (urls.length === 0) return undefined;
+  if (category) {
+    const prefixes = categoryPaths[category];
+    if (prefixes) {
+      for (const prefix of prefixes) {
+        const match = urls.find(u => new URL(u).pathname.includes(prefix));
+        if (match) return match;
+      }
+    }
+  }
+  // Default: prefer /commands/ for backward compatibility
+  return urls.find(u => u.includes("/commands/")) || urls[0];
+}
+
+function resolveDocUrl(query: string, category?: string): string | undefined {
+  const q = query.toLowerCase().replace(/\s+/g, "-");
+
+  // 1. Exact slug match
+  const exact = sitemapIndex.get(q);
+  if (exact && exact.length > 0) {
+    return preferUrl(exact, category);
+  }
+
+  // 2. Substring match on path segments
+  const substring = allDocUrls.filter(u => {
+    const path = new URL(u).pathname.toLowerCase();
+    return path.includes(`/${q}`);
+  });
+  if (substring.length > 0) {
+    return preferUrl(substring, category);
+  }
+
+  return undefined;
+}
 
 function fetchPage(url: string): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -108,18 +197,68 @@ server.registerPrompt(
   })
 );
 
-server.registerTool(
-  "igorpro_lookup_command",
+server.registerPrompt(
+  "igorpro_documentation_lookup",
   {
-    title: "Look up Igor Pro command",
+    title: "Igor Pro documentation lookup",
+    description: "Instructions for looking up documentation for Igor Pro",
+  },
+  () => ({
+    messages: [
+      {
+        role: "user",
+        content: {
+          type: "text",
+          text: [
+            "When looking up documentation, use the following base URLs for different categories of lookup:",
+            "Operations and Function names: https://docs.wavemetrics.com/igorpro/commands",
+            "Programming-related topics like keywords, flow control, operators: https://docs.wavemetrics.com/igorpro/programming",
+            "Python reference material (not Python operations): https://docs.wavemetrics.com/igorpro/python/python-module-reference",
+            "Python general information: https://docs.wavemetrics.com/igorpro/python/python-overview",
+            "Analysis, Stats, Curve Fitting: https://docs.wavemetrics.com/igorpro/analysis",
+            "Basic Igor information (waves, data folders, etc.): https://docs.wavemetrics.com/igorpro/igor-basics",
+            "Graphing: https://docs.wavemetrics.com/graphing",
+            "Advanced topics or other miscellaneous topics: https://docs.wavemetrics.com/igorpro/advanced-topics",
+            "Many of these URLs are 404 because they don't have a landing page but do have child pages that are relevant."
+          ].join("\n"),
+        },
+      },
+    ],
+  })
+);
+
+server.registerTool(
+  "igorpro_search_documentation",
+  {
+    title: "Look up Igor Pro documentation",
     description:
       "Look up documentation for an Igor Pro function, operation, or programming topic by name. Fetches the full documentation from docs.wavemetrics.com.",
     inputSchema: {
-      name: z.string().describe("The name of the Igor Pro command to look up (e.g. 'Display', 'abs', 'for')"),
+      name: z.string().describe("A topic to look up in the Igor Pro documentation, which can be the name of a function or operation or another topic name"),
+      category: z.enum(["commands", "programming", "python-reference", "python-general", "analysis", "igor-basics", "graphing", "advanced-topics"]).optional().describe(
+        "Optional documentation category to prefer when multiple pages match. " +
+        "'commands' for operations/functions, 'programming' for keywords/flow control/operators, " +
+        "'python-reference' for Python module reference, 'python-general' for Python overview, " +
+        "'analysis' for analysis/stats/curve fitting, 'igor-basics' for waves/data folders, " +
+        "'graphing' for graphing topics, 'advanced-topics' for advanced or miscellaneous topics."
+      ),
     },
   },
-  async ({ name: query }) => {
-    const url = `${DOCS_BASE_URL}/${encodeURIComponent(query.toLowerCase())}`;
+  async ({ name: query, category }) => {
+    await ensureSitemap();
+
+    const url = resolveDocUrl(query, category);
+
+    if (!url) {
+      return {
+        content: [
+          {
+            type: "text" as const,
+            text: `No documentation page found for "${query}". The sitemap has ${allDocUrls.length} entries but none matched. Try a different name or check spelling.`,
+          },
+        ],
+      };
+    }
 
     try {
       const html = await fetchPage(url);
@@ -130,7 +269,7 @@ server.registerTool(
           content: [
             {
               type: "text" as const,
-              text: `No documentation found for "${query}". Try using igorpro_search_commands to find the correct name.`,
+              text: `Page found at ${url} but no content could be extracted for "${query}".`,
             },
           ],
         };
@@ -151,7 +290,7 @@ server.registerTool(
         content: [
           {
             type: "text" as const,
-            text: `No documentation found for "${query}". Could not fetch online docs: ${message}.`,
+            text: `Found URL ${url} for "${query}" but could not fetch it: ${message}.`,
           },
         ],
       };
