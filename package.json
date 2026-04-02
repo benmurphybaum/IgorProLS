@@ -23,7 +23,7 @@
   "contributes": {
     "languages": [{
       "id": "igorpro",
-      "aliases": ["Igor Pro", "igorpro"],
+      "aliases": ["Igor Pro", "igorpro", "igor", "Igor"],
       "extensions": [".ipf"],
       "configuration": "./language-configuration.json"
     }],
@@ -34,8 +34,8 @@
     }],
     "mcpServerDefinitionProviders": [
       {
-        "id": "Igor Pro",
-        "label": "Igor Pro documentation AI"
+        "id": "igorpro",
+        "label": "Igor Pro"
       }
     ]
   },

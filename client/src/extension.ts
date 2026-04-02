@@ -55,11 +55,11 @@ export function activate(context: ExtensionContext) {
     path.join("server", "out", "mcpServer.js")
   );
   context.subscriptions.push(
-    lm.registerMcpServerDefinitionProvider("Igor Pro", {
+    lm.registerMcpServerDefinitionProvider("igorpro", {
       provideMcpServerDefinitions() {
         return [
           new McpStdioServerDefinition(
-            "Igor Pro documentation AI",
+            "Igor Pro",
             "node",
             [mcpServerPath]
           ),

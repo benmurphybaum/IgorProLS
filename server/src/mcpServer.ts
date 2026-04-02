@@ -79,6 +79,35 @@ const server = new McpServer({
   version: "1.0.0",
 });
 
+server.registerPrompt(
+  "igorpro_coding_instructions",
+  {
+    title: "Igor Pro coding instructions",
+    description: "Instructions for writing and formatting Igor Pro code",
+  },
+  () => ({
+    messages: [
+      {
+        role: "user",
+        content: {
+          type: "text",
+          text: [
+            "When generating Igor Pro code, always use the language identifier `igorpro` for fenced code blocks.",
+            "For example:",
+            "```igorpro",
+            "Function MyFunc(x)",
+            "    Variable x",
+            "    return x * 2",
+            "End",
+            "```",
+            "Never use `igor`, `c`, or plain text for Igor Pro code blocks.",
+          ].join("\n"),
+        },
+      },
+    ],
+  })
+);
+
 server.registerTool(
   "igorpro_lookup_command",
   {
