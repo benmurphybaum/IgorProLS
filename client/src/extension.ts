@@ -1,5 +1,5 @@
 import * as path from "path";
-import { workspace, ExtensionContext } from "vscode";
+import { workspace, ExtensionContext, lm, McpStdioServerDefinition } from "vscode";
 
 import {
   LanguageClient,
@@ -41,14 +41,32 @@ export function activate(context: ExtensionContext) {
 
   // Create the language client and start the client.
   client = new LanguageClient(
-    "igorprols language-server-id",
-    "IgorProLS language server name",
+    "igorpro",
+    "Igor Pro Language Server",
     serverOptions,
     clientOptions
   );
 
   // Start the client. This will also launch the server
   client.start();
+
+  // Register the MCP server so it works in any workspace
+  const mcpServerPath = context.asAbsolutePath(
+    path.join("server", "out", "mcpServer.js")
+  );
+  context.subscriptions.push(
+    lm.registerMcpServerDefinitionProvider("Igor Pro", {
+      provideMcpServerDefinitions() {
+        return [
+          new McpStdioServerDefinition(
+            "Igor Pro documentation AI",
+            "node",
+            [mcpServerPath]
+          ),
+        ];
+      },
+    })
+  );
 }
 
 export function deactivate(): Thenable<void> | undefined {

@@ -1,7 +1,7 @@
 {
-  "name": "IgorProLS Server",
+  "name": "igorpro-server",
   "description": "Language server for Igor Pro",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Ben Murphy-Baum",
   "license": "MIT",
   "engines": {
@@ -12,7 +12,9 @@
     "url": "https://github.com/benmurphybaum/IgorProLS"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "vscode-languageserver": "^8.1.0",
-    "vscode-languageserver-textdocument": "^1.0.8"
+    "vscode-languageserver-textdocument": "^1.0.8",
+    "zod": "^4.3.6"
   }
 }

@@ -4,3 +4,5 @@ client/server
 .vscode-test
 tsconfig.tsbuildinfo
 igorpro-1.0.0.vsix
+.vscode/**
+*.vsix

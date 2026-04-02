@@ -1,5 +1,5 @@
 {
-  "name": "IgorProLS Client",
+  "name": "igorpro-server",
   "description": "Language server client for Igor Pro 10",
   "author": "Ben Murphy-Baum",
   "license": "MIT",
@@ -10,12 +10,12 @@
     "url": "https://github.com/benmurphybaum/IgorProLS"
   },
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.99.0"
   },
   "dependencies": {
     "vscode-languageclient": "^8.1.0"
   },
   "devDependencies": {
-    "@types/vscode": "^1.81.0"
+    "@types/vscode": "^1.99.0"
   }
 }
