@@ -37,6 +37,11 @@
         "id": "igorpro",
         "label": "Igor Pro"
       }
+    ],
+    "chatInstructions": [
+      {
+        "path": "./prompts/igorpro.instructions.md"
+      }
     ]
   },
   "scripts": {

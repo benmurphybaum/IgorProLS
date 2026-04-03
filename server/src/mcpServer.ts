@@ -2,8 +2,60 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import * as https from "https";
+import * as fs from "fs";
+import * as path from "path";
 
 const SITEMAP_URL = "https://docs.wavemetrics.com/sitemap.xml";
+
+// --- CommandHelp index ---
+interface CommandEntry {
+  type: string;
+  name: string;
+  tooltip: string;
+}
+
+let commandEntries: CommandEntry[] = [];
+
+function loadCommandHelp(): void {
+  try {
+    const filePath = path.join(__dirname, "../src/completionSources/CommandHelp.txt");
+    const text = fs.readFileSync(filePath, "utf-8");
+    for (const line of text.split("\n")) {
+      const tokens = line.split("::");
+      if (tokens.length === 3) {
+        commandEntries.push({ type: tokens[0].trim(), name: tokens[1].trim(), tooltip: tokens[2].trim() });
+      }
+    }
+  } catch (e) {
+    process.stderr.write(`Failed to load CommandHelp.txt: ${e}\n`);
+  }
+}
+
+function searchCommandHelp(query: string): CommandEntry[] {
+  const q = query.toLowerCase();
+  // 1. Exact name match
+  const exact = commandEntries.filter(e => e.name.toLowerCase() === q);
+  if (exact.length > 0) return exact;
+  // 2. Starts-with match
+  const startsWith = commandEntries.filter(e => e.name.toLowerCase().startsWith(q));
+  if (startsWith.length > 0) return startsWith;
+  // 3. Contains match (single token)
+  const contains = commandEntries.filter(e => e.name.toLowerCase().includes(q));
+  if (contains.length > 0) return contains;
+  // 4. All-words match: split query on whitespace/punctuation and check that every
+  //    word appears somewhere in the lowercased name. This handles queries like
+  //    "violin plot" matching "AppendViolinPlot" and "ModifyViolinPlot".
+  const words = q.split(/[\s\-_]+/).filter(Boolean);
+  if (words.length > 1) {
+    return commandEntries.filter(e => {
+      const name = e.name.toLowerCase();
+      return words.every(w => name.includes(w));
+    });
+  }
+  return [];
+}
+
+loadCommandHelp();
 
 // Maps lowercase last-path-segment -> full URLs
 let sitemapIndex: Map<string, string[]> = new Map();
@@ -168,6 +220,43 @@ const server = new McpServer({
   version: "1.0.0",
 });
 
+server.registerTool(
+  "igorpro_find_operations",
+  {
+    title: "Find Igor Pro operations and functions",
+    description:
+      "Search the local Igor Pro command index (CommandHelp.txt) to find the exact names of operations, " +
+      "functions, or programming topics matching a query. Use this tool FIRST when you are unsure of the " +
+      "exact name of an Igor Pro operation or function before calling igorpro_search_documentation. " +
+      "For example, query 'violin plot' to discover 'AppendViolinPlot', 'ModifyViolinPlot', etc.",
+    inputSchema: {
+      query: z.string().describe("A topic, keyword, or partial name to search for in the Igor Pro command index"),
+    },
+  },
+  ({ query }) => {
+    const matches = searchCommandHelp(query);
+    if (matches.length === 0) {
+      return {
+        content: [
+          {
+            type: "text" as const,
+            text: `No operations or functions found matching "${query}" in the Igor Pro command index.`,
+          },
+        ],
+      };
+    }
+    const lines = matches.map(e => `${e.type}: ${e.name}  —  ${e.tooltip}`);
+    return {
+      content: [
+        {
+          type: "text" as const,
+          text: `Found ${matches.length} match(es) for "${query}":\n\n${lines.join("\n")}`,
+        },
+      ],
+    };
+  }
+);
+
 server.registerPrompt(
   "igorpro_coding_instructions",
   {
@@ -197,42 +286,12 @@ server.registerPrompt(
   })
 );
 
-server.registerPrompt(
-  "igorpro_documentation_lookup",
-  {
-    title: "Igor Pro documentation lookup",
-    description: "Instructions for looking up documentation for Igor Pro",
-  },
-  () => ({
-    messages: [
-      {
-        role: "user",
-        content: {
-          type: "text",
-          text: [
-            "When looking up documentation, use the following base URLs for different categories of lookup:",
-            "Operations and Function names: https://docs.wavemetrics.com/igorpro/commands",
-            "Programming-related topics like keywords, flow control, operators: https://docs.wavemetrics.com/igorpro/programming",
-            "Python reference material (not Python operations): https://docs.wavemetrics.com/igorpro/python/python-module-reference",
-            "Python general information: https://docs.wavemetrics.com/igorpro/python/python-overview",
-            "Analysis, Stats, Curve Fitting: https://docs.wavemetrics.com/igorpro/analysis",
-            "Basic Igor information (waves, data folders, etc.): https://docs.wavemetrics.com/igorpro/igor-basics",
-            "Graphing: https://docs.wavemetrics.com/graphing",
-            "Advanced topics or other miscellaneous topics: https://docs.wavemetrics.com/igorpro/advanced-topics",
-            "Many of these URLs are 404 because they don't have a landing page but do have child pages that are relevant."
-          ].join("\n"),
-        },
-      },
-    ],
-  })
-);
-
 server.registerTool(
   "igorpro_search_documentation",
   {
-    title: "Look up Igor Pro documentation",
+    title: "Search Igor Pro documentation",
     description:
-      "Look up documentation for an Igor Pro function, operation, or programming topic by name. Fetches the full documentation from docs.wavemetrics.com.",
+      "Search for documentation about Igor Pro-related topics from WaveMetrics official documentation website",
     inputSchema: {
       name: z.string().describe("A topic to look up in the Igor Pro documentation, which can be the name of a function or operation or another topic name"),
       category: z.enum(["commands", "programming", "python-reference", "python-general", "analysis", "igor-basics", "graphing", "advanced-topics"]).optional().describe(
@@ -247,14 +306,33 @@ server.registerTool(
   async ({ name: query, category }) => {
     await ensureSitemap();
 
-    const url = resolveDocUrl(query, category);
+    // Search CommandHelp.txt for the best-matching canonical name to use for URL resolution
+    const matches = searchCommandHelp(query);
+
+    // Try candidates from CommandHelp first (exact → starts-with → contains), then fall back to raw query
+    const namesToTry = matches.length > 0
+      ? [...matches.map(e => e.name), query]
+      : [query];
+
+    let url: string | undefined;
+    let resolvedName = query;
+    for (const name of namesToTry) {
+      url = resolveDocUrl(name, category);
+      if (url) {
+        resolvedName = name;
+        break;
+      }
+    }
 
     if (!url) {
+      const hint = matches.length > 0
+        ? ` Command index matched: ${matches.slice(0, 5).map(e => e.name).join(", ")}${matches.length > 5 ? ", ..." : ""}.`
+        : " No entries found in local command index either.";
       return {
         content: [
           {
             type: "text" as const,
-            text: `No documentation page found for "${query}". The sitemap has ${allDocUrls.length} entries but none matched. Try a different name or check spelling.`,
+            text: `No documentation page found for "${query}".${hint} The sitemap has ${allDocUrls.length} entries.`,
           },
         ],
       };
@@ -279,7 +357,7 @@ server.registerTool(
         content: [
           {
             type: "text" as const,
-            text: `Documentation for "${query}" (from ${url}):\n\n${text}`,
+            text: `Documentation for "${resolvedName}" (from ${url}):\n\n${text}`,
           },
         ],
       };
@@ -290,7 +368,7 @@ server.registerTool(
         content: [
           {
             type: "text" as const,
-            text: `Found URL ${url} for "${query}" but could not fetch it: ${message}.`,
+            text: `Found URL ${url} for "${resolvedName}" but could not fetch it: ${message}.`,
           },
         ],
       };
