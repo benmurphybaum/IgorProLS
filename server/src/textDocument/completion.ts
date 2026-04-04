@@ -55,4 +55,14 @@ export const completion = (lineToCursor: string, prefix: string, params: Complet
     }
 }
 
-		
+export function findFirstNonStringSemicolon(line: string): number {
+    const regex = /(?:'[^'\\]*(?:\\.[^'\\]*)*'|"[^"\\]*(?:\\.[^"\\]*)*")|(;)/g;
+
+    let match: RegExpExecArray | null;
+    while ((match = regex.exec(line)) !== null) {
+        if (match[1]) {
+            return match.index + 1;
+        }
+    }
+    return 0;
+}

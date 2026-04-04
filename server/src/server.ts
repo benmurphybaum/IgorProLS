@@ -11,7 +11,7 @@ import {
 } from "vscode-languageserver/node";
 
 import { TextDocument } from "vscode-languageserver-textdocument";
-import { completion } from "./textDocument/completion";
+import { completion, findFirstNonStringSemicolon } from "./textDocument/completion";
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -47,7 +47,10 @@ connection.onCompletion((params: CompletionParams): CompletionList | null => {
   const range: Range = { start: { line: params.position.line, character: 0 }, end: params.position};
   const currentLine = doc.getText(range);
 
-  const lineUntilCursor = currentLine.slice(0, params.position.character).trimStart();
+  // Find the first non-string semi-colon, which will indicate the start of the current command
+  const pos = findFirstNonStringSemicolon(currentLine);
+
+  const lineUntilCursor = currentLine.slice(pos, params.position.character).trimStart();
   const currentWord = lineUntilCursor.replace(/.*\W(.*)/, "$1");
   
   return completion(lineUntilCursor, currentWord, params);

@@ -159,7 +159,7 @@ function fetchPage(url: string): Promise<string> {
       }
       const chunks: Buffer[] = [];
       res.on("data", (chunk) => chunks.push(chunk));
-      res.on("end", () => resolve(Buffer.concat(chunks).toString("utf-8")));
+      res.on("end", () => resolve(Buffer.concat(chunks as Uint8Array[]).toString("utf-8")));
       res.on("error", reject);
     }).on("error", reject);
   });

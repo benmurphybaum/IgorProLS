@@ -44,7 +44,7 @@ class CompletionSources
             {
                 const type: string = tokens[0];
                 const operation: string = tokens[1];
-                const tooltip: string = tokens[2]
+                const tooltip: string = " " + tokens[2]
 
                 const labelDetails: CompletionItemLabelDetails = {
                     detail: tooltip
