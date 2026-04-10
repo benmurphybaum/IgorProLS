@@ -299,7 +299,8 @@ server.registerTool(
         "'commands' for operations/functions, 'programming' for keywords/flow control/operators, " +
         "'python-reference' for Python module reference, 'python-general' for Python overview, " +
         "'analysis' for analysis/stats/curve fitting, 'igor-basics' for waves/data folders, " +
-        "'graphing' for graphing topics, 'advanced-topics' for advanced or miscellaneous topics."
+        "'graphing' for graphing topics, 'advanced-topics' for advanced or miscellaneous topics." +
+        "Always provide links to the source documentation that the answer is based on."
       ),
     },
   },
